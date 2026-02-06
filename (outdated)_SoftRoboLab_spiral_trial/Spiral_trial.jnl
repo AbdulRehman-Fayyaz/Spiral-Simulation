@@ -1,0 +1,520 @@
+# -*- coding: mbcs -*-
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+mdb.models['Model-1'].ConstrainedSketch(name='__profile__', sheetSize=100.0)
+del mdb.models['Model-1'].sketches['__profile__']
+mdb.models['Model-1'].ConstrainedSketch(name='__profile__', sheetSize=100.0)
+mdb.models['Model-1'].sketches['__profile__'].Line(point1=(0.0, 0.0), point2=(
+    2.5, 17.0))
+mdb.models['Model-1'].sketches['__profile__'].Line(point1=(2.5, 17.0), point2=(
+    21.0, 21.5))
+mdb.models['Model-1'].sketches['__profile__'].Line(point1=(21.0, 21.5), point2=
+    (21.0, 5.0))
+mdb.models['Model-1'].sketches['__profile__'].VerticalConstraint(addUndoState=
+    False, entity=mdb.models['Model-1'].sketches['__profile__'].geometry[4])
+mdb.models['Model-1'].sketches['__profile__'].Line(point1=(21.0, 5.0), point2=(
+    0.0, 0.0))
+mdb.models['Model-1'].sketches['__profile__'].autoDimension(objectList=(
+    mdb.models['Model-1'].sketches['__profile__'].geometry[2], ))
+del mdb.models['Model-1'].sketches['__profile__']
+mdb.models['Model-1'].ConstrainedSketch(name='__profile__', sheetSize=0.1)
+mdb.models['Model-1'].sketches['__profile__'].sketchOptions.setValues(
+    decimalPlaces=3)
+mdb.models['Model-1'].sketches['__profile__'].Line(point1=(0.0, 0.0), point2=(
+    0.0065, 0.0175))
+mdb.models['Model-1'].sketches['__profile__'].Line(point1=(0.0065, 0.0175), 
+    point2=(0.0245, 0.021))
+mdb.models['Model-1'].sketches['__profile__'].Line(point1=(0.0245, 0.021), 
+    point2=(0.0268333333333186, 0.009))
+mdb.models['Model-1'].sketches['__profile__'].PerpendicularConstraint(
+    addUndoState=False, entity1=
+    mdb.models['Model-1'].sketches['__profile__'].geometry[3], entity2=
+    mdb.models['Model-1'].sketches['__profile__'].geometry[4])
+mdb.models['Model-1'].sketches['__profile__'].Line(point1=(0.0268333333333186, 
+    0.009), point2=(0.0, 0.0))
+mdb.models['Model-1'].sketches['__profile__'].ObliqueDimension(textPoint=(
+    -0.00136155355721712, 0.0116295386105776), value=0.05, vertex1=
+    mdb.models['Model-1'].sketches['__profile__'].vertices[0], vertex2=
+    mdb.models['Model-1'].sketches['__profile__'].vertices[1])
+mdb.models['Model-1'].sketches['__profile__'].ObliqueDimension(textPoint=(
+    0.0142602119594812, -0.0161715298891068), value=0.05, vertex1=
+    mdb.models['Model-1'].sketches['__profile__'].vertices[3], vertex2=
+    mdb.models['Model-1'].sketches['__profile__'].vertices[0])
+mdb.models['Model-1'].sketches['__profile__'].undo()
+mdb.models['Model-1'].sketches['__profile__'].undo()
+mdb.models['Model-1'].sketches['__profile__'].undo()
+mdb.models['Model-1'].sketches['__profile__'].undo()
+mdb.models['Model-1'].sketches['__profile__'].Line(point1=(0.0245, 0.021), 
+    point2=(0.0365, 0.0115))
+mdb.models['Model-1'].sketches['__profile__'].Line(point1=(0.0365, 0.0115), 
+    point2=(0.0, 0.0))
+mdb.models['Model-1'].sketches['__profile__'].FixedConstraint(entity=
+    mdb.models['Model-1'].sketches['__profile__'].vertices[0])
+mdb.models['Model-1'].sketches['__profile__'].ObliqueDimension(textPoint=(
+    0.0285997465252876, 0.000875947996973991), value=0.05, vertex1=
+    mdb.models['Model-1'].sketches['__profile__'].vertices[3], vertex2=
+    mdb.models['Model-1'].sketches['__profile__'].vertices[0])
+mdb.models['Model-1'].sketches['__profile__'].ObliqueDimension(textPoint=(
+    -0.00231081992387772, 0.0136242005974054), value=0.05, vertex1=
+    mdb.models['Model-1'].sketches['__profile__'].vertices[0], vertex2=
+    mdb.models['Model-1'].sketches['__profile__'].vertices[1])
+mdb.models['Model-1'].sketches['__profile__'].undo()
+mdb.models['Model-1'].sketches['__profile__'].AngularDimension(line1=
+    mdb.models['Model-1'].sketches['__profile__'].geometry[2], line2=
+    mdb.models['Model-1'].sketches['__profile__'].geometry[5], textPoint=(
+    0.00730380415916443, 0.00509543903172016), value=80.41)
+mdb.models['Model-1'].sketches['__profile__'].AngularDimension(line1=
+    mdb.models['Model-1'].sketches['__profile__'].geometry[5], line2=
+    mdb.models['Model-1'].sketches['__profile__'].geometry[4], textPoint=(
+    0.0336317047476768, -0.00280488654971123), value=80.41)
+mdb.models['Model-1'].sketches['__profile__'].HorizontalConstraint(entity=
+    mdb.models['Model-1'].sketches['__profile__'].geometry[5])
+mdb.models['Model-1'].sketches['__profile__'].ObliqueDimension(textPoint=(
+    -0.0108471661806107, 0.0081478413194418), value=0.05, vertex1=
+    mdb.models['Model-1'].sketches['__profile__'].vertices[0], vertex2=
+    mdb.models['Model-1'].sketches['__profile__'].vertices[1])
+del mdb.models['Model-1'].sketches['__profile__']
+mdb.models['Model-1'].ConstrainedSketch(name='__profile__', sheetSize=0.1)
+mdb.models['Model-1'].sketches['__profile__'].sketchOptions.setValues(
+    decimalPlaces=3)
+mdb.models['Model-1'].sketches['__profile__'].Line(point1=(0.0, 0.0), point2=(
+    0.0045, 0.027))
+mdb.models['Model-1'].sketches['__profile__'].Line(point1=(0.0045, 0.027), 
+    point2=(0.034, 0.0365))
+mdb.models['Model-1'].sketches['__profile__'].Line(point1=(0.034, 0.0365), 
+    point2=(0.038, 0.011))
+mdb.models['Model-1'].sketches['__profile__'].Line(point1=(0.038, 0.011), 
+    point2=(0.0, 0.0))
+mdb.models['Model-1'].sketches['__profile__'].FixedConstraint(entity=
+    mdb.models['Model-1'].sketches['__profile__'].vertices[0])
+mdb.models['Model-1'].sketches['__profile__'].HorizontalConstraint(entity=
+    mdb.models['Model-1'].sketches['__profile__'].geometry[5])
+mdb.models['Model-1'].sketches['__profile__'].ObliqueDimension(textPoint=(
+    0.00969259068369865, -0.00741078425198793), value=0.05, vertex1=
+    mdb.models['Model-1'].sketches['__profile__'].vertices[3], vertex2=
+    mdb.models['Model-1'].sketches['__profile__'].vertices[0])
+mdb.models['Model-1'].sketches['__profile__'].ObliqueDimension(textPoint=(
+    -0.00631871074438095, 0.0174495205283165), value=0.05, vertex1=
+    mdb.models['Model-1'].sketches['__profile__'].vertices[0], vertex2=
+    mdb.models['Model-1'].sketches['__profile__'].vertices[1])
+mdb.models['Model-1'].sketches['__profile__'].undo()
+mdb.models['Model-1'].sketches['__profile__'].AngularDimension(line1=
+    mdb.models['Model-1'].sketches['__profile__'].geometry[5], line2=
+    mdb.models['Model-1'].sketches['__profile__'].geometry[2], textPoint=(
+    0.00795286521315575, 0.00484162382781506), value=80.41)
+mdb.models['Model-1'].sketches['__profile__'].AngularDimension(line1=
+    mdb.models['Model-1'].sketches['__profile__'].geometry[5], line2=
+    mdb.models['Model-1'].sketches['__profile__'].geometry[4], textPoint=(
+    0.0422346256673336, 0.00496801175177097), value=80.41)
+mdb.models['Model-1'].sketches['__profile__'].AngularDimension(line1=
+    mdb.models['Model-1'].sketches['__profile__'].geometry[2], line2=
+    mdb.models['Model-1'].sketches['__profile__'].geometry[3], textPoint=(
+    0.0112418942153454, 0.0231679547578096), value=80.42)
+mdb.models['Model-1'].sketches['__profile__'].ObliqueDimension(textPoint=(
+    -0.00596743449568748, 0.035090260207653), value=0.05, vertex1=
+    mdb.models['Model-1'].sketches['__profile__'].vertices[0], vertex2=
+    mdb.models['Model-1'].sketches['__profile__'].vertices[1])
+mdb.models['Model-1'].sketches['__profile__'].offset(distance=0.005, 
+    objectList=(mdb.models['Model-1'].sketches['__profile__'].geometry[2], 
+    mdb.models['Model-1'].sketches['__profile__'].geometry[3], 
+    mdb.models['Model-1'].sketches['__profile__'].geometry[4], 
+    mdb.models['Model-1'].sketches['__profile__'].geometry[5]), side=LEFT)
+mdb.models['Model-1'].Part(dimensionality=THREE_D, name='Part-1', type=
+    DEFORMABLE_BODY)
+mdb.models['Model-1'].parts['Part-1'].BaseSolidExtrude(depth=0.002, sketch=
+    mdb.models['Model-1'].sketches['__profile__'])
+del mdb.models['Model-1'].sketches['__profile__']
+mdb.models['Model-1'].parts.changeKey(fromName='Part-1', toName='Spiral1')
+mdb.models['Model-1'].ConstrainedSketch(name='__profile__', sheetSize=0.1)
+mdb.models['Model-1'].sketches['__profile__'].sketchOptions.setValues(
+    decimalPlaces=3)
+del mdb.models['Model-1'].sketches['__profile__']
+mdb.models['Model-1'].Part(name='Spiral2', objectToCopy=
+    mdb.models['Model-1'].parts['Spiral1'])
+mdb.models['Model-1'].ConstrainedSketch(name='__edit__', objectToCopy=
+    mdb.models['Model-1'].parts['Spiral2'].features['Solid extrude-1'].sketch)
+mdb.models['Model-1'].parts['Spiral2'].projectReferencesOntoSketch(filter=
+    COPLANAR_EDGES, sketch=mdb.models['Model-1'].sketches['__edit__'], 
+    upToFeature=
+    mdb.models['Model-1'].parts['Spiral2'].features['Solid extrude-1'])
+mdb.models['Model-1'].sketches['__edit__'].dimensions[4].setValues(value=
+    37.5121321)
+mdb.models['Model-1'].sketches['__edit__'].dimensions[4].setValues(value=
+    0.0375121321)
+mdb.models['Model-1'].sketches['__edit__'].dimensions[0].setValues(value=
+    0.0375121321)
+mdb.models['Model-1'].sketches['__edit__'].autoTrimCurve(curve1=
+    mdb.models['Model-1'].sketches['__edit__'].geometry[8], point1=(
+    0.0192247740924358, 0.0373659878969193))
+mdb.models['Model-1'].sketches['__edit__'].autoTrimCurve(curve1=
+    mdb.models['Model-1'].sketches['__edit__'].geometry[7], point1=(
+    0.0400298871099949, 0.0222178474068642))
+mdb.models['Model-1'].sketches['__edit__'].autoTrimCurve(curve1=
+    mdb.models['Model-1'].sketches['__edit__'].geometry[6], point1=(
+    0.0415460430085659, 0.00117876194417477))
+mdb.models['Model-1'].sketches['__edit__'].autoTrimCurve(curve1=
+    mdb.models['Model-1'].sketches['__edit__'].geometry[10], point1=(
+    0.0183824673295021, 0.00311435759067535))
+mdb.models['Model-1'].sketches['__edit__'].autoTrimCurve(curve1=
+    mdb.models['Model-1'].sketches['__edit__'].geometry[2], point1=(
+    0.00591624155640602, 0.0243217572569847))
+mdb.models['Model-1'].sketches['__edit__'].undo()
+mdb.models['Model-1'].sketches['__edit__'].autoTrimCurve(curve1=
+    mdb.models['Model-1'].sketches['__edit__'].geometry[9], point1=(
+    0.0154343694448471, 0.0387966446578503))
+mdb.models['Model-1'].sketches['__edit__'].autoTrimCurve(curve1=
+    mdb.models['Model-1'].sketches['__edit__'].geometry[11], point1=(
+    0.00793779641389847, 0.0220495350658894))
+mdb.models['Model-1'].sketches['__edit__'].offset(distance=0.005, objectList=(
+    mdb.models['Model-1'].sketches['__edit__'].geometry[2], 
+    mdb.models['Model-1'].sketches['__edit__'].geometry[3], 
+    mdb.models['Model-1'].sketches['__edit__'].geometry[4], 
+    mdb.models['Model-1'].sketches['__edit__'].geometry[5]), side=LEFT)
+mdb.models['Model-1'].parts['Spiral2'].features['Solid extrude-1'].setValues(
+    sketch=mdb.models['Model-1'].sketches['__edit__'])
+del mdb.models['Model-1'].sketches['__edit__']
+mdb.models['Model-1'].Part(name='Spiral3', objectToCopy=
+    mdb.models['Model-1'].parts['Spiral2'])
+mdb.models['Model-1'].ConstrainedSketch(name='__edit__', objectToCopy=
+    mdb.models['Model-1'].parts['Spiral3'].features['Solid extrude-1'].sketch)
+mdb.models['Model-1'].parts['Spiral3'].projectReferencesOntoSketch(filter=
+    COPLANAR_EDGES, sketch=mdb.models['Model-1'].sketches['__edit__'], 
+    upToFeature=
+    mdb.models['Model-1'].parts['Spiral3'].features['Solid extrude-1'])
+mdb.models['Model-1'].sketches['__edit__'].dimensions[4].setValues(value=
+    0.02814318771)
+mdb.models['Model-1'].sketches['__edit__'].dimensions[0].setValues(value=
+    0.02814318771)
+mdb.models['Model-1'].sketches['__edit__'].autoTrimCurve(curve1=
+    mdb.models['Model-1'].sketches['__edit__'].geometry[13], point1=(
+    0.0287464559078217, 0.0177582018077374))
+mdb.models['Model-1'].sketches['__edit__'].autoTrimCurve(curve1=
+    mdb.models['Model-1'].sketches['__edit__'].geometry[14], point1=(
+    0.0177393779158592, 0.0260268114507198))
+mdb.models['Model-1'].sketches['__edit__'].autoTrimCurve(curve1=
+    mdb.models['Model-1'].sketches['__edit__'].geometry[15], point1=(
+    0.00777676701545715, 0.0283548682928085))
+mdb.models['Model-1'].sketches['__edit__'].autoTrimCurve(curve1=
+    mdb.models['Model-1'].sketches['__edit__'].geometry[16], point1=(
+    0.00665195286273956, 0.0147879235446453))
+mdb.models['Model-1'].sketches['__edit__'].autoTrimCurve(curve1=
+    mdb.models['Model-1'].sketches['__edit__'].geometry[12], point1=(
+    0.0150076933205128, 0.00298709236085415))
+mdb.models['Model-1'].sketches['__edit__'].autoTrimCurve(curve1=
+    mdb.models['Model-1'].sketches['__edit__'].geometry[17], point1=(
+    0.0307550430297852, 0.00290681235492229))
+mdb.models['Model-1'].sketches['__edit__'].offset(distance=0.005, objectList=(
+    mdb.models['Model-1'].sketches['__edit__'].geometry[2], 
+    mdb.models['Model-1'].sketches['__edit__'].geometry[3], 
+    mdb.models['Model-1'].sketches['__edit__'].geometry[4], 
+    mdb.models['Model-1'].sketches['__edit__'].geometry[5]), side=LEFT)
+mdb.models['Model-1'].parts['Spiral3'].features['Solid extrude-1'].setValues(
+    sketch=mdb.models['Model-1'].sketches['__edit__'])
+del mdb.models['Model-1'].sketches['__edit__']
+mdb.models['Model-1'].Part(name='Spiral4', objectToCopy=
+    mdb.models['Model-1'].parts['Spiral3'])
+mdb.models['Model-1'].ConstrainedSketch(name='__edit__', objectToCopy=
+    mdb.models['Model-1'].parts['Spiral4'].features['Solid extrude-1'].sketch)
+mdb.models['Model-1'].parts['Spiral4'].projectReferencesOntoSketch(filter=
+    COPLANAR_EDGES, sketch=mdb.models['Model-1'].sketches['__edit__'], 
+    upToFeature=
+    mdb.models['Model-1'].parts['Spiral4'].features['Solid extrude-1'])
+mdb.models['Model-1'].sketches['__edit__'].dimensions[4].setValues(value=
+    0.02111421446)
+mdb.models['Model-1'].sketches['__edit__'].dimensions[0].setValues(value=
+    0.02111421446)
+mdb.models['Model-1'].sketches['__edit__'].autoTrimCurve(curve1=
+    mdb.models['Model-1'].sketches['__edit__'].geometry[21], point1=(
+    0.00951668806374073, 0.0139251705259085))
+mdb.models['Model-1'].sketches['__edit__'].autoTrimCurve(curve1=
+    mdb.models['Model-1'].sketches['__edit__'].geometry[18], point1=(
+    0.012478644028306, 0.00318828970193863))
+mdb.models['Model-1'].sketches['__edit__'].autoTrimCurve(curve1=
+    mdb.models['Model-1'].sketches['__edit__'].geometry[19], point1=(
+    0.0206756759434938, 0.00869438238441944))
+mdb.models['Model-1'].sketches['__edit__'].autoTrimCurve(curve1=
+    mdb.models['Model-1'].sketches['__edit__'].geometry[23], point1=(
+    0.0219844449311495, 0.00380772538483143))
+mdb.models['Model-1'].sketches['__edit__'].autoTrimCurve(curve1=
+    mdb.models['Model-1'].sketches['__edit__'].geometry[20], point1=(
+    0.017438193783164, 0.0175729561597109))
+mdb.models['Model-1'].sketches['__edit__'].autoTrimCurve(curve1=
+    mdb.models['Model-1'].sketches['__edit__'].geometry[22], point1=(
+    0.0108254570513964, 0.0206701327115297))
+mdb.models['Model-1'].sketches['__edit__'].offset(distance=0.003, objectList=(
+    mdb.models['Model-1'].sketches['__edit__'].geometry[2], 
+    mdb.models['Model-1'].sketches['__edit__'].geometry[3], 
+    mdb.models['Model-1'].sketches['__edit__'].geometry[4], 
+    mdb.models['Model-1'].sketches['__edit__'].geometry[5]), side=LEFT)
+mdb.models['Model-1'].parts['Spiral4'].features['Solid extrude-1'].setValues(
+    sketch=mdb.models['Model-1'].sketches['__edit__'])
+del mdb.models['Model-1'].sketches['__edit__']
+mdb.models['Model-1'].Part(name='Spiral5', objectToCopy=
+    mdb.models['Model-1'].parts['Spiral4'])
+mdb.models['Model-1'].ConstrainedSketch(name='__edit__', objectToCopy=
+    mdb.models['Model-1'].parts['Spiral5'].features['Solid extrude-1'].sketch)
+mdb.models['Model-1'].parts['Spiral5'].projectReferencesOntoSketch(filter=
+    COPLANAR_EDGES, sketch=mdb.models['Model-1'].sketches['__edit__'], 
+    upToFeature=
+    mdb.models['Model-1'].parts['Spiral5'].features['Solid extrude-1'])
+mdb.models['Model-1'].sketches['__edit__'].dimensions[4].setValues(value=
+    0.01584678026)
+mdb.models['Model-1'].sketches['__edit__'].dimensions[0].setValues(value=
+    0.01584678026)
+mdb.models['Model-1'].sketches['__edit__'].autoTrimCurve(curve1=
+    mdb.models['Model-1'].sketches['__edit__'].geometry[27], point1=(
+    0.00704022962599993, 0.0155765227973461))
+mdb.models['Model-1'].sketches['__edit__'].autoTrimCurve(curve1=
+    mdb.models['Model-1'].sketches['__edit__'].geometry[26], point1=(
+    0.00745685119181871, 0.0157549306750298))
+mdb.models['Model-1'].sketches['__edit__'].autoTrimCurve(curve1=
+    mdb.models['Model-1'].sketches['__edit__'].geometry[25], point1=(
+    0.0177533812820911, 0.0104027464985847))
+mdb.models['Model-1'].sketches['__edit__'].autoTrimCurve(curve1=
+    mdb.models['Model-1'].sketches['__edit__'].geometry[24], point1=(
+    0.0163844786584377, 0.00261234305799007))
+mdb.models['Model-1'].sketches['__edit__'].autoTrimCurve(curve1=
+    mdb.models['Model-1'].sketches['__edit__'].geometry[29], point1=(
+    0.0123372869566083, 0.00231499969959259))
+mdb.models['Model-1'].sketches['__edit__'].autoTrimCurve(curve1=
+    mdb.models['Model-1'].sketches['__edit__'].geometry[28], point1=(
+    0.00465952698141336, 0.0048721544444561))
+mdb.models['Model-1'].sketches['__edit__'].offset(distance=0.003, objectList=(
+    mdb.models['Model-1'].sketches['__edit__'].geometry[2], 
+    mdb.models['Model-1'].sketches['__edit__'].geometry[3], 
+    mdb.models['Model-1'].sketches['__edit__'].geometry[4], 
+    mdb.models['Model-1'].sketches['__edit__'].geometry[5]), side=LEFT)
+mdb.models['Model-1'].parts['Spiral5'].features['Solid extrude-1'].setValues(
+    sketch=mdb.models['Model-1'].sketches['__edit__'])
+del mdb.models['Model-1'].sketches['__edit__']
+mdb.models['Model-1'].Part(name='Spiral6', objectToCopy=
+    mdb.models['Model-1'].parts['Spiral5'])
+mdb.models['Model-1'].ConstrainedSketch(name='__edit__', objectToCopy=
+    mdb.models['Model-1'].parts['Spiral6'].features['Solid extrude-1'].sketch)
+mdb.models['Model-1'].parts['Spiral6'].projectReferencesOntoSketch(filter=
+    COPLANAR_EDGES, sketch=mdb.models['Model-1'].sketches['__edit__'], 
+    upToFeature=
+    mdb.models['Model-1'].parts['Spiral6'].features['Solid extrude-1'])
+mdb.models['Model-1'].sketches['__edit__'].dimensions[4].setValues(value=
+    0.011884426)
+mdb.models['Model-1'].sketches['__edit__'].dimensions[0].setValues(value=
+    0.011884426)
+mdb.models['Model-1'].sketches['__edit__'].autoTrimCurve(curve1=
+    mdb.models['Model-1'].sketches['__edit__'].geometry[32], point1=(
+    0.0100668221712112, 0.00965069700032473))
+mdb.models['Model-1'].sketches['__edit__'].autoTrimCurve(curve1=
+    mdb.models['Model-1'].sketches['__edit__'].geometry[31], point1=(
+    0.0120210740715265, 0.00384935270994902))
+mdb.models['Model-1'].sketches['__edit__'].autoTrimCurve(curve1=
+    mdb.models['Model-1'].sketches['__edit__'].geometry[30], point1=(
+    0.0121060386300087, 0.00237779226154089))
+mdb.models['Model-1'].sketches['__edit__'].autoTrimCurve(curve1=
+    mdb.models['Model-1'].sketches['__edit__'].geometry[34], point1=(
+    0.00984024256467819, 0.00189670547842979))
+mdb.models['Model-1'].sketches['__edit__'].autoTrimCurve(curve1=
+    mdb.models['Model-1'].sketches['__edit__'].geometry[33], point1=(
+    0.00502542406320572, 0.00670757610350847))
+mdb.models['Model-1'].sketches['__edit__'].autoTrimCurve(curve1=
+    mdb.models['Model-1'].sketches['__edit__'].geometry[35], point1=(
+    0.00550690665841103, 0.0110939582809806))
+mdb.models['Model-1'].sketches['__edit__'].offset(distance=0.002, objectList=(
+    mdb.models['Model-1'].sketches['__edit__'].geometry[2], 
+    mdb.models['Model-1'].sketches['__edit__'].geometry[3], 
+    mdb.models['Model-1'].sketches['__edit__'].geometry[4], 
+    mdb.models['Model-1'].sketches['__edit__'].geometry[5]), side=LEFT)
+mdb.models['Model-1'].parts['Spiral6'].features['Solid extrude-1'].setValues(
+    sketch=mdb.models['Model-1'].sketches['__edit__'])
+del mdb.models['Model-1'].sketches['__edit__']
+mdb.openStep('C:/Users/st195764/Downloads/Spiral1_onshape.step', scaleFromFile=
+    OFF)
+mdb.models['Model-1'].PartFromGeometryFile(combine=False, dimensionality=
+    THREE_D, geometryFile=mdb.acis, name='Spiral1_onshape', type=
+    DEFORMABLE_BODY)
+mdb.models['Model-1'].ConstrainedSketch(name='__profile__', sheetSize=0.1)
+mdb.models['Model-1'].sketches['__profile__'].sketchOptions.setValues(
+    decimalPlaces=3)
+mdb.models['Model-1'].sketches['__profile__'].rectangle(point1=(0.0, 0.0), 
+    point2=(0.006, 0.0))
+#* Rectangle cannot be created.
+mdb.models['Model-1'].sketches['__profile__'].rectangle(point1=(0.0, 0.0), 
+    point2=(0.0075, 0.0105))
+mdb.models['Model-1'].sketches['__profile__'].ObliqueDimension(textPoint=(
+    -0.00261757709085941, 0.00550728850066662), value=0.00200764, vertex1=
+    mdb.models['Model-1'].sketches['__profile__'].vertices[0], vertex2=
+    mdb.models['Model-1'].sketches['__profile__'].vertices[1])
+mdb.models['Model-1'].sketches['__profile__'].ObliqueDimension(textPoint=(
+    0.00286400713957846, 0.00555869191884995), value=0.0001, vertex1=
+    mdb.models['Model-1'].sketches['__profile__'].vertices[3], vertex2=
+    mdb.models['Model-1'].sketches['__profile__'].vertices[0])
+mdb.models['Model-1'].Part(dimensionality=THREE_D, name='Spiral1flex', type=
+    DEFORMABLE_BODY)
+mdb.models['Model-1'].parts['Spiral1flex'].BaseSolidExtrude(depth=0.05, sketch=
+    mdb.models['Model-1'].sketches['__profile__'])
+del mdb.models['Model-1'].sketches['__profile__']
+mdb.models['Model-1'].Part(name='Spiral1_onshape2', objectToCopy=
+    mdb.models['Model-1'].parts['Spiral1_onshape'])
+mdb.models['Model-1'].rootAssembly.DatumCsysByDefault(CARTESIAN)
+mdb.models['Model-1'].rootAssembly.Instance(dependent=ON, name=
+    'Spiral1_onshape-1', part=mdb.models['Model-1'].parts['Spiral1_onshape'])
+mdb.models['Model-1'].rootAssembly.Instance(dependent=ON, name=
+    'Spiral1_onshape2-1', part=mdb.models['Model-1'].parts['Spiral1_onshape2'])
+mdb.models['Model-1'].rootAssembly.Instance(dependent=ON, name='Spiral1flex-1', 
+    part=mdb.models['Model-1'].parts['Spiral1flex'])
+mdb.models['Model-1'].rootAssembly.translate(instanceList=(
+    'Spiral1_onshape2-1', ), vector=(0.0, 0.0, 4.0))
+mdb.models['Model-1'].rootAssembly.translate(instanceList=('Spiral1_onshape-1', 
+    ), vector=(-0.025, -0.005, 0.048))
+del mdb.models['Model-1'].rootAssembly.features['Spiral1_onshape2-1']
+del mdb.models['Model-1'].rootAssembly.features['Spiral1_onshape-1']
+mdb.models['Model-1'].rootAssembly.Instance(dependent=ON, name=
+    'Spiral1_onshape-1', part=mdb.models['Model-1'].parts['Spiral1_onshape'])
+mdb.models['Model-1'].rootAssembly.rotate(angle=50.0, axisDirection=(0.00833, 
+    0.049301, 0.0), axisPoint=(0.0, 0.0, 0.0), instanceList=(
+    'Spiral1_onshape-1', ))
+del mdb.models['Model-1'].rootAssembly.features['Spiral1_onshape-1']
+mdb.models['Model-1'].rootAssembly.Instance(dependent=ON, name=
+    'Spiral1_onshape-1', part=mdb.models['Model-1'].parts['Spiral1_onshape'])
+mdb.models['Model-1'].rootAssembly.Instance(dependent=ON, name=
+    'Spiral1_onshape-2', part=mdb.models['Model-1'].parts['Spiral1_onshape'])
+del mdb.models['Model-1'].rootAssembly.features['Spiral1_onshape-1']
+del mdb.models['Model-1'].rootAssembly.features['Spiral1_onshape-2']
+del mdb.models['Model-1'].parts['Spiral1_onshape2']
+mdb.models['Model-1'].rootAssembly.Instance(dependent=ON, name=
+    'Spiral1_onshape-1', part=mdb.models['Model-1'].parts['Spiral1_onshape'])
+mdb.models['Model-1'].rootAssembly.rotate(angle=50.0, axisDirection=(-10.0, 
+    0.0, 0.0), axisPoint=(0.05, 0.0, 0.0), instanceList=('Spiral1_onshape-1', 
+    ))
+mdb.models['Model-1'].rootAssembly.rotate(angle=90.0, axisDirection=(0.0, 10.0, 
+    0.0), axisPoint=(0.0001, 0.008492, 0.0), instanceList=('Spiral1_onshape-1', 
+    'Spiral1flex-1'))
+mdb.models['Model-1'].rootAssembly.rotate(angle=90.0, axisDirection=(0.0, 10.0, 
+    0.0), axisPoint=(0.0001, 0.008492, 0.0), instanceList=('Spiral1_onshape-1', 
+    'Spiral1flex-1'))
+mdb.models['Model-1'].rootAssembly.rotate(angle=90.0, axisDirection=(10.0, 0.0, 
+    0.0), axisPoint=(0.0001, 0.0105, 0.0), instanceList=('Spiral1flex-1', ))
+mdb.models['Model-1'].rootAssembly.rotate(angle=90.0, axisDirection=(0.0, 0.0, 
+    10.0), axisPoint=(0.0001, 0.0105, -0.002008), instanceList=(
+    'Spiral1flex-1', ))
+mdb.models['Model-1'].rootAssembly.translate(instanceList=('Spiral1flex-1', ), 
+    vector=(0.0001, -0.0106, 0.0))
+mdb.models['Model-1'].rootAssembly.ParallelFace(fixedPlane=
+    mdb.models['Model-1'].rootAssembly.instances['Spiral1_onshape-1'].faces[9], 
+    flip=OFF, movablePlane=
+    mdb.models['Model-1'].rootAssembly.instances['Spiral1flex-1'].faces[0])
+mdb.models['Model-1'].rootAssembly.translate(instanceList=('Spiral1flex-1', ), 
+    vector=(0.0, 0.000765, 0.000346))
+mdb.models['Model-1'].rootAssembly.Instance(dependent=ON, name=
+    'Spiral1_onshape-2', part=mdb.models['Model-1'].parts['Spiral1_onshape'])
+mdb.models['Model-1'].rootAssembly.rotate(angle=180.0, axisDirection=(
+    -1.665967, -9.860251, 0.0), axisPoint=(0.00833, 0.049301, 0.0), 
+    instanceList=('Spiral1_onshape-2', ))
+mdb.models['Model-1'].rootAssembly.ParallelFace(fixedPlane=
+    mdb.models['Model-1'].rootAssembly.instances['Spiral1flex-1'].faces[0], 
+    flip=OFF, movablePlane=
+    mdb.models['Model-1'].rootAssembly.instances['Spiral1_onshape-2'].faces[9])
+mdb.models['Model-1'].rootAssembly.translate(instanceList=('Spiral1_onshape-2', 
+    ), vector=(-0.000601, -0.002116, -0.00345))
+mdb.models['Model-1'].rootAssembly.rotate(angle=180.0, axisDirection=(9.827727, 
+    -1.513945, 1.060076), axisPoint=(-0.048939, 0.009157, -0.006534), 
+    instanceList=('Spiral1_onshape-2', ))
+mdb.models['Model-1'].rootAssembly.rotate(angle=180.0, axisDirection=(9.827727, 
+    -1.513945, 1.060076), axisPoint=(-0.048939, 0.009157, -0.006534), 
+    instanceList=('Spiral1_onshape-2', ))
+mdb.models['Model-1'].rootAssembly.rotate(angle=180.0, axisDirection=(9.827727, 
+    -1.513945, 1.060076), axisPoint=(-0.048939, 0.009157, -0.006534), 
+    instanceList=('Spiral1_onshape-2', ))
+mdb.models['Model-1'].rootAssembly.rotate(angle=180.0, axisDirection=(9.827727, 
+    -1.513945, 1.060076), axisPoint=(-0.042676, 0.012973, -0.003339), 
+    instanceList=('Spiral1_onshape-2', ))
+del mdb.models['Model-1'].rootAssembly.features['Parallel Face-2']
+mdb.models['Model-1'].rootAssembly.translate(instanceList=('Spiral1_onshape-2', 
+    ), vector=(-9.7e-05, -0.00572, -0.002919))
+mdb.models['Model-1'].rootAssembly.translate(instanceList=('Spiral1_onshape-2', 
+    ), vector=(-0.002776, -0.016427, 0.0))
+mdb.models['Model-1'].ConstrainedSketch(name='__profile__', sheetSize=0.1)
+mdb.models['Model-1'].sketches['__profile__'].sketchOptions.setValues(
+    decimalPlaces=3)
+mdb.models['Model-1'].sketches['__profile__'].Line(point1=(0.0, 0.0), point2=(
+    0.011, 0.015))
+mdb.models['Model-1'].sketches['__profile__'].Line(point1=(0.0, 0.0), point2=(
+    -0.016, 0.017))
+# Save by st195764 on 2026_01_27-20.07.38; build 2025 2024_09_20-15.00.46 RELr427 198590
+# Save by st195764 on 2026_01_27-20.07.50; build 2025 2024_09_20-15.00.46 RELr427 198590
+# Save by st195764 on 2026_01_27-20.07.50; build 2025 2024_09_20-15.00.46 RELr427 198590
+# Save by st195764 on 2026_01_27-20.07.50; build 2025 2024_09_20-15.00.46 RELr427 198590
+# Save by st195764 on 2026_01_27-20.07.51; build 2025 2024_09_20-15.00.46 RELr427 198590
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+del mdb.models['Model-1'].sketches['__profile__']
+# Save by st195764 on 2026_01_27-20.07.59; build 2025 2024_09_20-15.00.46 RELr427 198590
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+mdb.models['Model-1'].rootAssembly.EdgeToEdge(fixedAxis=
+    mdb.models['Model-1'].rootAssembly.instances['Spiral1_onshape-2'].edges[23]
+    , flip=OFF, movableAxis=
+    mdb.models['Model-1'].rootAssembly.instances['Spiral1flex-1'].edges[1])
+mdb.models['Model-1'].rootAssembly.translate(instanceList=('Spiral1_onshape-2', 
+    ), vector=(0.001388, -0.001645, 0.001152))
+mdb.models['Model-1'].rootAssembly.instances['Spiral1_onshape-2'].ConvertConstraints(
+    )
+mdb.models['Model-1'].rootAssembly.translate(instanceList=('Spiral1_onshape-2', 
+    ), vector=(0.0, -0.001645, 0.001152))
+mdb.models['Model-1'].rootAssembly.rotate(angle=-45.0, axisDirection=(-10.0, 
+    0.0, 0.0), axisPoint=(0.0002, -5.8e-05, -8.2e-05), instanceList=(
+    'Spiral1_onshape-2', ))
+# Save by st195764 on 2026_02_06-15.48.05; build 2025 2024_09_20-15.00.46 RELr427 198590
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+mdb.models['Model-1'].rootAssembly.ParallelEdge(fixedAxis=
+    mdb.models['Model-1'].rootAssembly.instances['Spiral1flex-1'].edges[1], 
+    flip=OFF, movableAxis=
+    mdb.models['Model-1'].rootAssembly.instances['Spiral1_onshape-2'].edges[12])
+mdb.models['Model-1'].rootAssembly.rotate(angle=-45.0, axisDirection=(10.0, 
+    0.0, 0.0), axisPoint=(-0.0498, -0.000306, -0.000329), instanceList=(
+    'Spiral1_onshape-2', ))
+# Save by st195764 on 2026_02_06-15.51.38; build 2025 2024_09_20-15.00.46 RELr427 198590
+# Save by st195764 on 2026_02_06-15.53.32; build 2025 2024_09_20-15.00.46 RELr427 198590

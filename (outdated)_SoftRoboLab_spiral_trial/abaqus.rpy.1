@@ -1,0 +1,271 @@
+# -*- coding: mbcs -*-
+#
+# Abaqus/CAE Release 2025 replay file
+# Internal Version: 2024_09_20-15.00.46 RELr427 198590
+# Run by st195764 on Fri Feb  6 15:40:57 2026
+#
+
+# from driverUtils import executeOnCaeGraphicsStartup
+# executeOnCaeGraphicsStartup()
+#: Executing "onCaeGraphicsStartup()" in the site directory ...
+from abaqus import *
+from abaqusConstants import *
+session.Viewport(name='Viewport: 1', origin=(0.0, 0.0), width=302.201538085938, 
+    height=211.859268188477)
+session.viewports['Viewport: 1'].makeCurrent()
+session.viewports['Viewport: 1'].maximize()
+from caeModules import *
+from driverUtils import executeOnCaeStartup
+executeOnCaeStartup()
+openMdb('Spiral_trial.cae')
+#: The model database "C:\Users\st195764\Desktop\ARF_soft_seminar\Spiral_trial.cae" has been opened.
+session.viewports['Viewport: 1'].setValues(displayedObject=None)
+session.viewports['Viewport: 1'].partDisplay.geometryOptions.setValues(
+    referenceRepresentation=ON)
+p = mdb.models['Model-1'].parts['Spiral1']
+session.viewports['Viewport: 1'].setValues(displayedObject=p)
+a = mdb.models['Model-1'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(
+    optimizationTasks=OFF, geometricRestrictions=OFF, stopConditions=OFF)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.221055, 
+    farPlane=0.340054, width=0.11557, height=0.0613744, cameraPosition=(
+    0.159478, 0.169909, 0.172381), cameraTarget=(0.00375424, 0.0141854, 
+    0.0166577), viewOffsetX=-0.000223016, viewOffsetY=0.00557598)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.231081, 
+    farPlane=0.339636, width=0.120811, height=0.064158, cameraPosition=(
+    0.228854, 0.0680542, 0.152087), cameraUpVector=(-0.500193, 0.84275, 
+    -0.198947), cameraTarget=(0.00521604, 0.00922796, 0.0132533), 
+    viewOffsetX=-0.000233131, viewOffsetY=0.00582888)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.237182, 
+    farPlane=0.333535, width=0.0460755, height=0.0244689, 
+    viewOffsetX=0.00423859, viewOffsetY=-4.15966e-05)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.252679, 
+    farPlane=0.346876, width=0.049086, height=0.0260676, cameraPosition=(
+    0.260505, 0.071959, -0.0801812), cameraUpVector=(-0.400364, 0.774969, 
+    0.489011), cameraTarget=(0.0111736, 0.00821347, 0.000561917), 
+    viewOffsetX=0.00451553, viewOffsetY=-4.43144e-05)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.249474, 
+    farPlane=0.350079, width=0.0863236, height=0.045843, 
+    viewOffsetX=0.00673683, viewOffsetY=0.00545182)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.242103, 
+    farPlane=0.345427, width=0.0837729, height=0.0444884, cameraPosition=(
+    0.228975, -0.0625497, 0.155701), cameraUpVector=(-0.0238319, 0.980801, 
+    -0.193547), cameraTarget=(-0.000149854, -0.00184946, 0.0269909), 
+    viewOffsetX=0.00653776, viewOffsetY=0.00529072)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.247235, 
+    farPlane=0.340295, width=0.0280876, height=0.0149162, 
+    viewOffsetX=0.0117353, viewOffsetY=-0.00438851)
+a = mdb.models['Model-1'].rootAssembly
+e1 = a.instances['Spiral1flex-1'].edges
+e2 = a.instances['Spiral1_onshape-2'].edges
+a.EdgeToEdge(movableAxis=e1[1], fixedAxis=e2[23], flip=OFF)
+#: Warning: The order of fixed and movable entities was swapped to avoid a dependency cycle.
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.241591, 
+    farPlane=0.347761, width=0.142619, height=0.0757395, viewOffsetX=0.0295483, 
+    viewOffsetY=0.000848394)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.27862, 
+    farPlane=0.371788, width=0.164479, height=0.0873482, cameraPosition=(
+    0.282247, -0.0110798, -0.0915418), cameraUpVector=(-0.100289, 0.470176, 
+    0.876856), cameraTarget=(0.0265618, -0.0304279, -0.00787754), 
+    viewOffsetX=0.0340772, viewOffsetY=0.000978429)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.255696, 
+    farPlane=0.379184, width=0.150946, height=0.0801614, cameraPosition=(
+    0.252574, 0.148083, 0.0453776), cameraUpVector=(-0.413519, -0.257113, 
+    0.873438), cameraTarget=(0.0330674, -0.00200334, 0.000208763), 
+    viewOffsetX=0.0312734, viewOffsetY=0.000897926)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.266225, 
+    farPlane=0.378272, width=0.157162, height=0.0834624, cameraPosition=(
+    0.275041, 0.104062, -0.0297693), cameraUpVector=(-0.304731, 0.064798, 
+    0.950232), cameraTarget=(0.0321319, -0.0105788, -0.00523436), 
+    viewOffsetX=0.0325612, viewOffsetY=0.000934902)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.278781, 
+    farPlane=0.365716, width=0.0130198, height=0.00691431, 
+    viewOffsetX=0.0235301, viewOffsetY=0.00622625)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.286356, 
+    farPlane=0.354576, width=0.0133736, height=0.00710216, cameraPosition=(
+    0.29489, 0.0241987, -0.00034131), cameraUpVector=(-0.347475, -0.0299951, 
+    0.937209), cameraTarget=(0.029696, -0.0248523, -0.00430213), 
+    viewOffsetX=0.0241694, viewOffsetY=0.00639541)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.286247, 
+    farPlane=0.354686, width=0.0133685, height=0.00709949, 
+    viewOffsetX=0.0265984, viewOffsetY=0.0054767)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.286324, 
+    farPlane=0.354608, width=0.0133721, height=0.0071014, cameraPosition=(
+    0.294844, 0.0246122, -0.00237349), cameraUpVector=(-0.335777, -0.0932488, 
+    0.937315), cameraTarget=(0.0296499, -0.0244388, -0.00633431), 
+    viewOffsetX=0.0266056, viewOffsetY=0.00547818)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.286324, 
+    farPlane=0.354609, width=0.0133721, height=0.00710141, cameraPosition=(
+    0.294681, 0.0258034, -0.00622813), cameraUpVector=(-0.312936, -0.215739, 
+    0.924947), cameraTarget=(0.0294871, -0.0232476, -0.0101889), 
+    viewOffsetX=0.0266056, viewOffsetY=0.00547819)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.286324, 
+    farPlane=0.354608, width=0.0133721, height=0.00710142, cameraPosition=(
+    0.294425, 0.0274829, -0.00988385), cameraUpVector=(-0.290393, -0.335301, 
+    0.896239), cameraTarget=(0.0292311, -0.0215681, -0.0138446), 
+    viewOffsetX=0.0266056, viewOffsetY=0.00547819)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.28679, 
+    farPlane=0.351772, width=0.0133939, height=0.00711297, cameraPosition=(
+    0.29599, 0.00504673, 0.00552215), cameraUpVector=(-0.351793, -0.418026, 
+    0.837554), cameraTarget=(0.0285107, -0.0237441, -0.0138501), 
+    viewOffsetX=0.0266489, viewOffsetY=0.0054871)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.285884, 
+    farPlane=0.352678, width=0.0247887, height=0.0131643, 
+    viewOffsetX=0.0252524, viewOffsetY=0.00489237)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.28705, 
+    farPlane=0.349281, width=0.0248899, height=0.013218, cameraPosition=(
+    0.295113, -0.0213767, 0.0206021), cameraUpVector=(-0.424991, -0.459289, 
+    0.780023), cameraTarget=(0.0275582, -0.0267687, -0.0130858), 
+    viewOffsetX=0.0253554, viewOffsetY=0.00491234)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.287039, 
+    farPlane=0.349293, width=0.0264776, height=0.0140612, 
+    viewOffsetX=0.0250516, viewOffsetY=0.00588399)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.286897, 
+    farPlane=0.349435, width=0.0264645, height=0.0140542, cameraPosition=(
+    0.294868, -0.023198, 0.0228381), cameraUpVector=(-0.431899, -0.373169, 
+    0.821102), cameraTarget=(0.0273134, -0.02859, -0.0108498), 
+    viewOffsetX=0.0250392, viewOffsetY=0.00588107)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.284765, 
+    farPlane=0.358742, width=0.0262679, height=0.0139498, cameraPosition=(
+    0.291321, 0.0323763, -0.0395884), cameraUpVector=(-0.197087, -0.375438, 
+    0.905651), cameraTarget=(0.0275918, -0.0205215, -0.0196359), 
+    viewOffsetX=0.0248532, viewOffsetY=0.00583737)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.286479, 
+    farPlane=0.357029, width=0.00720636, height=0.00382701, 
+    viewOffsetX=0.0284491, viewOffsetY=0.00684543)
+session.viewports['Viewport: 1'].view.setValues(width=0.00604097, 
+    height=0.00320812, cameraPosition=(0.294441, -0.00373775, 0.00252858), 
+    cameraUpVector=(0, 1, 0), cameraTarget=(-0.0273127, -0.00373775, 
+    0.00252858), viewOffsetX=0, viewOffsetY=0)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.29125, 
+    farPlane=0.34862, width=0.0348848, height=0.0185259, 
+    viewOffsetX=-0.00463542, viewOffsetY=0.00274664)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.289815, 
+    farPlane=0.350159, width=0.0347129, height=0.0184346, cameraPosition=(
+    0.294447, 0.00471735, 0.0064188), cameraUpVector=(-0.0263583, 0.999522, 
+    0.0161453), cameraTarget=(-0.0271719, -0.00370006, 0.00245853), 
+    viewOffsetX=-0.00461258, viewOffsetY=0.0027331)
+session.viewports['Viewport: 1'].view.setValues(width=0.0349045, 
+    height=0.0185364, cameraPosition=(-0.0255463, 0.319266, 0.00762073), 
+    cameraUpVector=(0, 0, 1), cameraTarget=(-0.0255463, -0.000721496, 
+    0.00762073), viewOffsetX=0, viewOffsetY=0)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.275961, 
+    farPlane=0.377062, width=0.10422, height=0.0553469, viewOffsetX=-0.0168197, 
+    viewOffsetY=-0.00375946)
+session.viewports['Viewport: 1'].view.setValues(width=0.102137, 
+    height=0.0542409, cameraPosition=(0.320866, -0.00724581, 0.00317262), 
+    cameraUpVector=(0, 1, 0), cameraTarget=(-0.00564554, -0.00724581, 
+    0.00317262), viewOffsetX=0, viewOffsetY=0)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.316425, 
+    farPlane=0.376296, width=0.0437804, height=0.02325, viewOffsetX=0.00150485, 
+    viewOffsetY=0.00729215)
+leaf = dgm.Leaf(leafType=DEFAULT_MODEL)
+session.viewports['Viewport: 1'].assemblyDisplay.displayGroup.either(leaf=leaf)
+leaf = dgm.Leaf(leafType=DEFAULT_MODEL)
+session.viewports['Viewport: 1'].assemblyDisplay.displayGroup.either(leaf=leaf)
+session.viewports['Viewport: 1'].view.setValues(session.views['Iso'])
+session.viewports['Viewport: 1'].view.setValues(session.views['User-1'])
+session.viewports['Viewport: 1'].view.setValues(session.views['User-2'])
+session.viewports['Viewport: 1'].view.setValues(session.views['User-3'])
+session.viewports['Viewport: 1'].view.setValues(session.views['User-4'])
+session.viewports['Viewport: 1'].view.setValues(session.views['Front'])
+session.viewports['Viewport: 1'].view.setValues(session.views['Back'])
+session.viewports['Viewport: 1'].view.setValues(session.views['Top'])
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.154393, 
+    farPlane=0.262691, width=0.0744668, height=0.0395464, cameraPosition=(
+    -0.00805661, 0.162899, 0.136583), cameraUpVector=(-0.13975, 0.578083, 
+    -0.803922), cameraTarget=(-0.0254941, -0.00724583, 0.0172667))
+session.viewports['Viewport: 1'].view.setValues(session.views['Top'])
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.171483, 
+    farPlane=0.245602, width=0.0827094, height=0.0439237, cameraPosition=(
+    0.0214781, -0.028661, -0.184785), cameraUpVector=(-0.121681, -0.989609, 
+    0.0765991), cameraTarget=(-0.0254941, -0.00724584, 0.0172667))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.163223, 
+    farPlane=0.253862, width=0.0787253, height=0.0418079, cameraPosition=(
+    0.158524, -0.0379647, -0.0759187), cameraUpVector=(0.441093, -0.0714718, 
+    0.894611), cameraTarget=(-0.0254941, -0.00724584, 0.0172667))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.162326, 
+    farPlane=0.254759, width=0.0782925, height=0.041578, cameraPosition=(
+    0.151695, 0.0287168, -0.0866597), cameraUpVector=(0.526203, -0.21521, 
+    0.822676), cameraTarget=(-0.0254941, -0.00724583, 0.0172667))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.1651, 
+    farPlane=0.251985, width=0.0456278, height=0.0242311, 
+    viewOffsetX=0.000992955, viewOffsetY=-0.00185346)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.160959, 
+    farPlane=0.256741, width=0.0444834, height=0.0236234, cameraPosition=(
+    0.142599, 0.0583393, -0.0879088), cameraUpVector=(0.580926, -0.244677, 
+    0.77631), cameraTarget=(-0.0252575, -0.00725956, 0.0170251), 
+    viewOffsetX=0.000968051, viewOffsetY=-0.00180697)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.163252, 
+    farPlane=0.254429, width=0.0253134, height=0.013443, 
+    viewOffsetX=-1.69941e-05, viewOffsetY=-0.00346023)
+a = mdb.models['Model-1'].rootAssembly
+a.translate(instanceList=('Spiral1_onshape-2', ), vector=(0.001388, -0.001645, 
+    0.001152))
+#: Warning: Final translated position of instance 'Spiral1_onshape-2' has been modified due to preexisting constraints.
+#: The instance Spiral1_onshape-2 was translated by 1.388E-03, -1.645E-03, 1.152E-03 with respect to the assembly coordinate system
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.164657, 
+    farPlane=0.251927, width=0.00482279, height=0.00256119, 
+    viewOffsetX=-0.00203914, viewOffsetY=-0.00101044)
+a = mdb.models['Model-1'].rootAssembly
+p1 = a.instances['Spiral1_onshape-2']
+p1.ConvertConstraints()
+#: All position constraints of "Spiral1_onshape-2" have been converted to absolute positions
+a = mdb.models['Model-1'].rootAssembly
+a.translate(instanceList=('Spiral1_onshape-2', ), vector=(0.0, -0.001645, 
+    0.001152))
+#: The instance Spiral1_onshape-2 was translated by 0., -1.645E-03, 1.152E-03 with respect to the assembly coordinate system
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.16418, 
+    farPlane=0.253501, width=0.0177787, height=0.00944158, 
+    viewOffsetX=0.000181157, viewOffsetY=-0.00195085)
+a = mdb.models['Model-1'].rootAssembly
+a.rotate(instanceList=('Spiral1_onshape-2', ), axisPoint=(0.0002, -5.8e-05, 
+    -8.2e-05), axisDirection=(-10.0, 0.0, 0.0), angle=-45.0)
+#: The instance Spiral1_onshape-2 was rotated by -45. degrees about the axis defined by the point 200.E-06, -58.E-06, -82.E-06 and the vector -10., 0., 0.
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.14217, 
+    farPlane=0.253722, width=0.0732001, height=0.0388737, 
+    viewOffsetX=0.0156158, viewOffsetY=-0.00404691)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.141804, 
+    farPlane=0.254088, width=0.0730116, height=0.0387735, cameraPosition=(
+    0.145798, 0.0592036, -0.0822517), cameraUpVector=(0.521215, 0.0305911, 
+    0.852877), cameraTarget=(-0.0220588, -0.00639523, 0.0226822), 
+    viewOffsetX=0.0155756, viewOffsetY=-0.00403649)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.156717, 
+    farPlane=0.278848, width=0.0806899, height=0.0428512, cameraPosition=(
+    0.0774043, 0.0739037, 0.17832), cameraUpVector=(-0.766044, -0.249827, 
+    0.592252), cameraTarget=(-0.0227506, -0.00741645, 0.0144714), 
+    viewOffsetX=0.0172136, viewOffsetY=-0.00446099)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.158849, 
+    farPlane=0.266523, width=0.0817878, height=0.0434342, cameraPosition=(
+    0.101831, 8.52523e-05, 0.171941), cameraUpVector=(-0.689326, -0.482671, 
+    0.540239), cameraTarget=(-0.0214532, -0.0116484, 0.00415033), 
+    viewOffsetX=0.0174478, viewOffsetY=-0.00452169)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.172482, 
+    farPlane=0.244127, width=0.0888069, height=0.0471618, cameraPosition=(
+    0.183773, -0.00621537, 0.00723566), cameraUpVector=(-0.0483035, -0.789462, 
+    0.611896), cameraTarget=(-0.0239679, -0.00763142, -0.0109914), 
+    viewOffsetX=0.0189452, viewOffsetY=-0.00490975)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.171518, 
+    farPlane=0.244828, width=0.0883104, height=0.0468981, cameraPosition=(
+    0.183493, -0.00894906, 0.00884461), cameraUpVector=(-0.0631291, -0.785162, 
+    0.616065), cameraTarget=(-0.0241132, -0.00772876, -0.0108747), 
+    viewOffsetX=0.0188393, viewOffsetY=-0.0048823)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.171765, 
+    farPlane=0.244582, width=0.0910014, height=0.0483272, 
+    viewOffsetX=0.0190863, viewOffsetY=0.00300485)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.15497, 
+    farPlane=0.276592, width=0.0821036, height=0.043602, cameraPosition=(
+    0.111009, 0.0502674, 0.161332), cameraUpVector=(-0.439995, -0.684221, 
+    0.58159), cameraTarget=(-0.00819678, -0.00939705, 0.000954723), 
+    viewOffsetX=0.0172201, viewOffsetY=0.00271104)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.16087, 
+    farPlane=0.267756, width=0.0852296, height=0.045262, cameraPosition=(
+    0.133359, 0.00249275, 0.146309), cameraUpVector=(-0.408737, -0.795812, 
+    0.446785), cameraTarget=(-0.00965559, -0.00902128, -0.00503498), 
+    viewOffsetX=0.0178757, viewOffsetY=0.00281426)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.167975, 
+    farPlane=0.260651, width=0.00485702, height=0.00257937, 
+    viewOffsetX=0.00234413, viewOffsetY=-0.0081757)
+mdb.save()
+#: The model database has been saved to "C:\Users\st195764\Desktop\ARF_soft_seminar\Spiral_trial.cae".
