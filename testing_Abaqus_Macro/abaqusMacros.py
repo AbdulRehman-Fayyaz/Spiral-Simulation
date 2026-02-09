@@ -26,18 +26,21 @@ def Macro1():
         sheetSize=200.0)
     g, v, d, c = s.geometry, s.vertices, s.dimensions, s.constraints
     s.setPrimaryObject(option=STANDALONE)
-    s.rectangle(point1=(0.0, 0.0), point2=(15.0, 10.0))
+    s.rectangle(point1=(-5.0, 5.0), point2=(5.0, -5.0))
     p = mdb.models['Model-1'].Part(name='Part-1', dimensionality=THREE_D, 
         type=DEFORMABLE_BODY)
     p = mdb.models['Model-1'].parts['Part-1']
-    p.BaseSolidExtrude(sketch=s, depth=20.0)
+    p.BaseSolidExtrude(sketch=s, depth=2.0)
     s.unsetPrimaryObject()
     p = mdb.models['Model-1'].parts['Part-1']
     session.viewports['Viewport: 1'].setValues(displayedObject=p)
     del mdb.models['Model-1'].sketches['__profile__']
-    session.viewports['Viewport: 1'].view.setValues(nearPlane=35.9521, 
-        farPlane=79.9173, width=63.8453, height=28.6514, viewOffsetX=9.33318, 
-        viewOffsetY=-1.09033)
-    mdb.save()
+    session.viewports['Viewport: 1'].partDisplay.setValues(sectionAssignments=ON, 
+        engineeringFeatures=ON)
+    session.viewports['Viewport: 1'].partDisplay.geometryOptions.setValues(
+        referenceRepresentation=OFF)
+    mdb.models['Model-1'].Material(name='Material-1')
+    mdb.models['Model-1'].materials['Material-1'].Elastic(table=((2000000000.0, 
+        0.3), ))
 
 
