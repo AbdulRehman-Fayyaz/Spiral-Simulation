@@ -1,0 +1,1899 @@
+1
+
+   Abaqus 2025                                  Date 10-Feb-2026   Time 17:06:06
+   For use by UNIVERSITAET STUTTGART under license from Dassault Systemes or its subsidiary.
+
+
+
+                         The Abaqus Software is a product of:
+
+                           Dassault Systemes Americas Corp.
+                           1301 Atwood Avenue, Suite 101W
+                              Johnston, RI 02919, USA
+ 
+
+
+                   The Abaqus Software is available only under license
+                   from Dassault Systemes or its subsidiary and may be
+                   used or reproduced only in accordance with the terms
+                   of such license.
+ 
+                          On machine MIB40-GAUSS 
+                          you are authorized to run
+                          Abaqus/Standard until 31-Mar-2025
+
+                          Your site id is: 200000000017928 
+
+
+ 
+                    For assistance or any other information you may
+                    obtain contact information for your local office
+                    from the world wide web at:
+
+                      https://www.3ds.com/products-services/simulia/services-support/
+
+ 
+                * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+                *                                                         * 
+                *                   *****************                     * 
+                *                   *  N O T I C E  *                     * 
+                *                   *****************                     * 
+                *                                                         * 
+                *                                                         * 
+                *                       Abaqus 2025                       * 
+                *                                                         * 
+                *       BUILD ID: 2024_09_20-15.00.46 RELr427 198590      * 
+                *                                                         * 
+                *                                                         * 
+                *  Please make sure you are using                         * 
+                *  release Abaqus 2025 manuals                            * 
+                *  plus the notes accompanying this release.              * 
+                *                                                         * 
+                *                                                         * 
+                *                                                         * 
+                *                                                         * 
+                *                                                         * 
+                *   This program may not be used for commercial purposes  * 
+                *           without payment of a commercial fee.          * 
+                *                                                         * 
+                * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+
+ 
+
+
+
+     PROCESSING PART, INSTANCE, AND ASSEMBLY INFORMATION
+   *******************************************************
+
+
+     END PROCESSING PART, INSTANCE, AND ASSEMBLY INFORMATION
+   ***********************************************************
+
+
+
+
+     OPTIONS BEING PROCESSED
+   ***************************
+
+
+  *Element, type=C3D8R
+  *Elset, elset=ASSEMBLY_SPIRAL-1_A-TAPE-SET
+  *Elset, elset=ASSEMBLY_SPIRAL-1_B-TAPE-SET
+  *Elset, elset=ASSEMBLY_SPIRAL-1_PLYWOOD-SET
+  *Elset, elset=ASSEMBLY__PICKEDSET18
+  *Elset, elset=ASSEMBLY___PICKEDSURF17_S2
+  *heading
+  *material, name=PLYWOOD
+  *density
+  *elastic
+  *material, name=TAPE
+  *density
+  *elastic
+  *solidsection, elset=ASSEMBLY_SPIRAL-1_A-TAPE-SET, material=TAPE
+  *solidsection, elset=ASSEMBLY_SPIRAL-1_B-TAPE-SET, material=TAPE
+  *solidsection, elset=ASSEMBLY_SPIRAL-1_PLYWOOD-SET, material=PLYWOOD
+  *solidsection, elset=ASSEMBLY_SPIRAL-1_A-TAPE-SET, material=TAPE
+  *solidsection, elset=ASSEMBLY_SPIRAL-1_B-TAPE-SET, material=TAPE
+  *solidsection, elset=ASSEMBLY_SPIRAL-1_PLYWOOD-SET, material=PLYWOOD
+  *surface, type=ELEMENT, name=ASSEMBLY__PICKEDSURF17
+  *surface, type=ELEMENT, name=ASSEMBLY__PICKEDSURF17
+  *boundary
+  *boundary
+  *surface, type=ELEMENT, name=ASSEMBLY__PICKEDSURF17
+  *output, field, variable=PRESELECT
+  *output, history, variable=PRESELECT
+  *output, field, variable=PRESELECT
+  *output, history, variable=PRESELECT
+  *output, field, variable=PRESELECT
+  *output, history, variable=PRESELECT
+  
+                               E L E M E N T   Q U A L I T Y  C H E C K S        
+  
+  
+ ***NOTES: DISTORTED ISOPARAMETRIC ELEMENTS: ANGLE BETWEEN ISOPARAMETRIC LINES 
+           IS LESS THAN 45 DEGREES OR GREATER THAN 135 DEGREES.
+  
+           TETRAHEDRAL QUALITY MEASURE: VOLUME OF TETRAHEDRON DIVIDED BY THE 
+           VOLUME OF EQUILATERAL TETRAHEDRON WITH SAME CIRCUMSPHERE RADIUS; 
+           0 FOR DEGENERATE TETRAHEDRON AND 1 FOR EQUILATERIAL TETRAHEDRON. IT 
+           IS RECOMMENDED THAT THE TETRAHEDRAL QUALITY MEASURE BE GREATER THAN 
+           0.02, THE MIN INTERIOR (DIHEDRAL) ANGLE BE GREATER THAN 10 DEGREES, 
+           AND THE MAX INTERIOR (DIHEDRAL) ANGLE BE LESS THAN 160 DEGREES. 
+  
+           MODIFIED TETRAHEDRAL QUALITY MEASURE: ANGLES BETWEEN THE TWO LINE 
+           SEGMENTS ON EACH EDGE; THE EDGES OF MODIFIED TETRAHEDRAL SHOULD BE 
+           AS STRAIGHT AS POSSIBLE. IT IS RECOMMENDED THAT THE ANGLE BETWEEN 
+           THE TWO LINE SEGMENTS ON EACH EDGE IS BETWEEN 160 AND 180 DEGREES. 
+  
+           TRIANGULAR QUALITY MEASURE: AREA OF TRIANGLE DIVIDED BY THE AREA OF 
+           EQUILATERAL TRIANGLE WITH SAME CIRCUMCIRCLE RADIUS; 0 FOR DEGENERATE 
+           TRIANGLE AND 1 FOR EQUILATERAL TRIANGLE. IT IS RECOMMENDED THAT THE
+           TRIANGULAR QUALITY MEASURE BE GREATER THAN 0.01, THE MIN INTERIOR 
+           ANGLE BE GREATER THAN 10 DEGREES, AND THE MAX INTERIOR ANGLE BE LESS 
+           THAN 160 DEGREES. 
+  
+           NODAL ADJUSTMENTS ARISING FROM CONTACT INTERACTIONS AND/OR TIE 
+           CONSTRAINTS CAN CAUSE SEVERE ELEMENT DISTORTION. IT MAY BE NECESSARY 
+           TO REMESH IN ORDER TO REDUCE THE AMOUNT OF ADJUSTMENT. 
+
+ ***WARNING: 1617 elements are distorted. Either the isoparametric angles are 
+             out of the suggested limits or the triangular or tetrahedral 
+             quality measure is bad. The elements have been identified in 
+             element set WarnElemDistorted.
+  
+ --------------------------------------------------------------------------------
+ Distorted isoparametric elements
+  
+      Element        Min/max angle   Adjusted nodes 
+ ------------------ ---------------- -------------- 
+       SPIRAL-1.329          14.6902       NO       
+       SPIRAL-1.330           14.169       NO       
+       SPIRAL-1.331           24.864       NO       
+       SPIRAL-1.332          14.1752       NO       
+       SPIRAL-1.333          15.5885       NO       
+       SPIRAL-1.334           16.532       NO       
+       SPIRAL-1.335          15.0859       NO       
+       SPIRAL-1.336          13.8676       NO       
+       SPIRAL-1.337          12.8284       NO       
+       SPIRAL-1.338          11.9322       NO       
+       SPIRAL-1.339          11.1513       NO       
+       SPIRAL-1.340          10.4653       NO       
+       SPIRAL-1.341          9.85818       NO       
+       SPIRAL-1.342          9.31699       NO       
+       SPIRAL-1.343          8.83163       NO       
+       SPIRAL-1.344          8.39396       NO       
+       SPIRAL-1.345          7.99744       NO       
+       SPIRAL-1.346          7.63647       NO       
+       SPIRAL-1.347          15.8605       NO       
+       SPIRAL-1.348          8.05207       NO       
+       SPIRAL-1.349          7.98643       NO       
+       SPIRAL-1.350          7.92194       NO       
+       SPIRAL-1.351          7.85841       NO       
+       SPIRAL-1.352          7.79581       NO       
+       SPIRAL-1.353          7.73425       NO       
+       SPIRAL-1.354          7.67371       NO       
+       SPIRAL-1.355          7.61401       NO       
+       SPIRAL-1.356          7.55526       NO       
+       SPIRAL-1.357          7.49744       NO       
+       SPIRAL-1.358          7.44049       NO       
+       SPIRAL-1.359          7.38436       NO       
+       SPIRAL-1.360          7.32906       NO       
+       SPIRAL-1.361          7.27461       NO       
+       SPIRAL-1.362          7.22099       NO       
+       SPIRAL-1.363           17.669       NO       
+       SPIRAL-1.366           37.316       NO       
+       SPIRAL-1.368          17.8293       NO       
+       SPIRAL-1.370          40.7633       NO       
+       SPIRAL-1.383          17.7898       NO       
+       SPIRAL-1.401          25.7043       NO       
+       SPIRAL-1.423          34.8109       NO       
+       SPIRAL-1.429          24.3387       NO       
+       SPIRAL-1.430          23.1741       NO       
+       SPIRAL-1.444          17.8389       NO       
+       SPIRAL-1.446          17.3603       NO       
+       SPIRAL-1.447          17.6828       NO       
+       SPIRAL-1.448          42.9224       NO       
+       SPIRAL-1.449          43.2738       NO       
+       SPIRAL-1.450          43.6078       NO       
+       SPIRAL-1.451          17.6671       NO       
+       SPIRAL-1.452          43.9388       NO       
+       SPIRAL-1.453          44.2878       NO       
+       SPIRAL-1.454          44.7104       NO       
+       SPIRAL-1.456           17.671       NO       
+       SPIRAL-1.457          19.2369       NO       
+       SPIRAL-1.473          22.2176       NO       
+       SPIRAL-1.475          20.7735       NO       
+       SPIRAL-1.488          17.5918       NO       
+       SPIRAL-1.490          42.0142       NO       
+       SPIRAL-1.501          17.6608       NO       
+       SPIRAL-1.502          17.6635       NO       
+       SPIRAL-1.504          17.6654       NO       
+       SPIRAL-1.505          17.6482       NO       
+       SPIRAL-1.518          27.1853       NO       
+       SPIRAL-1.519          28.8057       NO       
+       SPIRAL-1.520           30.594       NO       
+       SPIRAL-1.521          32.5839       NO       
+       SPIRAL-1.522          40.1397       NO       
+       SPIRAL-1.523           43.331       NO       
+       SPIRAL-1.533          37.4777       NO       
+       SPIRAL-1.534          19.1908       NO       
+       SPIRAL-1.539          42.5269       NO       
+       SPIRAL-1.551           21.398       NO       
+       SPIRAL-1.556          39.6818       NO       
+       SPIRAL-1.558          39.2158       NO       
+       SPIRAL-1.569          20.6875       NO       
+       SPIRAL-1.570          35.6694       NO       
+       SPIRAL-1.571          38.3739       NO       
+       SPIRAL-1.572          37.9345       NO       
+       SPIRAL-1.573          37.4744       NO       
+       SPIRAL-1.574          38.6282       NO       
+       SPIRAL-1.575          39.7775       NO       
+       SPIRAL-1.576          39.4437       NO       
+       SPIRAL-1.577          37.2881       NO       
+       SPIRAL-1.578          34.9641       NO       
+       SPIRAL-1.579          36.5363       NO       
+       SPIRAL-1.580          36.0003       NO       
+       SPIRAL-1.581          33.3674       NO       
+       SPIRAL-1.582          35.1609       NO       
+       SPIRAL-1.583          37.0366       NO       
+       SPIRAL-1.584          36.6653       NO       
+       SPIRAL-1.585          36.2978       NO       
+       SPIRAL-1.586          35.8285       NO       
+       SPIRAL-1.587          32.6674       NO       
+       SPIRAL-1.588          27.6101       NO       
+       SPIRAL-1.589          18.0166       NO       
+      SPIRAL-1.1044          13.6478       NO       
+      SPIRAL-1.1045          14.0249       NO       
+      SPIRAL-1.1046          23.4173       NO       
+      SPIRAL-1.1047          13.0756       NO       
+      SPIRAL-1.1048          13.9741       NO       
+      SPIRAL-1.1049          15.0019       NO       
+      SPIRAL-1.1050          15.9028       NO       
+      SPIRAL-1.1051          14.8092       NO       
+      SPIRAL-1.1052          13.8536       NO       
+      SPIRAL-1.1053          13.0116       NO       
+      SPIRAL-1.1054          12.2646       NO       
+      SPIRAL-1.1055          11.5977       NO       
+      SPIRAL-1.1056          10.9988       NO       
+      SPIRAL-1.1057          10.4581       NO       
+      SPIRAL-1.1058          9.96748       NO       
+      SPIRAL-1.1059          9.52036       NO       
+      SPIRAL-1.1060          9.11137       NO       
+      SPIRAL-1.1061          8.73585       NO       
+      SPIRAL-1.1062          8.38985       NO       
+      SPIRAL-1.1063          8.06999       NO       
+      SPIRAL-1.1064          7.77341       NO       
+      SPIRAL-1.1065          7.49781       NO       
+      SPIRAL-1.1066          7.24101       NO       
+      SPIRAL-1.1067           15.488       NO       
+      SPIRAL-1.1068          7.86071       NO       
+      SPIRAL-1.1069          7.80649       NO       
+      SPIRAL-1.1070          7.75296       NO       
+      SPIRAL-1.1071          7.70015       NO       
+      SPIRAL-1.1072           7.6481       NO       
+      SPIRAL-1.1073          7.59674       NO       
+      SPIRAL-1.1074          7.54601       NO       
+      SPIRAL-1.1075          7.49596       NO       
+      SPIRAL-1.1076          7.44659       NO       
+      SPIRAL-1.1077          7.39788       NO       
+      SPIRAL-1.1078           7.3498       NO       
+      SPIRAL-1.1079          7.30232       NO       
+      SPIRAL-1.1080          7.25542       NO       
+      SPIRAL-1.1081          7.20916       NO       
+      SPIRAL-1.1082          7.16349       NO       
+      SPIRAL-1.1083           7.1184       NO       
+      SPIRAL-1.1084          7.07382       NO       
+      SPIRAL-1.1085          7.02974       NO       
+      SPIRAL-1.1086          6.98629       NO       
+      SPIRAL-1.1087          6.94338       NO       
+      SPIRAL-1.1091          36.5012       NO       
+      SPIRAL-1.1095          35.9448       NO       
+      SPIRAL-1.1105           44.342       NO       
+      SPIRAL-1.1106          41.7385       NO       
+      SPIRAL-1.1107          39.3577       NO       
+      SPIRAL-1.1108          37.1118       NO       
+      SPIRAL-1.1109          33.0774       NO       
+      SPIRAL-1.1110          31.2624       NO       
+      SPIRAL-1.1111          29.5808       NO       
+      SPIRAL-1.1112          28.0955       NO       
+      SPIRAL-1.1113          26.8496       NO       
+      SPIRAL-1.1114          25.8438       NO       
+      SPIRAL-1.1115          24.7829       NO       
+      SPIRAL-1.1116           23.653       NO       
+      SPIRAL-1.1117          22.5808       NO       
+      SPIRAL-1.1118          21.6419       NO       
+      SPIRAL-1.1119           20.792       NO       
+      SPIRAL-1.1122          33.1743       NO       
+      SPIRAL-1.1123          16.3528       NO       
+      SPIRAL-1.1124          38.1064       NO       
+      SPIRAL-1.1141          16.8011       NO       
+      SPIRAL-1.1142          40.4106       NO       
+      SPIRAL-1.1143          16.0053       NO       
+      SPIRAL-1.1144          15.9352       NO       
+      SPIRAL-1.1145          15.9004       NO       
+      SPIRAL-1.1146          33.5382       NO       
+      SPIRAL-1.1147          15.9178       NO       
+      SPIRAL-1.1148           15.974       NO       
+      SPIRAL-1.1149          16.1202       NO       
+      SPIRAL-1.1150          16.0948       NO       
+      SPIRAL-1.1151          43.3439       NO       
+      SPIRAL-1.1152          16.0233       NO       
+      SPIRAL-1.1153          15.9161       NO       
+      SPIRAL-1.1154          15.8957       NO       
+      SPIRAL-1.1155          15.9823       NO       
+      SPIRAL-1.1156          16.0052       NO       
+      SPIRAL-1.1157           16.021       NO       
+      SPIRAL-1.1158          16.0487       NO       
+      SPIRAL-1.1159          17.7559       NO       
+      SPIRAL-1.1162          44.4606       NO       
+      SPIRAL-1.1179          20.0876       NO       
+      SPIRAL-1.1181          19.4629       NO       
+      SPIRAL-1.1183          18.9113       NO       
+      SPIRAL-1.1197          36.2642       NO       
+      SPIRAL-1.1198          41.1481       NO       
+      SPIRAL-1.1199           40.729       NO       
+      SPIRAL-1.1201          35.3727       NO       
+      SPIRAL-1.1204          38.7573       NO       
+      SPIRAL-1.1205          35.7045       NO       
+      SPIRAL-1.1206          34.7583       NO       
+      SPIRAL-1.1233          35.0459       NO       
+      SPIRAL-1.1235          16.0178       NO       
+      SPIRAL-1.1236           41.348       NO       
+      SPIRAL-1.1282          16.3012       NO       
+      SPIRAL-1.1283          43.4059       NO       
+      SPIRAL-1.1284          34.4964       NO       
+      SPIRAL-1.1288          33.8055       NO       
+      SPIRAL-1.1292          16.0361       NO       
+      SPIRAL-1.1298          43.7132       NO       
+      SPIRAL-1.1324          18.8837       NO       
+      SPIRAL-1.1342           35.829       NO       
+      SPIRAL-1.1343          34.6162       NO       
+      SPIRAL-1.1345          35.0435       NO       
+      SPIRAL-1.1346          39.2585       NO       
+      SPIRAL-1.1347          34.8697       NO       
+      SPIRAL-1.1348          34.8643       NO       
+      SPIRAL-1.1349          42.2568       NO       
+      SPIRAL-1.1379          33.6917       NO       
+      SPIRAL-1.1435          33.4628       NO       
+      SPIRAL-1.1436          34.6846       NO       
+      SPIRAL-1.1440          39.8791       NO       
+      SPIRAL-1.1443          44.3217       NO       
+      SPIRAL-1.1444          39.7034       NO       
+      SPIRAL-1.1445           40.868       NO       
+      SPIRAL-1.1448          42.8041       NO       
+      SPIRAL-1.1449          43.1306       NO       
+      SPIRAL-1.1450          40.4176       NO       
+      SPIRAL-1.1457          40.0507       NO       
+      SPIRAL-1.1503          37.5434       NO       
+      SPIRAL-1.1521           43.622       NO       
+      SPIRAL-1.1522          41.2248       NO       
+      SPIRAL-1.1523          38.3315       NO       
+      SPIRAL-1.1524          37.1214       NO       
+      SPIRAL-1.1536          38.5771       NO       
+      SPIRAL-1.1539          38.5678       NO       
+      SPIRAL-1.1540          39.6266       NO       
+      SPIRAL-1.1544          43.0387       NO       
+      SPIRAL-1.1547          20.6254       NO       
+      SPIRAL-1.1548           38.556       NO       
+      SPIRAL-1.1549          42.6421       NO       
+      SPIRAL-1.1550          42.6604       NO       
+      SPIRAL-1.1551          42.5526       NO       
+      SPIRAL-1.1552          42.2921       NO       
+      SPIRAL-1.1553          42.0123       NO       
+      SPIRAL-1.1554           41.723       NO       
+      SPIRAL-1.1555           39.296       NO       
+      SPIRAL-1.1556          36.7415       NO       
+      SPIRAL-1.1557            36.25       NO       
+      SPIRAL-1.1558          35.7557       NO       
+      SPIRAL-1.1559          35.2596       NO       
+      SPIRAL-1.1560           34.763       NO       
+      SPIRAL-1.1561          34.2667       NO       
+      SPIRAL-1.1562          33.7717       NO       
+      SPIRAL-1.1563          33.2795       NO       
+      SPIRAL-1.1564          32.7903       NO       
+      SPIRAL-1.1565          32.3048       NO       
+      SPIRAL-1.1566          34.3828       NO       
+      SPIRAL-1.1567          36.6369       NO       
+      SPIRAL-1.1568          33.4553       NO       
+      SPIRAL-1.1569           30.414       NO       
+      SPIRAL-1.1570          32.8257       NO       
+      SPIRAL-1.1571           35.408       NO       
+      SPIRAL-1.1572          34.9086       NO       
+      SPIRAL-1.1573          30.5091       NO       
+      SPIRAL-1.1574          18.1008       NO       
+      SPIRAL-1.2549          13.3985       NO       
+      SPIRAL-1.2550          13.6724       NO       
+      SPIRAL-1.2551          22.6248       NO       
+      SPIRAL-1.2552          12.4641       NO       
+      SPIRAL-1.2553          13.0554       NO       
+      SPIRAL-1.2554          13.7046       NO       
+      SPIRAL-1.2555          14.4202       NO       
+      SPIRAL-1.2556          15.2116       NO       
+      SPIRAL-1.2557          15.1148       NO       
+      SPIRAL-1.2558          14.3371       NO       
+      SPIRAL-1.2559          13.6341       NO       
+      SPIRAL-1.2560          12.9957       NO       
+      SPIRAL-1.2561          12.4135       NO       
+      SPIRAL-1.2562          11.8804       NO       
+      SPIRAL-1.2563          11.3907       NO       
+      SPIRAL-1.2564          10.9393       NO       
+      SPIRAL-1.2565           10.522       NO       
+      SPIRAL-1.2566          10.1351       NO       
+      SPIRAL-1.2567          9.77526       NO       
+      SPIRAL-1.2568          9.43987       NO       
+      SPIRAL-1.2569          9.12656       NO       
+      SPIRAL-1.2570          8.83325       NO       
+      SPIRAL-1.2571          8.55806       NO       
+      SPIRAL-1.2572          8.29937       NO       
+      SPIRAL-1.2573          8.05575       NO       
+      SPIRAL-1.2574          7.82597       NO       
+      SPIRAL-1.2575          7.60884       NO       
+      SPIRAL-1.2576          7.40337       NO       
+      SPIRAL-1.2577          7.20865       NO       
+      SPIRAL-1.2578          7.02386       NO       
+      SPIRAL-1.2579          15.3983       NO       
+      SPIRAL-1.2580           7.8183       NO       
+      SPIRAL-1.2581          7.77401       NO       
+      SPIRAL-1.2582          7.73022       NO       
+      SPIRAL-1.2583          7.68693       NO       
+      SPIRAL-1.2584          7.64413       NO       
+      SPIRAL-1.2585          7.60177       NO       
+      SPIRAL-1.2586          7.55989       NO       
+      SPIRAL-1.2587          7.51845       NO       
+      SPIRAL-1.2588          7.47745       NO       
+      SPIRAL-1.2589           7.4369       NO       
+      SPIRAL-1.2590          7.39673       NO       
+      SPIRAL-1.2591          7.35705       NO       
+      SPIRAL-1.2592          7.31777       NO       
+      SPIRAL-1.2593          7.27896       NO       
+      SPIRAL-1.2594          7.24055       NO       
+      SPIRAL-1.2595          7.20251       NO       
+      SPIRAL-1.2596          7.16487       NO       
+      SPIRAL-1.2597          7.12763       NO       
+      SPIRAL-1.2598          7.09076       NO       
+      SPIRAL-1.2599          7.05426       NO       
+      SPIRAL-1.2600          7.01815       NO       
+      SPIRAL-1.2601          6.98241       NO       
+      SPIRAL-1.2602          6.94702       NO       
+      SPIRAL-1.2603          6.91198       NO       
+      SPIRAL-1.2604          6.87732       NO       
+      SPIRAL-1.2605          6.84298       NO       
+      SPIRAL-1.2606          6.80898       NO       
+      SPIRAL-1.2611          16.8784       NO       
+      SPIRAL-1.2612          17.1144       NO       
+      SPIRAL-1.2613          38.4102       NO       
+      SPIRAL-1.2614          16.9539       NO       
+      SPIRAL-1.2615          17.1924       NO       
+      SPIRAL-1.2616          17.4604       NO       
+      SPIRAL-1.2619          39.2678       NO       
+      SPIRAL-1.2622          16.8941       NO       
+      SPIRAL-1.2623          38.6101       NO       
+      SPIRAL-1.2664           35.152       NO       
+      SPIRAL-1.2666          31.4229       NO       
+      SPIRAL-1.2667          27.9689       NO       
+      SPIRAL-1.2678          20.3934       NO       
+      SPIRAL-1.2720          38.2063       NO       
+      SPIRAL-1.2721          42.7086       NO       
+      SPIRAL-1.2731          43.8782       NO       
+      SPIRAL-1.2736           44.895       NO       
+      SPIRAL-1.2737          17.1035       NO       
+      SPIRAL-1.2738          17.0714       NO       
+      SPIRAL-1.2739          38.8529       NO       
+      SPIRAL-1.2744          17.0525       NO       
+      SPIRAL-1.2745          17.0745       NO       
+      SPIRAL-1.2746          17.0293       NO       
+      SPIRAL-1.2747          36.1582       NO       
+      SPIRAL-1.2748          17.0096       NO       
+      SPIRAL-1.2749          35.8968       NO       
+      SPIRAL-1.2750          17.3323       NO       
+      SPIRAL-1.2751           17.992       NO       
+      SPIRAL-1.2752          43.7212       NO       
+      SPIRAL-1.2754          20.2306       NO       
+      SPIRAL-1.2756          22.9406       NO       
+      SPIRAL-1.2759          23.5855       NO       
+      SPIRAL-1.2760          24.0666       NO       
+      SPIRAL-1.2761          24.7721       NO       
+      SPIRAL-1.2763          30.3545       NO       
+      SPIRAL-1.2764          32.5247       NO       
+      SPIRAL-1.2765          38.1102       NO       
+      SPIRAL-1.2782          18.5676       NO       
+      SPIRAL-1.2783          17.0857       NO       
+      SPIRAL-1.2784          42.0442       NO       
+      SPIRAL-1.2787          38.5735       NO       
+      SPIRAL-1.2788          40.6602       NO       
+      SPIRAL-1.2790          17.5239       NO       
+      SPIRAL-1.2791          17.1522       NO       
+      SPIRAL-1.2792          42.9908       NO       
+      SPIRAL-1.2793           17.101       NO       
+      SPIRAL-1.2794          37.6457       NO       
+      SPIRAL-1.2795          17.0515       NO       
+      SPIRAL-1.2848          43.5062       NO       
+      SPIRAL-1.2852          38.9929       NO       
+      SPIRAL-1.2853          44.2045       NO       
+      SPIRAL-1.2857          38.5335       NO       
+      SPIRAL-1.2892          36.5852       NO       
+      SPIRAL-1.2894          27.1049       NO       
+      SPIRAL-1.2895          25.4235       NO       
+      SPIRAL-1.2896          21.4819       NO       
+      SPIRAL-1.2898          32.0303       NO       
+      SPIRAL-1.2906          17.0107       NO       
+      SPIRAL-1.2907          17.1378       NO       
+      SPIRAL-1.2908          17.0999       NO       
+      SPIRAL-1.2921          38.4954       NO       
+      SPIRAL-1.2980          40.4859       NO       
+      SPIRAL-1.2982          41.4162       NO       
+      SPIRAL-1.2983          39.1807       NO       
+      SPIRAL-1.2984          38.8489       NO       
+      SPIRAL-1.2985          16.8796       NO       
+      SPIRAL-1.2986          36.8764       NO       
+      SPIRAL-1.2987          37.2651       NO       
+      SPIRAL-1.2988          43.3632       NO       
+      SPIRAL-1.2989          17.1436       NO       
+      SPIRAL-1.2990          38.4372       NO       
+      SPIRAL-1.2991          37.0919       NO       
+      SPIRAL-1.2992          17.3026       NO       
+      SPIRAL-1.2993          17.0777       NO       
+      SPIRAL-1.2994          38.7634       NO       
+      SPIRAL-1.2995          39.2879       NO       
+      SPIRAL-1.2996          38.0743       NO       
+      SPIRAL-1.3006          21.8337       NO       
+      SPIRAL-1.3015           41.515       NO       
+      SPIRAL-1.3016          43.4625       NO       
+      SPIRAL-1.3018          28.9922       NO       
+      SPIRAL-1.3020          21.9503       NO       
+      SPIRAL-1.3023          33.7887       NO       
+      SPIRAL-1.3026          26.1767       NO       
+      SPIRAL-1.3029          23.2813       NO       
+      SPIRAL-1.3049          42.9666       NO       
+      SPIRAL-1.3067          36.5448       NO       
+      SPIRAL-1.3075          43.8256       NO       
+      SPIRAL-1.3087          44.6452       NO       
+      SPIRAL-1.3090          39.3017       NO       
+      SPIRAL-1.3114          41.7482       NO       
+      SPIRAL-1.3125          43.8378       NO       
+      SPIRAL-1.3158          43.7264       NO       
+      SPIRAL-1.3163          43.7168       NO       
+      SPIRAL-1.3169          43.7044       NO       
+      SPIRAL-1.3176          43.5593       NO       
+      SPIRAL-1.3197          39.7935       NO       
+      SPIRAL-1.3198          43.9554       NO       
+      SPIRAL-1.3214          41.2746       NO       
+      SPIRAL-1.3225          39.7246       NO       
+      SPIRAL-1.3239          20.2511       NO       
+      SPIRAL-1.3240          35.6455       NO       
+      SPIRAL-1.3241          39.6842       NO       
+      SPIRAL-1.3242          40.5882       NO       
+      SPIRAL-1.3243          40.4773       NO       
+      SPIRAL-1.3244           40.276       NO       
+      SPIRAL-1.3245          38.8557       NO       
+      SPIRAL-1.3246          37.3316       NO       
+      SPIRAL-1.3247          37.0697       NO       
+      SPIRAL-1.3248          36.8024       NO       
+      SPIRAL-1.3249          36.5302       NO       
+      SPIRAL-1.3250          36.2535       NO       
+      SPIRAL-1.3251          35.9727       NO       
+      SPIRAL-1.3252          35.6883       NO       
+      SPIRAL-1.3253          35.4007       NO       
+      SPIRAL-1.3254            35.11       NO       
+      SPIRAL-1.3255           34.817       NO       
+      SPIRAL-1.3256          34.5219       NO       
+      SPIRAL-1.3257          34.2251       NO       
+      SPIRAL-1.3258          35.9015       NO       
+      SPIRAL-1.3259          37.6058       NO       
+      SPIRAL-1.3260          37.4438       NO       
+      SPIRAL-1.3261          37.2734       NO       
+      SPIRAL-1.3262          37.0823       NO       
+      SPIRAL-1.3263          36.8768       NO       
+      SPIRAL-1.3264          36.6624       NO       
+      SPIRAL-1.3265          36.4442       NO       
+      SPIRAL-1.3266          36.2283       NO       
+      SPIRAL-1.3267          35.9832       NO       
+      SPIRAL-1.3268          35.7217       NO       
+      SPIRAL-1.3269          35.4701       NO       
+      SPIRAL-1.3270          35.2142       NO       
+      SPIRAL-1.3271          34.9735       NO       
+      SPIRAL-1.3272          34.7027       NO       
+      SPIRAL-1.3273          34.3993       NO       
+      SPIRAL-1.3274          30.5415       NO       
+      SPIRAL-1.3275          18.3838       NO       
+      SPIRAL-1.4614          13.0756       NO       
+      SPIRAL-1.4615          13.2757       NO       
+      SPIRAL-1.4616          21.9379       NO       
+      SPIRAL-1.4617          11.9685       NO       
+      SPIRAL-1.4618          12.3725       NO       
+      SPIRAL-1.4619          12.8041       NO       
+      SPIRAL-1.4620          13.2664       NO       
+      SPIRAL-1.4621          13.7628       NO       
+      SPIRAL-1.4622          14.2976       NO       
+      SPIRAL-1.4623          14.8741       NO       
+      SPIRAL-1.4624           14.778       NO       
+      SPIRAL-1.4625          14.1889       NO       
+      SPIRAL-1.4626          13.6442       NO       
+      SPIRAL-1.4627           13.139       NO       
+      SPIRAL-1.4628          12.6694       NO       
+      SPIRAL-1.4629          12.2316       NO       
+      SPIRAL-1.4630          11.8227       NO       
+      SPIRAL-1.4631          11.4399       NO       
+      SPIRAL-1.4632          11.0809       NO       
+      SPIRAL-1.4633          10.7434       NO       
+      SPIRAL-1.4634          10.4256       NO       
+      SPIRAL-1.4635          10.1259       NO       
+      SPIRAL-1.4636          9.84273       NO       
+      SPIRAL-1.4637          9.57486       NO       
+      SPIRAL-1.4638          9.32105       NO       
+      SPIRAL-1.4639          9.08025       NO       
+      SPIRAL-1.4640          8.85149       NO       
+      SPIRAL-1.4641          8.63386       NO       
+      SPIRAL-1.4642          8.42661       NO       
+      SPIRAL-1.4643          8.22901       NO       
+      SPIRAL-1.4644           8.0404       NO       
+      SPIRAL-1.4645           7.8602       NO       
+      SPIRAL-1.4646          7.68785       NO       
+      SPIRAL-1.4647          7.52285       NO       
+      SPIRAL-1.4648          7.36476       NO       
+      SPIRAL-1.4649          7.21312       NO       
+      SPIRAL-1.4650          7.06758       NO       
+      SPIRAL-1.4651          6.92777       NO       
+      SPIRAL-1.4652          6.79339       NO       
+      SPIRAL-1.4653          15.2082       NO       
+      SPIRAL-1.4654           7.7222       NO       
+      SPIRAL-1.4655          7.68634       NO       
+      SPIRAL-1.4656          7.65079       NO       
+      SPIRAL-1.4657          7.61557       NO       
+      SPIRAL-1.4658          7.58067       NO       
+      SPIRAL-1.4659          7.54609       NO       
+      SPIRAL-1.4660          7.51182       NO       
+      SPIRAL-1.4661          7.47786       NO       
+      SPIRAL-1.4662          7.44421       NO       
+      SPIRAL-1.4663          7.41086       NO       
+      SPIRAL-1.4664          7.37779       NO       
+      SPIRAL-1.4665          7.34504       NO       
+      SPIRAL-1.4666          7.31257       NO       
+      SPIRAL-1.4667          7.28037       NO       
+      SPIRAL-1.4668           7.2485       NO       
+      SPIRAL-1.4669           7.2169       NO       
+      SPIRAL-1.4670          7.18554       NO       
+      SPIRAL-1.4671          7.15444       NO       
+      SPIRAL-1.4672          7.12361       NO       
+      SPIRAL-1.4673          7.09305       NO       
+      SPIRAL-1.4674          7.06275       NO       
+      SPIRAL-1.4675           7.0327       NO       
+      SPIRAL-1.4676          7.00291       NO       
+      SPIRAL-1.4677          6.97336       NO       
+      SPIRAL-1.4678          6.94407       NO       
+      SPIRAL-1.4679          6.91502       NO       
+      SPIRAL-1.4680           6.8862       NO       
+      SPIRAL-1.4681          6.85763       NO       
+      SPIRAL-1.4682          6.82929       NO       
+      SPIRAL-1.4683          6.80118       NO       
+      SPIRAL-1.4684          6.77331       NO       
+      SPIRAL-1.4685          6.74566       NO       
+      SPIRAL-1.4686          6.71823       NO       
+      SPIRAL-1.4687          6.69102       NO       
+      SPIRAL-1.4688          6.66404       NO       
+      SPIRAL-1.4689           6.6373       NO       
+      SPIRAL-1.4690          17.0253       NO       
+      SPIRAL-1.4693          35.3043       NO       
+      SPIRAL-1.4695          16.8714       NO       
+      SPIRAL-1.4697          37.5354       NO       
+      SPIRAL-1.4698          42.8354       NO       
+      SPIRAL-1.4704          17.0308       NO       
+      SPIRAL-1.4706          44.2042       NO       
+      SPIRAL-1.4708          40.5141       NO       
+      SPIRAL-1.4715          27.2175       NO       
+      SPIRAL-1.4730          32.1942       NO       
+      SPIRAL-1.4733          25.2051       NO       
+      SPIRAL-1.4734          20.7084       NO       
+      SPIRAL-1.4746          16.7647       NO       
+      SPIRAL-1.4747          36.3931       NO       
+      SPIRAL-1.4748          16.3428       NO       
+      SPIRAL-1.4749          39.7671       NO       
+      SPIRAL-1.4750          41.9423       NO       
+      SPIRAL-1.4751          16.7709       NO       
+      SPIRAL-1.4753          42.2421       NO       
+      SPIRAL-1.4754           17.745       NO       
+      SPIRAL-1.4764          16.8174       NO       
+      SPIRAL-1.4765          35.3719       NO       
+      SPIRAL-1.4766          16.4891       NO       
+      SPIRAL-1.4777           44.765       NO       
+      SPIRAL-1.4778          16.5262       NO       
+      SPIRAL-1.4788          18.5144       NO       
+      SPIRAL-1.4790          16.7603       NO       
+      SPIRAL-1.4801          35.6083       NO       
+      SPIRAL-1.4802           29.526       NO       
+      SPIRAL-1.4803          38.9467       NO       
+      SPIRAL-1.4804          43.2311       NO       
+      SPIRAL-1.4809          26.4746       NO       
+      SPIRAL-1.4810          40.8809       NO       
+      SPIRAL-1.4811          32.2899       NO       
+      SPIRAL-1.4812          19.0439       NO       
+      SPIRAL-1.4820          43.1008       NO       
+      SPIRAL-1.4827          34.2776       NO       
+      SPIRAL-1.4828          14.5678       NO       
+      SPIRAL-1.4829          42.5374       NO       
+      SPIRAL-1.4831          36.2623       NO       
+      SPIRAL-1.4835           43.717       NO       
+      SPIRAL-1.4837          17.7687       NO       
+      SPIRAL-1.4838          27.3687       NO       
+      SPIRAL-1.4839          30.2136       NO       
+      SPIRAL-1.4840          33.6229       NO       
+      SPIRAL-1.4841          37.3066       NO       
+      SPIRAL-1.4842          38.1622       NO       
+      SPIRAL-1.4843          38.9119       NO       
+      SPIRAL-1.4844          39.5578       NO       
+      SPIRAL-1.4845          40.2011       NO       
+      SPIRAL-1.4846          40.7587       NO       
+      SPIRAL-1.4847          41.2174       NO       
+      SPIRAL-1.4848          41.6544       NO       
+      SPIRAL-1.4849          42.0565       NO       
+      SPIRAL-1.4850          42.4053       NO       
+      SPIRAL-1.4851          38.6525       NO       
+      SPIRAL-1.4852          21.2991       NO       
+      SPIRAL-1.5197          42.5904       NO       
+      SPIRAL-1.5200          32.0707       NO       
+      SPIRAL-1.5206          41.6849       NO       
+      SPIRAL-1.5207          35.6804       NO       
+      SPIRAL-1.5208          23.0479       NO       
+      SPIRAL-1.5209          20.9495       NO       
+      SPIRAL-1.5210          19.0715       NO       
+      SPIRAL-1.5231          41.8165       NO       
+      SPIRAL-1.5232          16.9481       NO       
+      SPIRAL-1.5238          17.0276       NO       
+      SPIRAL-1.5249          44.9543       NO       
+      SPIRAL-1.5252          23.6689       NO       
+      SPIRAL-1.5434          15.2558       NO       
+      SPIRAL-1.5435          14.5308       NO       
+      SPIRAL-1.5436          26.6559       NO       
+      SPIRAL-1.5437          15.6722       NO       
+      SPIRAL-1.5438          17.5109       NO       
+      SPIRAL-1.5439          15.4924       NO       
+      SPIRAL-1.5440          13.8826       NO       
+      SPIRAL-1.5441          12.5713       NO       
+      SPIRAL-1.5442          11.4832       NO       
+      SPIRAL-1.5443          10.5663       NO       
+      SPIRAL-1.5444          9.78385       NO       
+      SPIRAL-1.5445          9.10841       NO       
+      SPIRAL-1.5446          8.51948       NO       
+      SPIRAL-1.5447          8.00165       NO       
+      SPIRAL-1.5448          16.0608       NO       
+      SPIRAL-1.5449          8.15066       NO       
+      SPIRAL-1.5450          8.07097       NO       
+      SPIRAL-1.5451          7.99276       NO       
+      SPIRAL-1.5452          7.91597       NO       
+      SPIRAL-1.5453          7.84073       NO       
+      SPIRAL-1.5454           7.7669       NO       
+      SPIRAL-1.5455          7.69434       NO       
+      SPIRAL-1.5456          7.62319       NO       
+      SPIRAL-1.5457          7.55335       NO       
+      SPIRAL-1.5458           7.4847       NO       
+      SPIRAL-1.5459          7.41734       NO       
+      SPIRAL-1.5464          10.2926       NO       
+      SPIRAL-1.5465          11.0089       NO       
+      SPIRAL-1.5466            11.83       NO       
+      SPIRAL-1.5467           12.781       NO       
+      SPIRAL-1.5468          13.8959       NO       
+      SPIRAL-1.5469           15.219       NO       
+      SPIRAL-1.5470          16.8123       NO       
+      SPIRAL-1.5471          18.7635       NO       
+      SPIRAL-1.5472          21.2043       NO       
+      SPIRAL-1.5473           24.334       NO       
+      SPIRAL-1.5474          28.4566       NO       
+      SPIRAL-1.5475          34.0654       NO       
+      SPIRAL-1.5476          41.9463       NO       
+      SPIRAL-1.5480          6.28937       NO       
+      SPIRAL-1.5481          6.24139       NO       
+      SPIRAL-1.5482          6.19407       NO       
+      SPIRAL-1.5483          6.14807       NO       
+      SPIRAL-1.5484          6.10237       NO       
+      SPIRAL-1.5485          6.05712       NO       
+      SPIRAL-1.5486          6.01271       NO       
+      SPIRAL-1.5487          5.96973       NO       
+      SPIRAL-1.5488          5.92669       NO       
+      SPIRAL-1.5489          5.88393       NO       
+      SPIRAL-1.5490          5.84257       NO       
+      SPIRAL-1.5491          5.80159       NO       
+      SPIRAL-1.5492          5.76071       NO       
+      SPIRAL-1.5493          5.72034       NO       
+      SPIRAL-1.5494          5.68111       NO       
+      SPIRAL-1.5495          10.6497       NO       
+      SPIRAL-1.5496          18.8475       NO       
+      SPIRAL-1.5497          12.2562       NO       
+      SPIRAL-1.5502          12.0545       NO       
+      SPIRAL-1.5503          18.2995       NO       
+      SPIRAL-1.5504          9.89114       NO       
+      SPIRAL-1.5505          10.4031       NO       
+      SPIRAL-1.5506            10.97       NO       
+      SPIRAL-1.5507           11.601       NO       
+      SPIRAL-1.5508          12.3083       NO       
+      SPIRAL-1.5509          13.1056       NO       
+      SPIRAL-1.5510          14.0124       NO       
+      SPIRAL-1.5511          15.0497       NO       
+      SPIRAL-1.5512          16.2487       NO       
+      SPIRAL-1.5513          17.6479       NO       
+      SPIRAL-1.5514          19.3014       NO       
+      SPIRAL-1.5515          21.2829       NO       
+      SPIRAL-1.5516          23.6901       NO       
+      SPIRAL-1.5517          26.6659       NO       
+      SPIRAL-1.5518          30.4169       NO       
+      SPIRAL-1.5519          35.2449       NO       
+      SPIRAL-1.5520          41.5789       NO       
+      SPIRAL-1.5525          6.18757       NO       
+      SPIRAL-1.5526           6.1522       NO       
+      SPIRAL-1.5527          6.11746       NO       
+      SPIRAL-1.5528          6.08338       NO       
+      SPIRAL-1.5529          6.04905       NO       
+      SPIRAL-1.5530          6.01555       NO       
+      SPIRAL-1.5531          5.98196       NO       
+      SPIRAL-1.5532          5.94903       NO       
+      SPIRAL-1.5533          5.91629       NO       
+      SPIRAL-1.5534          5.88425       NO       
+      SPIRAL-1.5535           5.8522       NO       
+      SPIRAL-1.5536          5.82055       NO       
+      SPIRAL-1.5537          5.78935       NO       
+      SPIRAL-1.5538          5.75868       NO       
+      SPIRAL-1.5539          5.72828       NO       
+      SPIRAL-1.5540          5.69778       NO       
+      SPIRAL-1.5541          5.66792       NO       
+      SPIRAL-1.5542          5.63834       NO       
+      SPIRAL-1.5543          5.60919       NO       
+      SPIRAL-1.5544          5.57998       NO       
+      SPIRAL-1.5545          10.4814       NO       
+      SPIRAL-1.5550          12.0526       NO       
+      SPIRAL-1.5551          18.0896       NO       
+      SPIRAL-1.5552          9.70923       NO       
+      SPIRAL-1.5553          10.0796       NO       
+      SPIRAL-1.5554          10.4781       NO       
+      SPIRAL-1.5555          10.9094       NO       
+      SPIRAL-1.5556          11.3775       NO       
+      SPIRAL-1.5557          11.8867       NO       
+      SPIRAL-1.5558          12.4425       NO       
+      SPIRAL-1.5559           13.052       NO       
+      SPIRAL-1.5560           13.723       NO       
+      SPIRAL-1.5561          14.4656       NO       
+      SPIRAL-1.5562          15.2905       NO       
+      SPIRAL-1.5563          16.2128       NO       
+      SPIRAL-1.5564            17.25       NO       
+      SPIRAL-1.5565          18.4249       NO       
+      SPIRAL-1.5566          19.7642       NO       
+      SPIRAL-1.5567          21.3038       NO       
+      SPIRAL-1.5568          23.0892       NO       
+      SPIRAL-1.5569          25.1776       NO       
+      SPIRAL-1.5570          27.6515       NO       
+      SPIRAL-1.5571          30.6144       NO       
+      SPIRAL-1.5572          34.2043       NO       
+      SPIRAL-1.5573          38.6023       NO       
+      SPIRAL-1.5574          44.0448       NO       
+      SPIRAL-1.5580          6.19147       NO       
+      SPIRAL-1.5581          6.16479       NO       
+      SPIRAL-1.5582           6.1386       NO       
+      SPIRAL-1.5583          6.11233       NO       
+      SPIRAL-1.5584          6.08669       NO       
+      SPIRAL-1.5585          6.06087       NO       
+      SPIRAL-1.5586          6.03552       NO       
+      SPIRAL-1.5587          6.01015       NO       
+      SPIRAL-1.5588          5.98535       NO       
+      SPIRAL-1.5589          5.96049       NO       
+      SPIRAL-1.5590           5.9361       NO       
+      SPIRAL-1.5591          5.91165       NO       
+      SPIRAL-1.5592          5.88762       NO       
+      SPIRAL-1.5593          5.86327       NO       
+      SPIRAL-1.5594          5.83966       NO       
+      SPIRAL-1.5595          5.81587       NO       
+      SPIRAL-1.5596          5.79262       NO       
+      SPIRAL-1.5597          5.76973       NO       
+      SPIRAL-1.5598          5.74669       NO       
+      SPIRAL-1.5599          5.72421       NO       
+      SPIRAL-1.5600          5.70135       NO       
+      SPIRAL-1.5601          5.67905       NO       
+      SPIRAL-1.5602          5.65665       NO       
+      SPIRAL-1.5603          5.63444       NO       
+      SPIRAL-1.5604          5.61221       NO       
+      SPIRAL-1.5605          5.59059       NO       
+      SPIRAL-1.5606          5.56888       NO       
+      SPIRAL-1.5607          10.4681       NO       
+      SPIRAL-1.5612          11.9404       NO       
+      SPIRAL-1.5613           17.779       NO       
+      SPIRAL-1.5614          9.48826       NO       
+      SPIRAL-1.5615          9.75818       NO       
+      SPIRAL-1.5616          10.0434       NO       
+      SPIRAL-1.5617          10.3458       NO       
+      SPIRAL-1.5618          10.6667       NO       
+      SPIRAL-1.5619          11.0077       NO       
+      SPIRAL-1.5620          11.3715       NO       
+      SPIRAL-1.5621          11.7598       NO       
+      SPIRAL-1.5622          12.1747       NO       
+      SPIRAL-1.5623          12.6194       NO       
+      SPIRAL-1.5624          13.0973       NO       
+      SPIRAL-1.5625          13.6121       NO       
+      SPIRAL-1.5626          14.1684       NO       
+      SPIRAL-1.5627          14.7714       NO       
+      SPIRAL-1.5628          15.4265       NO       
+      SPIRAL-1.5629          16.1406       NO       
+      SPIRAL-1.5630           16.922       NO       
+      SPIRAL-1.5631            17.78       NO       
+      SPIRAL-1.5632           18.727       NO       
+      SPIRAL-1.5633          19.7756       NO       
+      SPIRAL-1.5634           20.944       NO       
+      SPIRAL-1.5635           22.253       NO       
+      SPIRAL-1.5636           23.725       NO       
+      SPIRAL-1.5637          25.3915       NO       
+      SPIRAL-1.5638          27.2903       NO       
+      SPIRAL-1.5639          29.4688       NO       
+      SPIRAL-1.5640          31.9865       NO       
+      SPIRAL-1.5641          34.9162       NO       
+      SPIRAL-1.5642          38.3485       NO       
+      SPIRAL-1.5643           42.392       NO       
+      SPIRAL-1.5651           6.1343       NO       
+      SPIRAL-1.5652          6.11449       NO       
+      SPIRAL-1.5653          6.09498       NO       
+      SPIRAL-1.5654          6.07565       NO       
+      SPIRAL-1.5655          6.05618       NO       
+      SPIRAL-1.5656          6.03698       NO       
+      SPIRAL-1.5657           6.0179       NO       
+      SPIRAL-1.5658          5.99897       NO       
+      SPIRAL-1.5659          5.98023       NO       
+      SPIRAL-1.5660          5.96142       NO       
+      SPIRAL-1.5661          5.94283       NO       
+      SPIRAL-1.5662          5.92435       NO       
+      SPIRAL-1.5663          5.90598       NO       
+      SPIRAL-1.5664          5.88767       NO       
+      SPIRAL-1.5665          5.86952       NO       
+      SPIRAL-1.5666          5.85154       NO       
+      SPIRAL-1.5667          5.83368       NO       
+      SPIRAL-1.5668          5.81578       NO       
+      SPIRAL-1.5669          5.79808       NO       
+      SPIRAL-1.5670           5.7805       NO       
+      SPIRAL-1.5671          5.76305       NO       
+      SPIRAL-1.5672          5.74544       NO       
+      SPIRAL-1.5673          5.72793       NO       
+      SPIRAL-1.5674          5.71077       NO       
+      SPIRAL-1.5675          5.69366       NO       
+      SPIRAL-1.5676          5.67663       NO       
+      SPIRAL-1.5677          5.65973       NO       
+      SPIRAL-1.5678          5.64299       NO       
+      SPIRAL-1.5679          5.62635       NO       
+      SPIRAL-1.5680          5.60977       NO       
+      SPIRAL-1.5681          5.59336       NO       
+      SPIRAL-1.5682            5.577       NO       
+      SPIRAL-1.5683          5.56074       NO       
+      SPIRAL-1.5684           5.5446       NO       
+      SPIRAL-1.5685          5.52857       NO       
+      SPIRAL-1.5686          5.51243       NO       
+      SPIRAL-1.5687          10.3733       NO       
+      SPIRAL-1.5692          19.2181       NO       
+      SPIRAL-1.5693          12.2575       NO       
+      SPIRAL-1.5694          10.6272       NO       
+      SPIRAL-1.5695          11.6477       NO       
+      SPIRAL-1.5696          12.8806       NO       
+      SPIRAL-1.5697          14.3993       NO       
+      SPIRAL-1.5698          16.3116       NO       
+      SPIRAL-1.5699          18.7901       NO       
+      SPIRAL-1.5700          22.1149       NO       
+      SPIRAL-1.5701          26.7648       NO       
+      SPIRAL-1.5702          33.6076       NO       
+      SPIRAL-1.5703           44.251       NO       
+      SPIRAL-1.5706          6.28226       NO       
+      SPIRAL-1.5707           6.2188       NO       
+      SPIRAL-1.5708          6.15693       NO       
+      SPIRAL-1.5709          6.09587       NO       
+      SPIRAL-1.5710          6.03616       NO       
+      SPIRAL-1.5711          5.97817       NO       
+      SPIRAL-1.5712          5.92035       NO       
+      SPIRAL-1.5713          5.86424       NO       
+      SPIRAL-1.5714          5.80932       NO       
+      SPIRAL-1.5715          5.75515       NO       
+      SPIRAL-1.5716          5.70188       NO       
+      SPIRAL-1.5717          10.6746       NO       
+      SPIRAL-1.5745          37.3422       NO       
+      SPIRAL-1.5746          37.9624       NO       
+      SPIRAL-1.5748          37.5842       NO       
+      SPIRAL-1.5749          37.7969       NO       
+      SPIRAL-1.5757          28.3011       NO       
+      SPIRAL-1.5758          18.3527       NO       
+      SPIRAL-1.5759          12.6257       NO       
+      SPIRAL-1.5760          10.9969       NO       
+      SPIRAL-1.5761          10.9084       NO       
+      SPIRAL-1.5762          20.1522       NO       
+      SPIRAL-1.5940          42.0033       NO       
+      SPIRAL-1.5941          27.4395       NO       
+      SPIRAL-1.5942          10.8736       NO       
+      SPIRAL-1.5943          17.3596       NO       
+      SPIRAL-1.5944          18.1869       NO       
+      SPIRAL-1.5945          10.4952       NO       
+      SPIRAL-1.5946          17.5417       NO       
+      SPIRAL-1.5947          21.1665       NO       
+      SPIRAL-1.5948          39.9954       NO       
+      SPIRAL-1.5949          33.2337       NO       
+      SPIRAL-1.5950          36.1602       NO       
+      SPIRAL-1.5951           38.923       NO       
+      SPIRAL-1.5952           11.477       NO       
+      SPIRAL-1.5953          19.3139       NO       
+      SPIRAL-1.5954          30.0402       NO       
+      SPIRAL-1.5955           11.445       NO       
+      SPIRAL-1.5956          11.6056       NO       
+      SPIRAL-1.5957          11.1824       NO       
+      SPIRAL-1.5958          21.0335       NO       
+      SPIRAL-1.5959          30.9511       NO       
+      SPIRAL-1.5961          27.4575       NO       
+      SPIRAL-1.5962          27.4081       NO       
+      SPIRAL-1.5963          26.5168       NO       
+      SPIRAL-1.5964          11.0452       NO       
+      SPIRAL-1.5965           10.995       NO       
+      SPIRAL-1.5966          11.0183       NO       
+      SPIRAL-1.5967          19.5707       NO       
+      SPIRAL-1.5968          10.7285       NO       
+      SPIRAL-1.5969          10.7978       NO       
+      SPIRAL-1.5970          11.1278       NO       
+      SPIRAL-1.5976          35.8928       NO       
+      SPIRAL-1.6097          11.4186       NO       
+      SPIRAL-1.6098          19.1352       NO       
+      SPIRAL-1.6109          26.4488       NO       
+      SPIRAL-1.6122          34.1559       NO       
+      SPIRAL-1.6123          44.1962       NO       
+      SPIRAL-1.6125          11.1772       NO       
+      SPIRAL-1.6126          25.1338       NO       
+      SPIRAL-1.6162          25.0932       NO       
+      SPIRAL-1.6195          10.8519       NO       
+      SPIRAL-1.6196          22.2047       NO       
+      SPIRAL-1.6197           44.326       NO       
+      SPIRAL-1.6198           39.129       NO       
+      SPIRAL-1.6199          33.5849       NO       
+      SPIRAL-1.6200          26.1059       NO       
+      SPIRAL-1.6201          12.3507       NO       
+      SPIRAL-1.6204           39.502       NO       
+      SPIRAL-1.6205          31.4684       NO       
+      SPIRAL-1.6210           43.607       NO       
+      SPIRAL-1.6211          38.7815       NO       
+      SPIRAL-1.6239          39.3427       NO       
+      SPIRAL-1.6240          10.9087       NO       
+      SPIRAL-1.6241          27.7388       NO       
+      SPIRAL-1.6250          19.8505       NO       
+      SPIRAL-1.6251          19.6277       NO       
+      SPIRAL-1.6254          23.8723       NO       
+      SPIRAL-1.6256          43.1739       NO       
+      SPIRAL-1.6257          34.9202       NO       
+      SPIRAL-1.6258          10.7315       NO       
+      SPIRAL-1.6261          43.2364       NO       
+      SPIRAL-1.6262          39.8429       NO       
+      SPIRAL-1.6263          34.1517       NO       
+      SPIRAL-1.6282          14.8742       NO       
+      SPIRAL-1.6295           20.994       NO       
+      SPIRAL-1.6338          13.0241       NO       
+      SPIRAL-1.6339          10.8962       NO       
+      SPIRAL-1.6340          10.9703       NO       
+      SPIRAL-1.6341           11.065       NO       
+      SPIRAL-1.6342          20.0321       NO       
+      SPIRAL-1.6343          10.5604       NO       
+      SPIRAL-1.6344          10.5691       NO       
+      SPIRAL-1.6345          11.4663       NO       
+      SPIRAL-1.6346          11.2256       NO       
+      SPIRAL-1.6347          14.3466       NO       
+      SPIRAL-1.6348          30.5604       NO       
+      SPIRAL-1.6385          30.0546       NO       
+      SPIRAL-1.6409          23.6714       NO       
+      SPIRAL-1.6446          41.5724       NO       
+      SPIRAL-1.6470           11.179       NO       
+      SPIRAL-1.6471          16.5591       NO       
+      SPIRAL-1.6472          12.6047       NO       
+      SPIRAL-1.6473          19.8421       NO       
+      SPIRAL-1.6474           19.834       NO       
+      SPIRAL-1.6475          20.6516       NO       
+      SPIRAL-1.6476          14.4315       NO       
+      SPIRAL-1.6477          35.0301       NO       
+      SPIRAL-1.6478          24.5781       NO       
+      SPIRAL-1.6479          21.5193       NO       
+      SPIRAL-1.6480          23.0139       NO       
+      SPIRAL-1.6481          25.1483       NO       
+      SPIRAL-1.6482          19.8557       NO       
+      SPIRAL-1.6483          19.5724       NO       
+      SPIRAL-1.6484          20.8133       NO       
+      SPIRAL-1.6485          30.1115       NO       
+      SPIRAL-1.6486          18.9518       NO       
+      SPIRAL-1.6487          11.0855       NO       
+      SPIRAL-1.6488          30.5498       NO       
+      SPIRAL-1.6554          31.1924       NO       
+      SPIRAL-1.6555          41.2067       NO       
+      SPIRAL-1.6556          22.0485       NO       
+      SPIRAL-1.6559          31.4824       NO       
+      SPIRAL-1.6575           28.668       NO       
+      SPIRAL-1.6576          19.7438       NO       
+      SPIRAL-1.6577          18.7068       NO       
+      SPIRAL-1.6578          22.8547       NO       
+      SPIRAL-1.6582          42.4999       NO       
+      SPIRAL-1.6593            17.18       NO       
+      SPIRAL-1.6613          36.4788       NO       
+      SPIRAL-1.6618          31.5973       NO       
+      SPIRAL-1.6620          24.2258       NO       
+      SPIRAL-1.6621           24.375       NO       
+      SPIRAL-1.6622           30.432       NO       
+      SPIRAL-1.6623          34.7093       NO       
+      SPIRAL-1.6660          33.3643       NO       
+      SPIRAL-1.6685          44.3423       NO       
+      SPIRAL-1.6701          43.9668       NO       
+      SPIRAL-1.6702          26.0409       NO       
+      SPIRAL-1.6717          32.5534       NO       
+      SPIRAL-1.6718          34.2256       NO       
+      SPIRAL-1.6723          27.4291       NO       
+      SPIRAL-1.6724          24.9382       NO       
+      SPIRAL-1.6727          31.2492       NO       
+      SPIRAL-1.6733          25.9119       NO       
+      SPIRAL-1.6787          43.6406       NO       
+      SPIRAL-1.6788          35.8859       NO       
+      SPIRAL-1.6792          30.6031       NO       
+      SPIRAL-1.6793          33.5728       NO       
+      SPIRAL-1.6796          23.2436       NO       
+      SPIRAL-1.6815          34.6433       NO       
+      SPIRAL-1.6816          40.5835       NO       
+      SPIRAL-1.6826          25.6587       NO       
+      SPIRAL-1.6846          30.7303       NO       
+      SPIRAL-1.6847          33.5932       NO       
+      SPIRAL-1.6849          35.1282       NO       
+      SPIRAL-1.6850          38.0957       NO       
+      SPIRAL-1.6858          44.9562       NO       
+      SPIRAL-1.6870          40.8363       NO       
+      SPIRAL-1.6887          40.4726       NO       
+      SPIRAL-1.6889          37.8814       NO       
+      SPIRAL-1.6912           40.022       NO       
+      SPIRAL-1.6913          44.5861       NO       
+      SPIRAL-1.6914          29.4439       NO       
+      SPIRAL-1.6915          39.3075       NO       
+      SPIRAL-1.6918          43.3247       NO       
+      SPIRAL-1.6921          37.7789       NO       
+      SPIRAL-1.6926          44.6333       NO       
+      SPIRAL-1.6927          40.0319       NO       
+      SPIRAL-1.6928          31.4801       NO       
+      SPIRAL-1.6937          31.0446       NO       
+      SPIRAL-1.6939          44.7474       NO       
+      SPIRAL-1.6964          42.1056       NO       
+      SPIRAL-1.6966          40.0575       NO       
+      SPIRAL-1.6982          31.8116       NO       
+      SPIRAL-1.6987          44.4242       NO       
+      SPIRAL-1.6989          37.4352       NO       
+      SPIRAL-1.6991          36.1753       NO       
+      SPIRAL-1.6995          42.0641       NO       
+      SPIRAL-1.7001          40.1978       NO       
+      SPIRAL-1.7026          31.7485       NO       
+      SPIRAL-1.7033          21.5331       NO       
+      SPIRAL-1.7034          22.9213       NO       
+      SPIRAL-1.7038          35.9739       NO       
+      SPIRAL-1.7045          32.3283       NO       
+      SPIRAL-1.7046            43.49       NO       
+      SPIRAL-1.7047          39.9877       NO       
+      SPIRAL-1.7080          20.9262       NO       
+      SPIRAL-1.7081          38.1287       NO       
+      SPIRAL-1.7087          42.0122       NO       
+      SPIRAL-1.7088          37.5078       NO       
+      SPIRAL-1.7092          35.1328       NO       
+      SPIRAL-1.7096          25.1621       NO       
+      SPIRAL-1.7098          25.5297       NO       
+      SPIRAL-1.7099          41.9354       NO       
+      SPIRAL-1.7103          42.2171       NO       
+      SPIRAL-1.7104          37.0917       NO       
+      SPIRAL-1.7112          40.4376       NO       
+      SPIRAL-1.7121          32.2088       NO       
+      SPIRAL-1.7126          40.3837       NO       
+      SPIRAL-1.7131          35.6037       NO       
+      SPIRAL-1.7140          28.4481       NO       
+      SPIRAL-1.7141          39.5286       NO       
+      SPIRAL-1.7150          33.3004       NO       
+      SPIRAL-1.7153          26.9286       NO       
+      SPIRAL-1.7160          31.3818       NO       
+      SPIRAL-1.7165          40.5703       NO       
+      SPIRAL-1.7169          42.0188       NO       
+      SPIRAL-1.7173          35.3932       NO       
+      SPIRAL-1.7190          18.8736       NO       
+      SPIRAL-1.7208           42.495       NO       
+      SPIRAL-1.7213           29.728       NO       
+      SPIRAL-1.7219          38.2561       NO       
+      SPIRAL-1.7222          43.8468       NO       
+      SPIRAL-1.7230          32.6878       NO       
+      SPIRAL-1.7237          44.8113       NO       
+      SPIRAL-1.7239          42.8167       NO       
+      SPIRAL-1.7247          24.1071       NO       
+      SPIRAL-1.8872          44.0889       NO       
+     SPIRAL-1.10455          35.7942       NO       
+     SPIRAL-1.10456          43.3551       NO       
+     SPIRAL-1.10457          42.5306       NO       
+     SPIRAL-1.10458          12.4895       NO       
+     SPIRAL-1.10459          11.1001       NO       
+     SPIRAL-1.10460          17.1286       NO       
+     SPIRAL-1.10461          41.1906       NO       
+     SPIRAL-1.10468          10.3554       NO       
+     SPIRAL-1.10469          10.2415       NO       
+     SPIRAL-1.10470          22.3293       NO       
+     SPIRAL-1.10471          42.6379       NO       
+     SPIRAL-1.10494           42.871       NO       
+     SPIRAL-1.10495            39.51       NO       
+     SPIRAL-1.10496          33.1142       NO       
+     SPIRAL-1.10510           36.913       NO       
+     SPIRAL-1.10511           30.167       NO       
+     SPIRAL-1.10512          14.4132       NO       
+     SPIRAL-1.10514          14.2279       NO       
+     SPIRAL-1.10516          27.7089       NO       
+     SPIRAL-1.10517           14.337       NO       
+     SPIRAL-1.10518          14.1174       NO       
+     SPIRAL-1.10519           36.491       NO       
+     SPIRAL-1.10520          23.7747       NO       
+     SPIRAL-1.10521          12.3627       NO       
+     SPIRAL-1.10522          21.4109       NO       
+     SPIRAL-1.10523          11.1578       NO       
+     SPIRAL-1.10524          19.8136       NO       
+     SPIRAL-1.10525          25.8955       NO       
+     SPIRAL-1.10526          26.7187       NO       
+     SPIRAL-1.10527          27.4659       NO       
+     SPIRAL-1.10528          32.5107       NO       
+     SPIRAL-1.10531          38.7262       NO       
+     SPIRAL-1.10532          30.5818       NO       
+     SPIRAL-1.10533          38.7815       NO       
+     SPIRAL-1.10534          10.5237       NO       
+     SPIRAL-1.10535          10.5497       NO       
+     SPIRAL-1.10536            11.22       NO       
+     SPIRAL-1.10537          18.5076       NO       
+     SPIRAL-1.10538          11.2126       NO       
+     SPIRAL-1.10539          20.5635       NO       
+     SPIRAL-1.10540          29.2096       NO       
+     SPIRAL-1.10762          34.4989       NO       
+     SPIRAL-1.10764          16.9091       NO       
+     SPIRAL-1.10811          35.0465       NO       
+     SPIRAL-1.10816          32.1736       NO       
+     SPIRAL-1.10821          34.8469       NO       
+     SPIRAL-1.10822          31.6926       NO       
+     SPIRAL-1.10826          32.2306       NO       
+     SPIRAL-1.10830          43.4485       NO       
+     SPIRAL-1.10834          10.5855       NO       
+     SPIRAL-1.10835           24.925       NO       
+     SPIRAL-1.10837          21.8855       NO       
+     SPIRAL-1.10838          10.3058       NO       
+     SPIRAL-1.10839          17.2942       NO       
+     SPIRAL-1.10843          10.4013       NO       
+     SPIRAL-1.10844          19.6309       NO       
+     SPIRAL-1.10845          26.9235       NO       
+     SPIRAL-1.10846          21.6443       NO       
+     SPIRAL-1.10847          26.4426       NO       
+     SPIRAL-1.10848          18.9506       NO       
+     SPIRAL-1.10849          42.2168       NO       
+     SPIRAL-1.10851          18.4084       NO       
+     SPIRAL-1.10852           22.553       NO       
+     SPIRAL-1.10853          10.8352       NO       
+     SPIRAL-1.10854          18.1619       NO       
+     SPIRAL-1.10855          18.0045       NO       
+     SPIRAL-1.10856           11.027       NO       
+     SPIRAL-1.10857          37.4154       NO       
+     SPIRAL-1.10858          42.4332       NO       
+     SPIRAL-1.10864          19.7889       NO       
+     SPIRAL-1.10871          15.0532       NO       
+     SPIRAL-1.10873          36.8077       NO       
+     SPIRAL-1.10894          41.0625       NO       
+     SPIRAL-1.10896          42.1244       NO       
+     SPIRAL-1.11057           32.356       NO       
+     SPIRAL-1.11058          14.5641       NO       
+     SPIRAL-1.11059          11.1949       NO       
+     SPIRAL-1.11060          10.9826       NO       
+     SPIRAL-1.11061          10.9745       NO       
+     SPIRAL-1.11062          10.8795       NO       
+     SPIRAL-1.11063          11.0916       NO       
+     SPIRAL-1.11064          10.2465       NO       
+     SPIRAL-1.11065          13.7839       NO       
+     SPIRAL-1.11066           20.271       NO       
+     SPIRAL-1.11103          42.6747       NO       
+     SPIRAL-1.11104          38.3654       NO       
+     SPIRAL-1.11105           13.028       NO       
+     SPIRAL-1.11132          33.1629       NO       
+     SPIRAL-1.11165          18.6918       NO       
+     SPIRAL-1.11225          11.1112       NO       
+     SPIRAL-1.11227          16.9318       NO       
+     SPIRAL-1.11228          30.0923       NO       
+     SPIRAL-1.11229          28.5255       NO       
+     SPIRAL-1.11230          11.0498       NO       
+     SPIRAL-1.11231          18.4288       NO       
+     SPIRAL-1.11232          11.1086       NO       
+     SPIRAL-1.11233          11.0012       NO       
+     SPIRAL-1.11234          29.3884       NO       
+     SPIRAL-1.11235          18.7762       NO       
+     SPIRAL-1.11236          10.9414       NO       
+     SPIRAL-1.11237          28.1458       NO       
+     SPIRAL-1.11238          17.6918       NO       
+     SPIRAL-1.11239          16.9614       NO       
+     SPIRAL-1.11240          22.9775       NO       
+     SPIRAL-1.11241          31.2821       NO       
+     SPIRAL-1.11242          30.6318       NO       
+     SPIRAL-1.11243          17.1158       NO       
+     SPIRAL-1.11297          34.6279       NO       
+     SPIRAL-1.11298            33.77       NO       
+     SPIRAL-1.11299          21.8087       NO       
+     SPIRAL-1.11301          26.2276       NO       
+     SPIRAL-1.11315          20.3768       NO       
+     SPIRAL-1.11316          44.6951       NO       
+     SPIRAL-1.11319           25.341       NO       
+     SPIRAL-1.11323          22.1968       NO       
+     SPIRAL-1.11324          23.0908       NO       
+     SPIRAL-1.11335          23.7526       NO       
+     SPIRAL-1.11336          32.2603       NO       
+     SPIRAL-1.11350          39.9913       NO       
+     SPIRAL-1.11355          43.6883       NO       
+     SPIRAL-1.11357          24.6177       NO       
+     SPIRAL-1.11358           24.215       NO       
+     SPIRAL-1.11359          35.6924       NO       
+     SPIRAL-1.11360          25.8146       NO       
+     SPIRAL-1.11361          10.3602       NO       
+     SPIRAL-1.11378          24.0351       NO       
+     SPIRAL-1.11379          34.1448       NO       
+     SPIRAL-1.11390          22.1584       NO       
+     SPIRAL-1.11416          44.3323       NO       
+     SPIRAL-1.11417          43.5705       NO       
+     SPIRAL-1.11428          38.5363       NO       
+     SPIRAL-1.11429          27.3325       NO       
+     SPIRAL-1.11432          17.1782       NO       
+     SPIRAL-1.11435          43.9908       NO       
+     SPIRAL-1.11458            22.39       NO       
+     SPIRAL-1.11459          18.5526       NO       
+     SPIRAL-1.11460          29.1315       NO       
+     SPIRAL-1.11474          43.1855       NO       
+     SPIRAL-1.11475          44.9285       NO       
+     SPIRAL-1.11476          42.7257       NO       
+     SPIRAL-1.11497          31.2152       NO       
+     SPIRAL-1.11498          38.1851       NO       
+     SPIRAL-1.11504          38.7244       NO       
+     SPIRAL-1.11505          22.7432       NO       
+     SPIRAL-1.11526          38.1914       NO       
+     SPIRAL-1.11527          25.9362       NO       
+     SPIRAL-1.11529           40.382       NO       
+     SPIRAL-1.11530          44.8921       NO       
+     SPIRAL-1.11536          37.7717       NO       
+     SPIRAL-1.11547          32.5765       NO       
+     SPIRAL-1.11548          31.9314       NO       
+     SPIRAL-1.11578          30.0453       NO       
+     SPIRAL-1.11581          43.2272       NO       
+     SPIRAL-1.11582           34.392       NO       
+     SPIRAL-1.11583          34.9407       NO       
+     SPIRAL-1.11609           44.234       NO       
+     SPIRAL-1.11616          43.8455       NO       
+     SPIRAL-1.11617           37.653       NO       
+     SPIRAL-1.11618          43.6924       NO       
+     SPIRAL-1.11622          30.7926       NO       
+     SPIRAL-1.11623          40.4861       NO       
+     SPIRAL-1.11640          32.4471       NO       
+     SPIRAL-1.11655          18.5277       NO       
+     SPIRAL-1.11683          35.6431       NO       
+     SPIRAL-1.11689          31.5027       NO       
+     SPIRAL-1.11694          43.3373       NO       
+     SPIRAL-1.11695          37.8357       NO       
+     SPIRAL-1.11701            44.65       NO       
+     SPIRAL-1.11703          40.7784       NO       
+     SPIRAL-1.11714          36.4332       NO       
+     SPIRAL-1.11726          37.9874       NO       
+     SPIRAL-1.11728          41.5467       NO       
+     SPIRAL-1.11736          39.3323       NO       
+     SPIRAL-1.11739          43.0789       NO       
+     SPIRAL-1.11742           30.273       NO       
+     SPIRAL-1.11743          32.5896       NO       
+     SPIRAL-1.11747          24.0257       NO       
+     SPIRAL-1.11748          29.6532       NO       
+     SPIRAL-1.11782          43.4931       NO       
+     SPIRAL-1.11788          33.0008       NO       
+     SPIRAL-1.11793          40.1167       NO       
+     SPIRAL-1.11805          41.3914       NO       
+     SPIRAL-1.11807           34.823       NO       
+     SPIRAL-1.11810          43.0697       NO       
+     SPIRAL-1.11825           42.036       NO       
+     SPIRAL-1.11853          40.8709       NO       
+     SPIRAL-1.11854          40.0074       NO       
+     SPIRAL-1.11874          35.9223       NO       
+     SPIRAL-1.11875          43.8337       NO       
+     SPIRAL-1.11876          44.6807       NO       
+     SPIRAL-1.11877          38.2378       NO       
+     SPIRAL-1.11886          44.2484       NO       
+     SPIRAL-1.11903            27.28       NO       
+     SPIRAL-1.11904          30.6166       NO       
+     SPIRAL-1.11906          40.2869       NO       
+     SPIRAL-1.11913          37.9669       NO       
+     SPIRAL-1.11920          41.7633       NO       
+     SPIRAL-1.11925          36.5246       NO       
+     SPIRAL-1.11936          31.1241       NO       
+     SPIRAL-1.11947          33.8997       NO       
+     SPIRAL-1.11961          39.2087       NO       
+     SPIRAL-1.11962           43.514       NO       
+     SPIRAL-1.11976           29.181       NO       
+     SPIRAL-1.11979          35.5922       NO       
+     SPIRAL-1.11989          41.2745       NO       
+     SPIRAL-1.11991          24.1178       NO       
+     SPIRAL-1.11996          39.0458       NO       
+     SPIRAL-1.11997          41.1854       NO       
+     SPIRAL-1.11998          43.2361       NO       
+     SPIRAL-1.13622           44.438       NO       
+     SPIRAL-1.13623          42.5933       NO       
+     SPIRAL-1.13624          43.5512       NO       
+     SPIRAL-1.15214          44.5526       NO       
+     SPIRAL-1.15215          35.4977       NO       
+     SPIRAL-1.15233          15.9176       NO       
+     SPIRAL-1.15234          44.3586       NO       
+     SPIRAL-1.15235          35.2031       NO       
+     SPIRAL-1.15238          39.0926       NO       
+     SPIRAL-1.15240          39.0002       NO       
+     SPIRAL-1.15242          36.2336       NO       
+     SPIRAL-1.15272          27.1108       NO       
+     SPIRAL-1.15274          26.7694       NO       
+     SPIRAL-1.15275           27.749       NO       
+     SPIRAL-1.15276          28.9596       NO       
+     SPIRAL-1.15277          29.8512       NO       
+     SPIRAL-1.15278          30.8876       NO       
+     SPIRAL-1.15279          32.2143       NO       
+     SPIRAL-1.15280           33.763       NO       
+     SPIRAL-1.15282            36.96       NO       
+     SPIRAL-1.15283           38.563       NO       
+     SPIRAL-1.15284          42.2801       NO       
+     SPIRAL-1.15285           44.384       NO       
+     SPIRAL-1.15311          44.8179       NO       
+     SPIRAL-1.15312          43.6933       NO       
+     SPIRAL-1.15313          43.9698       NO       
+     SPIRAL-1.15315          17.6909       NO       
+     SPIRAL-1.15316          32.0083       NO       
+     SPIRAL-1.15317          39.4864       NO       
+     SPIRAL-1.15318          16.4448       NO       
+     SPIRAL-1.15319          16.1533       NO       
+     SPIRAL-1.15320          15.9553       NO       
+     SPIRAL-1.15321          16.0741       NO       
+     SPIRAL-1.15322          16.0092       NO       
+     SPIRAL-1.15323          16.3222       NO       
+     SPIRAL-1.15324          16.5236       NO       
+     SPIRAL-1.15325          16.0616       NO       
+     SPIRAL-1.15326           15.959       NO       
+     SPIRAL-1.15327          15.8883       NO       
+     SPIRAL-1.15328          32.9303       NO       
+     SPIRAL-1.15329          33.3902       NO       
+     SPIRAL-1.15330          15.8525       NO       
+     SPIRAL-1.15355          25.3717       NO       
+     SPIRAL-1.15357          25.9147       NO       
+     SPIRAL-1.15372          16.4041       NO       
+     SPIRAL-1.15397          35.5319       NO       
+     SPIRAL-1.15402          40.3548       NO       
+     SPIRAL-1.15418          15.9356       NO       
+     SPIRAL-1.15420          16.0036       NO       
+     SPIRAL-1.15422          42.0237       NO       
+     SPIRAL-1.15424          16.6847       NO       
+     SPIRAL-1.15425          16.6435       NO       
+     SPIRAL-1.15427          35.2835       NO       
+     SPIRAL-1.15428          36.5167       NO       
+     SPIRAL-1.15429          16.2126       NO       
+     SPIRAL-1.15431          39.2985       NO       
+     SPIRAL-1.15432          37.2501       NO       
+     SPIRAL-1.15433          41.4336       NO       
+     SPIRAL-1.15434           41.609       NO       
+     SPIRAL-1.15438          43.3247       NO       
+     SPIRAL-1.15440          34.1005       NO       
+     SPIRAL-1.15441           16.014       NO       
+     SPIRAL-1.15447          37.3247       NO       
+     SPIRAL-1.15450          35.3949       NO       
+     SPIRAL-1.15451          40.7963       NO       
+     SPIRAL-1.15453          37.1634       NO       
+     SPIRAL-1.15454          38.6284       NO       
+     SPIRAL-1.15506          43.0332       NO       
+     SPIRAL-1.15507          41.7546       NO       
+     SPIRAL-1.15538          25.4585       NO       
+     SPIRAL-1.15557          40.6499       NO       
+     SPIRAL-1.15558          35.4723       NO       
+     SPIRAL-1.15559          33.8354       NO       
+     SPIRAL-1.15560          34.2733       NO       
+     SPIRAL-1.15561           36.842       NO       
+     SPIRAL-1.15563          34.7339       NO       
+     SPIRAL-1.15566          37.8254       NO       
+     SPIRAL-1.15567          42.1228       NO       
+     SPIRAL-1.15568            40.08       NO       
+     SPIRAL-1.15575          43.2807       NO       
+     SPIRAL-1.15576          43.7303       NO       
+     SPIRAL-1.15578          43.3298       NO       
+     SPIRAL-1.15579          40.7817       NO       
+     SPIRAL-1.15622          41.1927       NO       
+     SPIRAL-1.15624           36.333       NO       
+     SPIRAL-1.15643          39.4039       NO       
+     SPIRAL-1.15645          37.9507       NO       
+     SPIRAL-1.15646          42.3713       NO       
+     SPIRAL-1.15661          38.6311       NO       
+     SPIRAL-1.15662          30.5113       NO       
+     SPIRAL-1.15663          43.0996       NO       
+     SPIRAL-1.15664          41.5453       NO       
+     SPIRAL-1.15665          39.5504       NO       
+     SPIRAL-1.15666          40.9497       NO       
+     SPIRAL-1.15667          40.4913       NO       
+     SPIRAL-1.15668          38.1852       NO       
+     SPIRAL-1.15669          37.7104       NO       
+     SPIRAL-1.15670          37.2287       NO       
+     SPIRAL-1.15671          36.7415       NO       
+     SPIRAL-1.15672            36.25       NO       
+     SPIRAL-1.15673          35.7557       NO       
+     SPIRAL-1.15674          35.2596       NO       
+     SPIRAL-1.15675           34.763       NO       
+     SPIRAL-1.15676          34.2667       NO       
+     SPIRAL-1.15677          33.7717       NO       
+     SPIRAL-1.15678          33.2795       NO       
+     SPIRAL-1.15679          32.7903       NO       
+     SPIRAL-1.15680          35.0581       NO       
+     SPIRAL-1.15681          37.4837       NO       
+     SPIRAL-1.15682           37.119       NO       
+     SPIRAL-1.15683          36.6747       NO       
+     SPIRAL-1.15684          33.1763       NO       
+     SPIRAL-1.15685          29.9564       NO       
+     SPIRAL-1.15686           32.253       NO       
+     SPIRAL-1.15687          34.8512       NO       
+     SPIRAL-1.15688          34.2624       NO       
+     SPIRAL-1.15689          20.0363       NO       
+     SPIRAL-1.16653          27.6308       NO       
+     SPIRAL-1.16654          29.3487       NO       
+     SPIRAL-1.16656          30.7819       NO       
+     SPIRAL-1.16657          32.3336       NO       
+     SPIRAL-1.16658          34.0175       NO       
+     SPIRAL-1.16659          35.8508       NO       
+     SPIRAL-1.16660          37.8521       NO       
+     SPIRAL-1.16661          42.4202       NO       
+     SPIRAL-1.16687          40.2293       NO       
+     SPIRAL-1.16688          17.5955       NO       
+     SPIRAL-1.16689          34.2129       NO       
+     SPIRAL-1.16691          19.0132       NO       
+     SPIRAL-1.16692          17.8494       NO       
+     SPIRAL-1.16693           17.774       NO       
+     SPIRAL-1.16694          44.7269       NO       
+     SPIRAL-1.16695          17.6805       NO       
+     SPIRAL-1.16696          17.6551       NO       
+     SPIRAL-1.16697          17.6333       NO       
+     SPIRAL-1.16698          17.6087       NO       
+     SPIRAL-1.16699          17.5663       NO       
+     SPIRAL-1.16700          17.5785       NO       
+     SPIRAL-1.16702          17.7521       NO       
+     SPIRAL-1.16726          41.9455       NO       
+     SPIRAL-1.16727          42.2923       NO       
+     SPIRAL-1.16728          43.0759       NO       
+     SPIRAL-1.16729          43.4592       NO       
+     SPIRAL-1.16730          43.8598       NO       
+     SPIRAL-1.16732          44.2823       NO       
+     SPIRAL-1.16761          17.7075       NO       
+     SPIRAL-1.16762          40.0384       NO       
+     SPIRAL-1.16766          25.7298       NO       
+     SPIRAL-1.16797          17.4501       NO       
+     SPIRAL-1.16804          17.7422       NO       
+     SPIRAL-1.16807          42.6952       NO       
+     SPIRAL-1.16810          39.5623       NO       
+     SPIRAL-1.16811          17.2763       NO       
+     SPIRAL-1.16839          39.8177       NO       
+     SPIRAL-1.16848          25.5258       NO       
+     SPIRAL-1.16850          26.8355       NO       
+     SPIRAL-1.16851          37.3407       NO       
+     SPIRAL-1.16852            40.68       NO       
+     SPIRAL-1.16853          40.4932       NO       
+     SPIRAL-1.16854          40.2679       NO       
+     SPIRAL-1.16855          40.0105       NO       
+     SPIRAL-1.16856           39.725       NO       
+     SPIRAL-1.16857          39.4138       NO       
+     SPIRAL-1.16858          39.0808       NO       
+     SPIRAL-1.16859          38.7309       NO       
+     SPIRAL-1.16860          38.3702       NO       
+     SPIRAL-1.16861          37.9939       NO       
+     SPIRAL-1.16862          37.6079       NO       
+     SPIRAL-1.16863          37.2152       NO       
+     SPIRAL-1.16864          36.8111       NO       
+     SPIRAL-1.16865          36.4013       NO       
+     SPIRAL-1.16866          35.9743       NO       
+     SPIRAL-1.16867          33.0278       NO       
+     SPIRAL-1.16868          30.1715       NO       
+     SPIRAL-1.16869          27.5699       NO       
+     SPIRAL-1.16870          17.9639       NO       
+     SPIRAL-1.17338          43.7892       NO       
+     SPIRAL-1.17348          22.7316       NO       
+     SPIRAL-1.17349          27.4144       NO       
+     SPIRAL-1.17350          30.1397       NO       
+     SPIRAL-1.17351          32.7041       NO       
+     SPIRAL-1.17352          35.2044       NO       
+     SPIRAL-1.17353          37.4009       NO       
+     SPIRAL-1.17380          29.2815       NO       
+     SPIRAL-1.17395          25.5509       NO       
+     SPIRAL-1.17396          39.7043       NO       
+     SPIRAL-1.17579          23.3698       NO       
+     SPIRAL-1.17581          27.9277       NO       
+     SPIRAL-1.17583          29.5291       NO       
+     SPIRAL-1.17585          39.4795       NO       
+     SPIRAL-1.17599          44.6582       NO       
+     SPIRAL-1.17601          17.3937       NO       
+     SPIRAL-1.17602          32.4367       NO       
+     SPIRAL-1.17604          17.2774       NO       
+     SPIRAL-1.17605          44.5477       NO       
+     SPIRAL-1.17606          41.3214       NO       
+     SPIRAL-1.17607          39.9565       NO       
+     SPIRAL-1.17608          16.6545       NO       
+     SPIRAL-1.17609           38.601       NO       
+     SPIRAL-1.17610          16.5577       NO       
+     SPIRAL-1.17639          37.5112       NO       
+     SPIRAL-1.17640          16.7672       NO       
+     SPIRAL-1.17642          17.9334       NO       
+     SPIRAL-1.17643          17.1764       NO       
+     SPIRAL-1.17654          31.5326       NO       
+     SPIRAL-1.17657          42.7258       NO       
+     SPIRAL-1.17658           33.924       NO       
+     SPIRAL-1.17686          23.8469       NO       
+     SPIRAL-1.17690          40.5697       NO       
+     SPIRAL-1.17691          38.7488       NO       
+     SPIRAL-1.17693          16.6816       NO       
+     SPIRAL-1.17695          36.5507       NO       
+     SPIRAL-1.17700          16.9269       NO       
+     SPIRAL-1.17702          37.1309       NO       
+     SPIRAL-1.17703          16.3107       NO       
+     SPIRAL-1.17704            41.74       NO       
+     SPIRAL-1.17705          17.5131       NO       
+     SPIRAL-1.17719          40.5295       NO       
+     SPIRAL-1.17720          18.3926       NO       
+     SPIRAL-1.17721          30.9195       NO       
+     SPIRAL-1.17722          35.6895       NO       
+     SPIRAL-1.17723          36.7648       NO       
+     SPIRAL-1.17724          37.6131       NO       
+     SPIRAL-1.17725          38.2635       NO       
+     SPIRAL-1.17726          38.9084       NO       
+     SPIRAL-1.17727           39.555       NO       
+     SPIRAL-1.17728          40.2011       NO       
+     SPIRAL-1.17729          40.8414       NO       
+     SPIRAL-1.17730          41.4306       NO       
+     SPIRAL-1.17731           40.002       NO       
+     SPIRAL-1.17732          38.6772       NO       
+     SPIRAL-1.17733          41.3315       NO       
+     SPIRAL-1.17734          39.4086       NO       
+     SPIRAL-1.17735          27.5118       NO       
+     SPIRAL-1.18086          29.6408       NO       
+     SPIRAL-1.18087          30.1633       NO       
+     SPIRAL-1.18088          29.0394       NO       
+     SPIRAL-1.18098          32.6899       NO       
+     SPIRAL-1.18099          30.9478       NO       
+     SPIRAL-1.18104          34.6669       NO       
+     SPIRAL-1.18105          38.3195       NO       
+     SPIRAL-1.18106          40.9045       NO       
+     SPIRAL-1.18109          43.7011       NO       
+     SPIRAL-1.18110          42.2712       NO       
+     SPIRAL-1.18160          37.5912       NO       
+     SPIRAL-1.18161          16.9975       NO       
+     SPIRAL-1.18162          17.0828       NO       
+     SPIRAL-1.18164          17.0711       NO       
+     SPIRAL-1.18185          17.0095       NO       
+     SPIRAL-1.18186          37.0628       NO       
+     SPIRAL-1.18189          41.5997       NO       
+     SPIRAL-1.18190          17.2348       NO       
+     SPIRAL-1.18191          37.4507       NO       
+     SPIRAL-1.18195          42.0444       NO       
+     SPIRAL-1.18196            44.07       NO       
+     SPIRAL-1.18207          37.0961       NO       
+     SPIRAL-1.18221          26.3007       NO       
+     SPIRAL-1.18240          17.1618       NO       
+     SPIRAL-1.18241          17.0118       NO       
+     SPIRAL-1.18242          37.9989       NO       
+     SPIRAL-1.18243          17.0921       NO       
+     SPIRAL-1.18244          17.0795       NO       
+     SPIRAL-1.18245          17.0545       NO       
+     SPIRAL-1.18247          17.2752       NO       
+     SPIRAL-1.18248          39.9094       NO       
+     SPIRAL-1.18249           17.043       NO       
+     SPIRAL-1.18251          17.1089       NO       
+     SPIRAL-1.18252          39.8176       NO       
+     SPIRAL-1.18254          40.2405       NO       
+     SPIRAL-1.18255          17.1001       NO       
+     SPIRAL-1.18259          40.7164       NO       
+     SPIRAL-1.18282          36.8554       NO       
+     SPIRAL-1.18303          27.3721       NO       
+     SPIRAL-1.18304          26.4074       NO       
+     SPIRAL-1.18322           40.499       NO       
+     SPIRAL-1.18324          17.1346       NO       
+     SPIRAL-1.18331            17.03       NO       
+     SPIRAL-1.18349          26.7545       NO       
+     SPIRAL-1.18350          28.0627       NO       
+     SPIRAL-1.18351          31.8188       NO       
+     SPIRAL-1.18352          33.6023       NO       
+     SPIRAL-1.18353          35.8548       NO       
+     SPIRAL-1.18354          39.5734       NO       
+     SPIRAL-1.18376          18.6518       NO       
+     SPIRAL-1.18377          34.0408       NO       
+     SPIRAL-1.18378          17.1102       NO       
+     SPIRAL-1.18379          17.1579       NO       
+     SPIRAL-1.18380          37.6399       NO       
+     SPIRAL-1.18381          17.0379       NO       
+     SPIRAL-1.18382           17.067       NO       
+     SPIRAL-1.18383          17.0209       NO       
+     SPIRAL-1.18384          17.3222       NO       
+     SPIRAL-1.18439          41.9444       NO       
+     SPIRAL-1.18440          37.1317       NO       
+     SPIRAL-1.18441           38.279       NO       
+     SPIRAL-1.18442          36.4218       NO       
+     SPIRAL-1.18443          42.9247       NO       
+     SPIRAL-1.18444          37.2084       NO       
+     SPIRAL-1.18445           17.079       NO       
+     SPIRAL-1.18446          17.1164       NO       
+     SPIRAL-1.18447           18.554       NO       
+     SPIRAL-1.18448          37.4558       NO       
+     SPIRAL-1.18449          39.5278       NO       
+     SPIRAL-1.18450          38.9481       NO       
+     SPIRAL-1.18451          38.6861       NO       
+     SPIRAL-1.18452          37.4578       NO       
+     SPIRAL-1.18459          26.0784       NO       
+     SPIRAL-1.18487          44.5187       NO       
+     SPIRAL-1.18490           44.845       NO       
+     SPIRAL-1.18537          38.9747       NO       
+     SPIRAL-1.18538          39.7184       NO       
+     SPIRAL-1.18539          42.0855       NO       
+     SPIRAL-1.18543          43.5744       NO       
+     SPIRAL-1.18575          40.5596       NO       
+     SPIRAL-1.18594          42.4021       NO       
+     SPIRAL-1.18606          44.5693       NO       
+     SPIRAL-1.18615           36.224       NO       
+     SPIRAL-1.18619          40.9009       NO       
+     SPIRAL-1.18633           42.724       NO       
+     SPIRAL-1.18669          43.6335       NO       
+     SPIRAL-1.18685          17.0374       NO       
+     SPIRAL-1.18694          40.9873       NO       
+     SPIRAL-1.18698          40.7585       NO       
+     SPIRAL-1.18699          44.7922       NO       
+     SPIRAL-1.18700          39.8346       NO       
+     SPIRAL-1.18704          43.2744       NO       
+     SPIRAL-1.18705          26.5028       NO       
+     SPIRAL-1.18706          37.2133       NO       
+     SPIRAL-1.18707          40.6014       NO       
+     SPIRAL-1.18708          40.6222       NO       
+     SPIRAL-1.18709            39.31       NO       
+     SPIRAL-1.18710          37.8374       NO       
+     SPIRAL-1.18711          37.5877       NO       
+     SPIRAL-1.18712          38.7032       NO       
+     SPIRAL-1.18713          38.4497       NO       
+     SPIRAL-1.18714          36.8024       NO       
+     SPIRAL-1.18715          36.5302       NO       
+     SPIRAL-1.18716          36.2535       NO       
+     SPIRAL-1.18717          35.9727       NO       
+     SPIRAL-1.18718          37.3546       NO       
+     SPIRAL-1.18719          37.0718       NO       
+     SPIRAL-1.18720            35.11       NO       
+     SPIRAL-1.18721           34.817       NO       
+     SPIRAL-1.18722          34.5219       NO       
+     SPIRAL-1.18723          34.2251       NO       
+     SPIRAL-1.18724          33.9269       NO       
+     SPIRAL-1.18725          33.6274       NO       
+     SPIRAL-1.18726          35.3712       NO       
+     SPIRAL-1.18727          37.1746       NO       
+     SPIRAL-1.18728           37.019       NO       
+     SPIRAL-1.18729           36.812       NO       
+     SPIRAL-1.18730          36.5125       NO       
+     SPIRAL-1.18731          33.9879       NO       
+     SPIRAL-1.18732          31.5265       NO       
+     SPIRAL-1.18733          33.4191       NO       
+     SPIRAL-1.18734          35.3999       NO       
+     SPIRAL-1.18735          32.8533       NO       
+     SPIRAL-1.18736          30.3437       NO       
+     SPIRAL-1.18737          32.5067       NO       
+     SPIRAL-1.18738          34.6725       NO       
+     SPIRAL-1.18739          34.1849       NO       
+     SPIRAL-1.18740          33.6898       NO       
+     SPIRAL-1.18741          20.3072       NO       
+  
+  
+  *step, name=Step-1, nlgeom=YES
+  *step, name=Step-1, nlgeom=YES
+  *output, field, variable=PRESELECT
+  *output, history, variable=PRESELECT
+  *step, name=Step-1, nlgeom=YES
+  *step, name=Step-1, nlgeom=YES
+  *static
+  *boundary
+  *dsload
+  *output, field, variable=PRESELECT
+  *output, history, variable=PRESELECT
+  *endstep
+  *step, name=Step-1, nlgeom=YES
+  *static
+  *boundary
+  *endstep
+
+ ***WARNING: Boundary conditions are specified on inactive dof 4 at 208 nodes. 
+             The nodes have been identified in node set WarnNodeBCInactiveDof4.
+
+ ***WARNING: Boundary conditions are specified on inactive dof 5 at 208 nodes. 
+             The nodes have been identified in node set WarnNodeBCInactiveDof5.
+
+ ***WARNING: Boundary conditions are specified on inactive dof 6 at 208 nodes. 
+             The nodes have been identified in node set WarnNodeBCInactiveDof6.
+
+     - (RAMP) OR (STEP) - INDICATE USE OF DEFAULT AMPLITUDES ASSOCIATED WITH THE STEP
+
+
+
+                            P R O B L E M   S I Z E
+
+
+          NUMBER OF ELEMENTS IS                                 20093
+          NUMBER OF NODES IS                                    30258
+          NUMBER OF NODES DEFINED BY THE USER                   30258
+          TOTAL NUMBER OF VARIABLES IN THE MODEL                90774
+          (DEGREES OF FREEDOM PLUS MAX NO. OF ANY LAGRANGE MULTIPLIER
+           VARIABLES. INCLUDE *PRINT,SOLVE=YES TO GET THE ACTUAL NUMBER.)
+
+
+
+                              END OF USER INPUT PROCESSING
+
+
+
+     JOB TIME SUMMARY
+       USER TIME (SEC)      =      1.1    
+       SYSTEM TIME (SEC)    =     0.20    
+       TOTAL CPU TIME (SEC) =      1.3    
+       WALLCLOCK TIME (SEC) =            1
+1
+
+   Abaqus 2025                                  Date 10-Feb-2026   Time 17:06:14
+   For use by UNIVERSITAET STUTTGART under license from Dassault Systemes or its subsidiary.
+
+                                                                                               STEP    1  INCREMENT    1
+                                                                                          TIME COMPLETED IN THIS STEP   0.00    
+
+
+                        S T E P       1     S T A T I C   A N A L Y S I S
+
+
+                                                                                          
+
+     AUTOMATIC TIME CONTROL WITH -
+          A SUGGESTED INITIAL TIME INCREMENT OF                 1.00    
+          AND A TOTAL TIME PERIOD OF                            1.00    
+          THE MINIMUM TIME INCREMENT ALLOWED IS                1.000E-05
+          THE MAXIMUM TIME INCREMENT ALLOWED IS                 1.00    
+
+     LINEAR EQUATION SOLVER TYPE         DIRECT SPARSE
+
+          LARGE DISPLACEMENT THEORY WILL BE USED
+  
+                   M E M O R Y   E S T I M A T E
+  
+ PROCESS      FLOATING PT       MINIMUM MEMORY        MEMORY TO
+              OPERATIONS           REQUIRED          MINIMIZE I/O
+             PER ITERATION           (MB)               (MB)
+  
+     1          6.04E+09               60                284
+  
+ NOTE:
+      (1) SINCE ABAQUS DOES NOT PRE-ALLOCATE MEMORY AND ONLY ALLOCATES MEMORY AS NEEDED DURING THE ANALYSIS,
+          THE MEMORY REQUIREMENT PRINTED HERE CAN ONLY BE VIEWED AS A GENERAL GUIDELINE BASED ON THE BEST
+          KNOWLEDGE AVAILABLE AT THE BEGINNING OF A STEP BEFORE THE SOLUTION PROCESS HAS BEGUN.
+      (2) THE ESTIMATE IS NORMALLY UPDATED AT THE BEGINNING OF EVERY STEP. IT IS THE MAXIMUM VALUE OF THE
+          ESTIMATE FROM THE CURRENT STEP TO THE LAST STEP OF THE ANALYSIS, WITH UNSYMMETRIC SOLUTION TAKEN
+          INTO ACCOUNT IF APPLICABLE. 
+      (3) SINCE THE ESTIMATE IS BASED ON THE ACTIVE DEGREES OF FREEDOM IN THE FIRST ITERATION OF THE 
+          CURRENT STEP, THE MEMORY ESTIMATE MIGHT BE SIGNIFICANTLY DIFFERENT THAN ACTUAL USAGE FOR 
+          PROBLEMS WITH SUBSTANTIAL CHANGES IN ACTIVE DEGREES OF FREEDOM BETWEEN STEPS (OR EVEN WITHIN
+          THE SAME STEP). EXAMPLES ARE: PROBLEMS WITH SIGNIFICANT CONTACT CHANGES, PROBLEMS WITH MODEL
+          CHANGE, PROBLEMS WITH BOTH STATIC STEP AND STEADY STATE DYNAMIC PROCEDURES WHERE ACOUSTIC 
+          ELEMENTS WILL ONLY BE ACTIVATED IN THE STEADY STATE DYNAMIC STEPS.
+      (4) FOR MULTI-PROCESS EXECUTION, THE ESTIMATED VALUE OF FLOATING POINT OPERATIONS FOR EACH PROCESS
+          IS BASED ON AN INITIAL SCHEDULING OF OPERATIONS AND MIGHT NOT REFLECT THE ACTUAL FLOATING 
+          POINT OPERATIONS COMPLETED ON EACH PROCESS. OPERATIONS ARE DYNAMICALLY BALANCED DURING EXECUTION, 
+          SO THE ACTUAL BALANCE OF OPERATIONS BETWEEN PROCESSES IS EXPECTED TO BE BETTER THAN THE ESTIMATE
+          PRINTED HERE.
+      (5) THE UPPER LIMIT OF MEMORY THAT CAN BE ALLOCATED BY ABAQUS WILL IN GENERAL DEPEND ON THE VALUE OF
+          THE "MEMORY" PARAMETER AND THE AMOUNT OF PHYSICAL MEMORY AVAILABLE ON THE MACHINE. PLEASE SEE
+          THE "ABAQUS ANALYSIS USER'S MANUAL" FOR MORE DETAILS. THE ACTUAL USAGE OF MEMORY AND OF DISK
+          SPACE FOR SCRATCH DATA WILL DEPEND ON THIS UPPER LIMIT AS WELL AS THE MEMORY REQUIRED TO MINIMIZE
+          I/O. IF THE MEMORY UPPER LIMIT IS GREATER THAN THE MEMORY REQUIRED TO MINIMIZE I/O, THEN THE ACTUAL
+          MEMORY USAGE WILL BE CLOSE TO THE ESTIMATED "MEMORY TO MINIMIZE I/O" VALUE, AND THE SCRATCH DISK
+          USAGE WILL BE CLOSE-TO-ZERO; OTHERWISE, THE ACTUAL MEMORY USED WILL BE CLOSE TO THE PREVIOUSLY
+          MENTIONED MEMORY LIMIT, AND THE SCRATCH DISK USAGE WILL BE ROUGHLY PROPORTIONAL TO THE DIFFERENCE
+          BETWEEN THE ESTIMATED "MEMORY TO MINIMIZE I/O" AND THE MEMORY UPPER LIMIT. HOWEVER ACCURATE
+          ESTIMATE OF THE SCRATCH DISK SPACE IS NOT POSSIBLE.
+      (6) USING "*RESTART, WRITE" CAN GENERATE A LARGE AMOUNT OF DATA WRITTEN IN THE WORK DIRECTORY.
+
+
+          THE ANALYSIS HAS BEEN COMPLETED
+
+
+
+                              ANALYSIS COMPLETE
+                              WITH      4 WARNING MESSAGES ON THE DAT FILE
+                              AND   90029 WARNING MESSAGES ON THE MSG FILE
+                                    89956 WARNINGS ARE FOR NUMERICAL PROBLEMS
+                                       68 WARNINGS ARE FOR NEGATIVE EIGENVALUES
+
+
+
+     JOB TIME SUMMARY
+       USER TIME (SEC)      =     4.93E+02
+       SYSTEM TIME (SEC)    =      66.    
+       TOTAL CPU TIME (SEC) =     5.59E+02
+       WALLCLOCK TIME (SEC) =          479

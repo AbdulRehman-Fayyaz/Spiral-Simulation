@@ -1,0 +1,15 @@
+<?xml version="1.0"?><msgwrapper><Started><phase type="symconst">BATCHPRE_PHASE</phase><jobName type="string">Static_Job-2</jobName><clientHost type="string">MIB40-GAUSS</clientHost><handle type="integer">0</handle></Started>
+<Warning><message type="string">1617 elements are distorted. Either the isoparametric angles are out of the suggested limits or the triangular or tetrahedral quality measure is bad. The elements have been identified in element set WarnElemDistorted.</message><phase type="symconst">BATCHPRE_PHASE</phase><jobName type="string">Static_Job-2</jobName></Warning>
+<Warning><message type="string">Boundary conditions are specified on inactive dof 4 at 1720 nodes. The nodes have been identified in node set WarnNodeBCInactiveDof4.</message><phase type="symconst">BATCHPRE_PHASE</phase><jobName type="string">Static_Job-2</jobName></Warning>
+<Warning><message type="string">Boundary conditions are specified on inactive dof 5 at 1720 nodes. The nodes have been identified in node set WarnNodeBCInactiveDof5.</message><phase type="symconst">BATCHPRE_PHASE</phase><jobName type="string">Static_Job-2</jobName></Warning>
+<Warning><message type="string">Boundary conditions are specified on inactive dof 6 at 1720 nodes. The nodes have been identified in node set WarnNodeBCInactiveDof6.</message><phase type="symconst">BATCHPRE_PHASE</phase><jobName type="string">Static_Job-2</jobName></Warning>
+<Odb_File><file type="string">C:\Users\st195764\Desktop\Spiral-Simulation\Abaqus_files\LAB_files\Static_Job-2.odb</file><phase type="symconst">BATCHPRE_PHASE</phase><jobName type="string">Static_Job-2</jobName></Odb_File>
+<Completed><message type="string">Analysis phase complete</message><phase type="symconst">BATCHPRE_PHASE</phase><jobName type="string">Static_Job-2</jobName></Completed>
+<Started><phase type="symconst">STANDARD_PHASE</phase><jobName type="string">Static_Job-2</jobName><clientHost type="string">MIB40-GAUSS</clientHost><handle type="integer">19600</handle></Started>
+<Step><stepId type="integer">1</stepId><phase type="symconst">STANDARD_PHASE</phase><jobName type="string">Static_Job-2</jobName></Step>
+<Odb_Frame><step type="integer">0</step><frame type="integer">0</frame><phase type="symconst">STANDARD_PHASE</phase><jobName type="string">Static_Job-2</jobName></Odb_Frame>
+<MEMORY_ESTIMATE><memory type="float">219</memory><phase type="symconst">STANDARD_PHASE</phase><jobName type="string">Static_Job-2</jobName></MEMORY_ESTIMATE>
+<PHYSICAL_MEMORY><physical_memory type="float">16071</physical_memory><phase type="symconst">STANDARD_PHASE</phase><jobName type="string">Static_Job-2</jobName></PHYSICAL_MEMORY>
+<MINIMUM_MEMORY><minimum_memory type="float">63</minimum_memory><phase type="symconst">STANDARD_PHASE</phase><jobName type="string">Static_Job-2</jobName></MINIMUM_MEMORY>
+<Completed><message type="string">Analysis phase complete</message><phase type="symconst">STANDARD_PHASE</phase><jobName type="string">Static_Job-2</jobName></Completed>
+<JOB_COMPLETED><time type="string">Tue Feb 10 13:14:42 2026</time><jobName type="string">Static_Job-2</jobName></JOB_COMPLETED></msgwrapper>
