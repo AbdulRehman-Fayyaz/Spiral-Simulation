@@ -1,0 +1,75 @@
+# -*- coding: mbcs -*-
+#
+# Abaqus/CAE Release 2025 replay file
+# Internal Version: 2024_09_20-15.00.46 RELr427 198590
+# Run by st195764 on Tue Feb 10 18:19:30 2026
+#
+
+# from driverUtils import executeOnCaeGraphicsStartup
+# executeOnCaeGraphicsStartup()
+#: Executing "onCaeGraphicsStartup()" in the site directory ...
+from abaqus import *
+from abaqusConstants import *
+session.Viewport(name='Viewport: 1', origin=(0.0, 0.0), width=169.902587890625, 
+    height=194.592590332031)
+session.viewports['Viewport: 1'].makeCurrent()
+session.viewports['Viewport: 1'].maximize()
+from caeModules import *
+from driverUtils import executeOnCaeStartup
+executeOnCaeStartup()
+openMdb('Spiral_inLAB.cae')
+#: The model database "C:\Users\st195764\Desktop\Spiral-Simulation\Abaqus_files\LAB_files\Spiral_inLAB.cae" has been opened.
+session.viewports['Viewport: 1'].setValues(displayedObject=None)
+session.viewports['Viewport: 1'].partDisplay.geometryOptions.setValues(
+    referenceRepresentation=ON)
+p = mdb.models['spiral_Model_Dynamic'].parts['Spiral']
+session.viewports['Viewport: 1'].setValues(displayedObject=p)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.305368, 
+    farPlane=0.52386, width=0.264736, height=0.115076, viewOffsetX=0.00292509, 
+    viewOffsetY=-0.00295617)
+a = mdb.models['spiral_Model_Dynamic'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+o3 = session.openOdb(
+    name='C:/Users/st195764/Desktop/Spiral-Simulation/Abaqus_files/LAB_files/static_traction_Job-4.odb')
+#: Model: C:/Users/st195764/Desktop/Spiral-Simulation/Abaqus_files/LAB_files/static_traction_Job-4.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     1
+#: Number of Meshes:             1
+#: Number of Element Sets:       5
+#: Number of Node Sets:          7
+#: Number of Steps:              1
+session.viewports['Viewport: 1'].setValues(displayedObject=o3)
+session.viewports['Viewport: 1'].makeCurrent()
+a = mdb.models['spiral_Model_Dynamic'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+session.viewports['Viewport: 1'].setValues(
+    displayedObject=session.odbs['C:/Users/st195764/Desktop/Spiral-Simulation/Abaqus_files/LAB_files/static_traction_Job-4.odb'])
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(
+    optimizationTasks=OFF, geometricRestrictions=OFF, stopConditions=OFF)
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    DEFORMED, ))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.267664, 
+    farPlane=0.442465, width=0.283541, height=0.12325, cameraPosition=(
+    0.324582, -0.116546, -0.100816), cameraUpVector=(0.152473, 0.859468, 
+    0.487922), cameraTarget=(0.0630993, 0.00888568, -0.037216))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.267918, 
+    farPlane=0.437557, width=0.28381, height=0.123367, cameraPosition=(
+    -0.100376, -0.0948671, -0.336211), cameraUpVector=(0.979494, -0.175343, 
+    0.0992301), cameraTarget=(-0.00651161, 0.0124368, -0.0757753))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.275058, 
+    farPlane=0.428216, width=0.291374, height=0.126655, cameraPosition=(
+    0.033217, -0.0994988, -0.353115), cameraUpVector=(0.920084, 0.151774, 
+    0.361122), cameraTarget=(0.0146348, 0.0117036, -0.078451))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.264305, 
+    farPlane=0.446301, width=0.279983, height=0.121704, cameraPosition=(
+    -0.112915, -0.179551, -0.279614), cameraUpVector=(0.933136, 0.277853, 
+    -0.228155), cameraTarget=(-0.00811142, -0.00075701, -0.0670102))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.2693, 
+    farPlane=0.441306, width=0.222728, height=0.0968159, 
+    viewOffsetX=0.00375924, viewOffsetY=0.00681923)
+session.viewports['Viewport: 1'].animationController.setValues(
+    animationType=TIME_HISTORY)
+session.viewports['Viewport: 1'].animationController.play(duration=UNLIMITED)
+session.viewports['Viewport: 1'].animationController.setValues(
+    animationType=NONE)

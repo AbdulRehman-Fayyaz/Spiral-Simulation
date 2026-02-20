@@ -1,0 +1,650 @@
+# -*- coding: mbcs -*-
+#
+# Abaqus/CAE Release 2025 replay file
+# Internal Version: 2024_09_20-15.00.46 RELr427 198590
+# Run by st195764 on Tue Feb 10 19:30:02 2026
+#
+
+# from driverUtils import executeOnCaeGraphicsStartup
+# executeOnCaeGraphicsStartup()
+#: Executing "onCaeGraphicsStartup()" in the site directory ...
+from abaqus import *
+from abaqusConstants import *
+session.Viewport(name='Viewport: 1', origin=(0.0, 0.0), width=169.902587890625, 
+    height=194.592590332031)
+session.viewports['Viewport: 1'].makeCurrent()
+session.viewports['Viewport: 1'].maximize()
+from caeModules import *
+from driverUtils import executeOnCaeStartup
+executeOnCaeStartup()
+openMdb('Spiral_inLAB.cae')
+#: The model database "C:\Users\st195764\Desktop\Spiral-Simulation\Abaqus_files\LAB_files\Spiral_inLAB.cae" has been opened.
+session.viewports['Viewport: 1'].setValues(displayedObject=None)
+session.viewports['Viewport: 1'].partDisplay.geometryOptions.setValues(
+    referenceRepresentation=ON)
+p = mdb.models['spiral_Model_Dynamic'].parts['Spiral']
+session.viewports['Viewport: 1'].setValues(displayedObject=p)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.307949, 
+    farPlane=0.521279, width=0.235898, height=0.102541, 
+    viewOffsetX=-0.00180639, viewOffsetY=0.00307782)
+p1 = mdb.models['spiral_Model_static_traction'].parts['Spiral']
+session.viewports['Viewport: 1'].setValues(displayedObject=p1)
+mdb.Model(name='spiral_Model_static_displacement', 
+    objectToCopy=mdb.models['spiral_Model_static_traction'])
+#: The model "spiral_Model_static_displacement" has been created.
+p = mdb.models['spiral_Model_static_displacement'].parts['Spiral']
+session.viewports['Viewport: 1'].setValues(displayedObject=p)
+a = mdb.models['spiral_Model_static_displacement'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(step='Step-1')
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(loads=ON, bcs=ON, 
+    predefinedFields=ON, connectors=ON, optimizationTasks=OFF, 
+    geometricRestrictions=OFF, stopConditions=OFF)
+del mdb.models['spiral_Model_static_displacement'].loads['Load-1']
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.322861, 
+    farPlane=0.506367, width=0.0812012, height=0.0352967, 
+    viewOffsetX=0.00535102, viewOffsetY=-0.023672)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.323613, 
+    farPlane=0.513272, width=0.0813903, height=0.0353789, cameraPosition=(
+    0.390564, 0.239727, -0.154129), cameraUpVector=(-0.459886, 0.662968, 
+    0.590743), cameraTarget=(0.062938, 0.0604605, 0.0259529), 
+    viewOffsetX=0.00536349, viewOffsetY=-0.0237272)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.321333, 
+    farPlane=0.524203, width=0.0808169, height=0.0351297, cameraPosition=(
+    0.428013, 0.239834, 0.0213735), cameraUpVector=(-0.686638, 0.66509, 
+    0.293569), cameraTarget=(0.0541613, 0.0605767, 0.0238478), 
+    viewOffsetX=0.0053257, viewOffsetY=-0.02356)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.320806, 
+    farPlane=0.524729, width=0.0820601, height=0.0356701, 
+    viewOffsetX=0.0096317, viewOffsetY=-0.032984)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.348822, 
+    farPlane=0.509954, width=0.0892264, height=0.0387851, cameraPosition=(
+    0.407022, 0.152713, -0.215078), cameraUpVector=(-0.0071841, 0.584694, 
+    0.811222), cameraTarget=(0.0879939, 0.0478133, 0.0280706), 
+    viewOffsetX=0.0104728, viewOffsetY=-0.0358644)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.348194, 
+    farPlane=0.510581, width=0.0890658, height=0.0387154, cameraPosition=(
+    0.389422, 0.171283, -0.230159), cameraUpVector=(-0.394161, 0.824119, 
+    0.406775), cameraTarget=(0.0703941, 0.066383, 0.0129898), 
+    viewOffsetX=0.010454, viewOffsetY=-0.0357999)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.347065, 
+    farPlane=0.51171, width=0.107761, height=0.046842, viewOffsetX=0.0377459, 
+    viewOffsetY=-0.0457645)
+a = mdb.models['spiral_Model_static_displacement'].rootAssembly
+v1 = a.instances['Spiral-1'].vertices
+e1 = a.instances['Spiral-1'].edges
+a.DatumCsysByThreePoints(origin=v1[269], name='Datum csys-2', 
+    coordSysType=CARTESIAN, point1=a.instances['Spiral-1'].InterestingPoint(
+    edge=e1[437], rule=MIDDLE), 
+    point2=a.instances['Spiral-1'].InterestingPoint(edge=e1[430], rule=MIDDLE))
+a = mdb.models['spiral_Model_static_displacement'].rootAssembly
+f1 = a.instances['Spiral-1'].faces
+faces1 = f1.getSequenceFromMask(mask=('[#0:5 #1000 ]', ), )
+region = regionToolset.Region(faces=faces1)
+mdb.models['spiral_Model_static_displacement'].DisplacementBC(
+    name='displacement_BC-2', createStepName='Step-1', region=region, u1=UNSET, 
+    u2=UNSET, u3=UNSET, ur1=UNSET, ur2=3.141, ur3=UNSET, amplitude=UNSET, 
+    fixed=OFF, distributionType=UNIFORM, fieldName='', localCsys=None)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.348439, 
+    farPlane=0.510335, width=0.0917655, height=0.0398889, 
+    viewOffsetX=0.0376128, viewOffsetY=-0.0419075)
+mdb.models['spiral_Model_static_displacement'].boundaryConditions['displacement_BC-2'].setValues(
+    ur2=UNSET, ur3=3.141)
+mdb.models['spiral_Model_static_displacement'].boundaryConditions['displacement_BC-2'].setValues(
+    ur3=-3.141)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(loads=OFF, bcs=OFF, 
+    predefinedFields=OFF, connectors=OFF)
+mdb.Job(name='statics_displacement_Job-5', 
+    model='spiral_Model_static_displacement', description='', type=ANALYSIS, 
+    atTime=None, waitMinutes=0, waitHours=0, queue=None, memory=90, 
+    memoryUnits=PERCENTAGE, getMemoryFromAnalysis=True, 
+    explicitPrecision=SINGLE, nodalOutputPrecision=SINGLE, echoPrint=OFF, 
+    modelPrint=OFF, contactPrint=OFF, historyPrint=OFF, userSubroutine='', 
+    scratch='', resultsFormat=ODB, numCpus=1, numGPUs=0)
+mdb.jobs['statics_displacement_Job-5'].submit(consistencyChecking=OFF)
+#: The job input file "statics_displacement_Job-5.inp" has been submitted for analysis.
+#: Job statics_displacement_Job-5: Analysis Input File Processor completed successfully.
+#: Job statics_displacement_Job-5: Abaqus/Standard completed successfully.
+#: Job statics_displacement_Job-5 completed successfully. 
+o3 = session.openOdb(
+    name='C:/Users/st195764/Desktop/Spiral-Simulation/Abaqus_files/LAB_files/statics_displacement_Job-5.odb')
+#: Model: C:/Users/st195764/Desktop/Spiral-Simulation/Abaqus_files/LAB_files/statics_displacement_Job-5.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     1
+#: Number of Meshes:             1
+#: Number of Element Sets:       5
+#: Number of Node Sets:          7
+#: Number of Steps:              1
+session.viewports['Viewport: 1'].setValues(displayedObject=o3)
+session.viewports['Viewport: 1'].makeCurrent()
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_DEF, ))
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    DEFORMED, ))
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    UNDEFORMED, ))
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    DEFORMED, ))
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=1 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=1 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=1 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=1 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=1 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=1 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=1 )
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.228694, 
+    farPlane=0.36511, width=0.0928536, height=0.0403619, 
+    viewOffsetX=0.000962361, viewOffsetY=-0.0164773)
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_DEF, ))
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    DEFORMED, ))
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    UNDEFORMED, ))
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    DEFORMED, ))
+a = mdb.models['spiral_Model_static_displacement'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+mdb.save()
+#: The model database has been saved to "C:\Users\st195764\Desktop\Spiral-Simulation\Abaqus_files\LAB_files\Spiral_inLAB.cae".
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(loads=ON, bcs=ON, 
+    predefinedFields=ON, connectors=ON)
+mdb.models['spiral_Model_static_displacement'].boundaryConditions['displacement_BC-2'].setValues(
+    ur2=-3.141, ur3=UNSET)
+mdb.models['spiral_Model_static_displacement'].boundaryConditions['displacement_BC-2'].setValues(
+    ur2=3.141)
+mdb.save()
+#: The model database has been saved to "C:\Users\st195764\Desktop\Spiral-Simulation\Abaqus_files\LAB_files\Spiral_inLAB.cae".
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(loads=OFF, bcs=OFF, 
+    predefinedFields=OFF, connectors=OFF)
+mdb.jobs['statics_displacement_Job-5'].submit(consistencyChecking=OFF)
+#: The job input file "statics_displacement_Job-5.inp" has been submitted for analysis.
+#: Job statics_displacement_Job-5: Analysis Input File Processor completed successfully.
+#: Job statics_displacement_Job-5: Abaqus/Standard completed successfully.
+#: Job statics_displacement_Job-5 completed successfully. 
+o3 = session.openOdb(
+    name='C:/Users/st195764/Desktop/Spiral-Simulation/Abaqus_files/LAB_files/statics_displacement_Job-5.odb')
+#: Model: C:/Users/st195764/Desktop/Spiral-Simulation/Abaqus_files/LAB_files/statics_displacement_Job-5.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     1
+#: Number of Meshes:             1
+#: Number of Element Sets:       5
+#: Number of Node Sets:          7
+#: Number of Steps:              1
+session.viewports['Viewport: 1'].setValues(displayedObject=o3)
+session.viewports['Viewport: 1'].makeCurrent()
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    DEFORMED, ))
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    UNDEFORMED, ))
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    DEFORMED, ))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.221941, 
+    farPlane=0.371863, width=0.152461, height=0.0662723, viewOffsetX=0.0029037, 
+    viewOffsetY=-0.00827381)
+a = mdb.models['spiral_Model_static_displacement'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(loads=ON, bcs=ON, 
+    predefinedFields=ON, connectors=ON)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.345006, 
+    farPlane=0.513769, width=0.131708, height=0.0572511, viewOffsetX=0.0500924, 
+    viewOffsetY=-0.0402033)
+mdb.models['spiral_Model_static_displacement'].boundaryConditions['displacement_BC-2'].setValues(
+    ur1=3.141, ur2=UNSET)
+o3 = session.openOdb(
+    name='C:/Users/st195764/Desktop/Spiral-Simulation/Abaqus_files/LAB_files/statics_displacement_Job-5.odb')
+session.viewports['Viewport: 1'].setValues(displayedObject=o3)
+session.viewports['Viewport: 1'].makeCurrent()
+a = mdb.models['spiral_Model_static_displacement'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+session.viewports['Viewport: 1'].setValues(
+    displayedObject=session.odbs['C:/Users/st195764/Desktop/Spiral-Simulation/Abaqus_files/LAB_files/statics_displacement_Job-5.odb'])
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(loads=OFF, bcs=OFF, 
+    predefinedFields=OFF, connectors=OFF)
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_DEF, ))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.22347, 
+    farPlane=0.370335, width=0.153511, height=0.0667287, 
+    viewOffsetX=0.00342818, viewOffsetY=8.18232e-05)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.218426, 
+    farPlane=0.364769, width=0.150047, height=0.0652227, cameraPosition=(
+    -0.235669, -0.0173533, 0.0015395), cameraUpVector=(0.0985228, 0.979792, 
+    0.174071), cameraTarget=(0.0517595, 0.0564409, -0.00796143), 
+    viewOffsetX=0.00335081, viewOffsetY=7.99765e-05)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.230473, 
+    farPlane=0.348214, width=0.158322, height=0.06882, cameraPosition=(
+    -0.222339, 0.0603266, 0.108399), cameraUpVector=(0.293782, 0.93206, 
+    -0.212031), cameraTarget=(0.0500414, 0.0538177, -0.00957302), 
+    viewOffsetX=0.00353561, viewOffsetY=8.43874e-05)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.212225, 
+    farPlane=0.366461, width=0.370318, height=0.160971, viewOffsetX=0.00321566, 
+    viewOffsetY=0.0175348)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.206259, 
+    farPlane=0.379863, width=0.359907, height=0.156445, cameraPosition=(
+    -0.22098, 0.106495, 0.109453), cameraUpVector=(0.364648, 0.839458, 
+    -0.402916), cameraTarget=(0.0479691, 0.0529433, -0.00434334), 
+    viewOffsetX=0.00312526, viewOffsetY=0.0170418)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=0 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=1 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=1 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=1 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=0 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=0 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=0 )
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.233918, 
+    farPlane=0.352205, width=0.0599522, height=0.0260602, 
+    viewOffsetX=-0.0130815, viewOffsetY=-0.0351022)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=1 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=0 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=1 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=0 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=1 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=0 )
+a = mdb.models['spiral_Model_static_displacement'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+a = mdb.models['spiral_Model_static_displacement'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+o7 = session.odbs['C:/Users/st195764/Desktop/Spiral-Simulation/Abaqus_files/LAB_files/statics_displacement_Job-5.odb']
+session.viewports['Viewport: 1'].setValues(displayedObject=o7)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.227069, 
+    farPlane=0.359054, width=0.147225, height=0.063996, 
+    viewOffsetX=-0.00418431, viewOffsetY=-0.0286704)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.207803, 
+    farPlane=0.362637, width=0.134733, height=0.0585662, cameraPosition=(
+    -0.213933, 0.158989, -0.0494214), cameraUpVector=(0.677252, 0.622846, 
+    -0.391655), cameraTarget=(0.0582316, 0.0475422, -0.00871633), 
+    viewOffsetX=-0.00382929, viewOffsetY=-0.0262378)
+a = mdb.models['spiral_Model_static_displacement'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(loads=ON, bcs=ON, 
+    predefinedFields=ON, connectors=ON)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.349222, 
+    farPlane=0.509553, width=0.0826518, height=0.0359273, viewOffsetX=0.042321, 
+    viewOffsetY=-0.0369546)
+mdb.models['spiral_Model_static_displacement'].boundaryConditions['displacement_BC-2'].setValues(
+    localCsys=None, u3=-50.0, ur1=UNSET)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(loads=OFF, bcs=OFF, 
+    predefinedFields=OFF, connectors=OFF)
+mdb.jobs['statics_displacement_Job-5'].submit(consistencyChecking=OFF)
+#: The job input file "statics_displacement_Job-5.inp" has been submitted for analysis.
+#: Job statics_displacement_Job-5: Analysis Input File Processor completed successfully.
+#: Error in job statics_displacement_Job-5: Too many attempts made for this increment
+#: Job statics_displacement_Job-5: Abaqus/Standard aborted due to errors.
+o3 = session.openOdb(
+    name='C:/Users/st195764/Desktop/Spiral-Simulation/Abaqus_files/LAB_files/statics_displacement_Job-5.odb')
+#: Model: C:/Users/st195764/Desktop/Spiral-Simulation/Abaqus_files/LAB_files/statics_displacement_Job-5.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     1
+#: Number of Meshes:             1
+#: Number of Element Sets:       5
+#: Number of Node Sets:          7
+#: Number of Steps:              1
+session.viewports['Viewport: 1'].setValues(displayedObject=o3)
+session.viewports['Viewport: 1'].makeCurrent()
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    DEFORMED, ))
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_DEF, ))
+#: Error in job statics_displacement_Job-5: Abaqus/Standard Analysis exited with an error - Please see the  message file for possible error messages if the file exists.
+#: Job statics_displacement_Job-5 aborted due to errors.
+a = mdb.models['spiral_Model_static_displacement'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.335578, 
+    farPlane=0.523197, width=0.214621, height=0.0972318, viewOffsetX=0.0509148, 
+    viewOffsetY=-0.00289169)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(
+    adaptiveMeshConstraints=ON)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(loads=ON, bcs=ON, 
+    predefinedFields=ON, connectors=ON, adaptiveMeshConstraints=OFF)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.350853, 
+    farPlane=0.507922, width=0.0563519, height=0.0244952, 
+    viewOffsetX=0.0422956, viewOffsetY=-0.0338855)
+a = mdb.models['spiral_Model_static_displacement'].rootAssembly
+v11 = a.instances['Spiral-1'].vertices
+e11 = a.instances['Spiral-1'].edges
+a.DatumCsysByThreePoints(origin=v11[269], point1=v11[141], name='Datum csys-3', 
+    coordSysType=CYLINDRICAL, point2=a.instances['Spiral-1'].InterestingPoint(
+    edge=e11[527], rule=MIDDLE))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.356267, 
+    farPlane=0.502507, width=0.000514207, height=0.000223517, 
+    viewOffsetX=0.0359233, viewOffsetY=-0.0421864)
+session.viewports['Viewport: 1'].enableMultipleColors()
+session.viewports['Viewport: 1'].setColor(initialColor='#BDBDBD')
+cmap=session.viewports['Viewport: 1'].colorMappings['Part']
+session.viewports['Viewport: 1'].setColor(colorMapping=cmap)
+session.viewports['Viewport: 1'].disableMultipleColors()
+session.viewports['Viewport: 1'].enableMultipleColors()
+session.viewports['Viewport: 1'].setColor(initialColor='#BDBDBD')
+cmap=session.viewports['Viewport: 1'].colorMappings['Assembly']
+session.viewports['Viewport: 1'].setColor(colorMapping=cmap)
+session.viewports['Viewport: 1'].disableMultipleColors()
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.342909, 
+    farPlane=0.515866, width=0.138565, height=0.0602316, viewOffsetX=0.0506898, 
+    viewOffsetY=-0.0394144)
+a = mdb.models['spiral_Model_static_displacement'].rootAssembly
+v1 = a.instances['Spiral-1'].vertices
+verts1 = v1.getSequenceFromMask(mask=('[#0:4 #2000 ]', ), )
+region = regionToolset.Region(vertices=verts1)
+mdb.models['spiral_Model_static_displacement'].boundaryConditions['displacement_BC-2'].setValues(
+    region=region, localCsys=None, u1=0.0, u2=0.0)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(loads=OFF, bcs=OFF, 
+    predefinedFields=OFF, connectors=OFF)
+mdb.jobs['statics_displacement_Job-5'].submit(consistencyChecking=OFF)
+#: The job input file "statics_displacement_Job-5.inp" has been submitted for analysis.
+#: Job statics_displacement_Job-5: Analysis Input File Processor completed successfully.
+#: Error in job statics_displacement_Job-5: Too many attempts made for this increment
+#: Job statics_displacement_Job-5: Abaqus/Standard aborted due to errors.
+#: Error in job statics_displacement_Job-5: Abaqus/Standard Analysis exited with an error - Please see the  message file for possible error messages if the file exists.
+#: Job statics_displacement_Job-5 aborted due to errors.
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.326046, 
+    farPlane=0.532729, width=0.116415, height=0.141315, viewOffsetX=0.044493, 
+    viewOffsetY=-0.0459653)
+o3 = session.openOdb(
+    name='C:/Users/st195764/Desktop/Spiral-Simulation/Abaqus_files/LAB_files/statics_displacement_Job-5.odb')
+#: Model: C:/Users/st195764/Desktop/Spiral-Simulation/Abaqus_files/LAB_files/statics_displacement_Job-5.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     1
+#: Number of Meshes:             1
+#: Number of Element Sets:       5
+#: Number of Node Sets:          7
+#: Number of Steps:              1
+session.viewports['Viewport: 1'].setValues(displayedObject=o3)
+session.viewports['Viewport: 1'].makeCurrent()
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    DEFORMED, ))
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    UNDEFORMED, ))
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    DEFORMED, ))
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_DEF, ))
+a = mdb.models['spiral_Model_static_displacement'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(loads=ON, bcs=ON, 
+    predefinedFields=ON, connectors=ON)
+a = mdb.models['spiral_Model_static_displacement'].rootAssembly
+del a.features['Datum csys-1']
+a = mdb.models['spiral_Model_static_displacement'].rootAssembly
+del a.features['Datum csys-2']
+a = mdb.models['spiral_Model_static_displacement'].rootAssembly
+del a.features['Datum csys-3']
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.339226, 
+    farPlane=0.519549, width=0.073227, height=0.0898021, viewOffsetX=0.0227112, 
+    viewOffsetY=-0.0184643)
+session.viewports['Viewport: 1'].viewportAnnotationOptions.setValues(triad=OFF)
+session.viewports['Viewport: 1'].viewportAnnotationOptions.setValues(triad=ON)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.348075, 
+    farPlane=0.5107, width=0.0313381, height=0.0384315, viewOffsetX=0.0226296, 
+    viewOffsetY=-0.0386968)
+a = mdb.models['spiral_Model_static_displacement'].rootAssembly
+v1 = a.instances['Spiral-1'].vertices
+e1 = a.instances['Spiral-1'].edges
+a.DatumCsysByThreePoints(origin=v1[269], name='my_cooedinate', 
+    coordSysType=CARTESIAN, point1=a.instances['Spiral-1'].InterestingPoint(
+    edge=e1[437], rule=MIDDLE), 
+    point2=a.instances['Spiral-1'].InterestingPoint(edge=e1[435], rule=MIDDLE))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.345671, 
+    farPlane=0.513104, width=0.0456683, height=0.0560054, 
+    viewOffsetX=0.0291219, viewOffsetY=-0.0406432)
+a = mdb.models['spiral_Model_static_displacement'].rootAssembly
+v1 = a.instances['Spiral-1'].vertices
+verts1 = v1.getSequenceFromMask(mask=('[#0:8 #10000 ]', ), )
+region = regionToolset.Region(vertices=verts1)
+datum = mdb.models['spiral_Model_static_displacement'].rootAssembly.datums[26]
+mdb.models['spiral_Model_static_displacement'].boundaryConditions['displacement_BC-2'].setValues(
+    region=region, localCsys=datum, u2=10.0, u3=-10.0)
+mdb.save()
+#: The model database has been saved to "C:\Users\st195764\Desktop\Spiral-Simulation\Abaqus_files\LAB_files\Spiral_inLAB.cae".
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(loads=OFF, bcs=OFF, 
+    predefinedFields=OFF, connectors=OFF)
+mdb.jobs['statics_displacement_Job-5'].submit(consistencyChecking=OFF)
+#: The job input file "statics_displacement_Job-5.inp" has been submitted for analysis.
+#: Job statics_displacement_Job-5: Analysis Input File Processor completed successfully.
+#: Error in job statics_displacement_Job-5: Too many attempts made for this increment
+#: Job statics_displacement_Job-5: Abaqus/Standard aborted due to errors.
+o3 = session.openOdb(
+    name='C:/Users/st195764/Desktop/Spiral-Simulation/Abaqus_files/LAB_files/static_traction_Job-4.odb')
+#: Model: C:/Users/st195764/Desktop/Spiral-Simulation/Abaqus_files/LAB_files/static_traction_Job-4.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     1
+#: Number of Meshes:             1
+#: Number of Element Sets:       5
+#: Number of Node Sets:          7
+#: Number of Steps:              1
+session.viewports['Viewport: 1'].setValues(displayedObject=o3)
+session.viewports['Viewport: 1'].makeCurrent()
+#: Error in job statics_displacement_Job-5: Abaqus/Standard Analysis exited with an error - Please see the  message file for possible error messages if the file exists.
+#: Job statics_displacement_Job-5 aborted due to errors.
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    DEFORMED, ))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.249588, 
+    farPlane=0.437715, width=0.11283, height=0.138369, viewOffsetX=0.00429681, 
+    viewOffsetY=-0.00126242)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.275429, 
+    farPlane=0.433212, width=0.124512, height=0.152695, cameraPosition=(
+    0.363991, 0.0823486, -0.0682319), cameraUpVector=(-0.482942, 0.874466, 
+    -0.0455624), cameraTarget=(0.0729975, 0.0367623, -0.0308754), 
+    viewOffsetX=0.00474168, viewOffsetY=-0.00139312)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.267288, 
+    farPlane=0.463437, width=0.120832, height=0.148182, cameraPosition=(
+    0.212918, -0.17307, 0.188465), cameraUpVector=(0.603581, 0.547131, 
+    -0.579947), cameraTarget=(0.0494718, -0.00239618, 0.00872506), 
+    viewOffsetX=0.00460152, viewOffsetY=-0.00135194)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.270817, 
+    farPlane=0.453268, width=0.122428, height=0.150139, cameraPosition=(
+    0.324347, -0.048944, 0.132096), cameraUpVector=(0.196188, 0.529775, 
+    -0.825135), cameraTarget=(0.0696091, 0.0216242, -0.00310425), 
+    viewOffsetX=0.00466228, viewOffsetY=-0.00136979)
+a = mdb.models['spiral_Model_static_traction'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(loads=ON, bcs=ON, 
+    predefinedFields=ON, connectors=ON)
+mdb.models['spiral_Model_static_traction'].loads['Load-1'].setValues(
+    magnitude=200.0)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(loads=OFF, bcs=OFF, 
+    predefinedFields=OFF, connectors=OFF)
+mdb.jobs['static_traction_Job-4'].submit(consistencyChecking=OFF)
+#: The job input file "static_traction_Job-4.inp" has been submitted for analysis.
+#: Job static_traction_Job-4: Analysis Input File Processor completed successfully.
+#: Error in job static_traction_Job-4: Too many attempts made for this increment
+#: Job static_traction_Job-4: Abaqus/Standard aborted due to errors.
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(loads=ON, bcs=ON, 
+    predefinedFields=ON, connectors=ON)
+#: Error in job static_traction_Job-4: Abaqus/Standard Analysis exited with an error - Please see the  message file for possible error messages if the file exists.
+#: Job static_traction_Job-4 aborted due to errors.
+mdb.models['spiral_Model_static_traction'].loads['Load-1'].setValues(
+    magnitude=150.0)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(loads=OFF, bcs=OFF, 
+    predefinedFields=OFF, connectors=OFF)
+mdb.jobs['static_traction_Job-4'].submit(consistencyChecking=OFF)
+#: The job input file "static_traction_Job-4.inp" has been submitted for analysis.
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(loads=ON, bcs=ON, 
+    predefinedFields=ON, connectors=ON)
+mdb.save()
+#: The model database has been saved to "C:\Users\st195764\Desktop\Spiral-Simulation\Abaqus_files\LAB_files\Spiral_inLAB.cae".
+#: Job static_traction_Job-4: Analysis Input File Processor completed successfully.
+#: Error in job static_traction_Job-4: Too many attempts made for this increment
+#: Job static_traction_Job-4: Abaqus/Standard aborted due to errors.
+#: Error in job static_traction_Job-4: Abaqus/Standard Analysis exited with an error - Please see the  message file for possible error messages if the file exists.
+#: Job static_traction_Job-4 aborted due to errors.
+mdb.models['spiral_Model_static_traction'].loads['Load-1'].setValues(
+    magnitude=120.0)
+mdb.save()
+#: The model database has been saved to "C:\Users\st195764\Desktop\Spiral-Simulation\Abaqus_files\LAB_files\Spiral_inLAB.cae".
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(loads=OFF, bcs=OFF, 
+    predefinedFields=OFF, connectors=OFF)
+mdb.jobs['static_traction_Job-4'].submit(consistencyChecking=OFF)
+#: The job input file "static_traction_Job-4.inp" has been submitted for analysis.
+#: Job static_traction_Job-4: Analysis Input File Processor completed successfully.
+#: Error in job static_traction_Job-4: Too many attempts made for this increment
+#: Job static_traction_Job-4: Abaqus/Standard aborted due to errors.
+#: Error in job static_traction_Job-4: Abaqus/Standard Analysis exited with an error - Please see the  message file for possible error messages if the file exists.
+#: Job static_traction_Job-4 aborted due to errors.
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(loads=ON, bcs=ON, 
+    predefinedFields=ON, connectors=ON)
+mdb.models['spiral_Model_static_traction'].loads['Load-1'].setValues(
+    magnitude=110.0)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(loads=OFF, bcs=OFF, 
+    predefinedFields=OFF, connectors=OFF)
+mdb.jobs['static_traction_Job-4'].submit(consistencyChecking=OFF)
+#: The job input file "static_traction_Job-4.inp" has been submitted for analysis.
+#: Job static_traction_Job-4: Analysis Input File Processor completed successfully.
+#: Job static_traction_Job-4: Abaqus/Standard completed successfully.
+#: Job static_traction_Job-4 completed successfully. 
+o3 = session.openOdb(
+    name='C:/Users/st195764/Desktop/Spiral-Simulation/Abaqus_files/LAB_files/static_traction_Job-4.odb')
+#: Model: C:/Users/st195764/Desktop/Spiral-Simulation/Abaqus_files/LAB_files/static_traction_Job-4.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     1
+#: Number of Meshes:             1
+#: Number of Element Sets:       5
+#: Number of Node Sets:          7
+#: Number of Steps:              1
+session.viewports['Viewport: 1'].setValues(displayedObject=o3)
+session.viewports['Viewport: 1'].makeCurrent()
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    DEFORMED, ))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.25567, 
+    farPlane=0.43439, width=0.0848242, height=0.104024, 
+    viewOffsetX=-0.00442896, viewOffsetY=-0.000657609)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.255608, 
+    farPlane=0.428503, width=0.0848036, height=0.103999, cameraPosition=(
+    0.167065, 0.279042, 0.158733), cameraUpVector=(-0.522035, 0.401333, 
+    -0.752603), cameraTarget=(0.0420278, 0.0625855, -0.00146447), 
+    viewOffsetX=-0.00442789, viewOffsetY=-0.000657449)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.260795, 
+    farPlane=0.408704, width=0.0865244, height=0.106109, cameraPosition=(
+    -0.00873213, 0.350804, 0.0918276), cameraUpVector=(0.00650519, 0.00202768, 
+    -0.999977), cameraTarget=(0.0200524, 0.0725007, -0.00751951), 
+    viewOffsetX=-0.00451774, viewOffsetY=-0.00067079)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.255756, 
+    farPlane=0.417464, width=0.0848526, height=0.104059, cameraPosition=(
+    0.300628, 0.212687, -0.0515951), cameraUpVector=(-0.199075, -0.46592, 
+    -0.862141), cameraTarget=(0.0527958, 0.0518491, -0.0222414), 
+    viewOffsetX=-0.00443045, viewOffsetY=-0.000657829)
+mdb.save()
+#: The model database has been saved to "C:\Users\st195764\Desktop\Spiral-Simulation\Abaqus_files\LAB_files\Spiral_inLAB.cae".
+a = mdb.models['spiral_Model_static_traction'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(loads=ON, bcs=ON, 
+    predefinedFields=ON, connectors=ON)
+mdb.models['spiral_Model_static_traction'].loads['Load-1'].setValues(
+    magnitude=115.0)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(loads=OFF, bcs=OFF, 
+    predefinedFields=OFF, connectors=OFF)
+mdb.jobs['static_traction_Job-4'].submit(consistencyChecking=OFF)
+#: The job input file "static_traction_Job-4.inp" has been submitted for analysis.
+#: Job static_traction_Job-4: Analysis Input File Processor completed successfully.
+o3 = session.openOdb(
+    name='C:/Users/st195764/Desktop/Spiral-Simulation/Abaqus_files/LAB_files/static_pressure_Job-3.odb')
+#: Model: C:/Users/st195764/Desktop/Spiral-Simulation/Abaqus_files/LAB_files/static_pressure_Job-3.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     1
+#: Number of Meshes:             1
+#: Number of Element Sets:       5
+#: Number of Node Sets:          7
+#: Number of Steps:              1
+session.viewports['Viewport: 1'].setValues(displayedObject=o3)
+session.viewports['Viewport: 1'].makeCurrent()
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    DEFORMED, ))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.251539, 
+    farPlane=0.426417, width=0.0944471, height=0.115825, cameraPosition=(
+    0.191733, 0.313672, -0.118777), cameraUpVector=(-0.449822, -0.389192, 
+    -0.803859), cameraTarget=(0.0449283, 0.06771, -0.0406604))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.240038, 
+    farPlane=0.41309, width=0.0901286, height=0.110529, cameraPosition=(
+    -0.168249, 0.300426, -0.108985), cameraUpVector=(0.443787, -0.34823, 
+    -0.825705), cameraTarget=(0.000245526, 0.0660659, -0.0394449))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.243298, 
+    farPlane=0.400197, width=0.0913528, height=0.112031, cameraPosition=(
+    -0.129562, -0.248459, -0.0523551), cameraUpVector=(-0.0130181, 0.441677, 
+    -0.89708), cameraTarget=(0.00375938, 0.0162114, -0.0343013))
+a = mdb.models['spiral_Model_static_pressure'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(loads=ON, bcs=ON, 
+    predefinedFields=ON, connectors=ON)
+mdb.models['spiral_Model_static_pressure'].loads['Load-1'].setValues(
+    magnitude=-112.0)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(loads=OFF, bcs=OFF, 
+    predefinedFields=OFF, connectors=OFF)
+mdb.jobs['static_pressure_Job-3'].submit(consistencyChecking=OFF)
+#: The job input file "static_pressure_Job-3.inp" has been submitted for analysis.
+a = mdb.models['spiral_Model_static_traction'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(loads=ON, bcs=ON, 
+    predefinedFields=ON, connectors=ON)
+#: Job static_pressure_Job-3: Analysis Input File Processor completed successfully.
+a = mdb.models['spiral_Model_static_pressure'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+mdb.models['spiral_Model_static_pressure'].loads['Load-1'].setValues(
+    magnitude=-115.0)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(loads=OFF, bcs=OFF, 
+    predefinedFields=OFF, connectors=OFF)
+mdb.jobs['static_pressure_Job-3'].kill()
+#: Error in job static_pressure_Job-3: Process terminated by external request (SIGTERM or SIGINT received).
+#: Job static_pressure_Job-3: Abaqus/Standard was terminated prior to analysis completion.
+mdb.jobs['static_pressure_Job-3'].submit(consistencyChecking=OFF)
+#: Abaqus Error: Detected lock file static_pressure_Job-3.lck. Please confirm that no other applications are attempting to write to the output database associated with this job before removing the lock file and resubmitting.
+#: Abaqus/Analysis exited with error(s).
+#: The job input file "static_pressure_Job-3.inp" has been submitted for analysis.
+#: Error in job static_pressure_Job-3: Abaqus/Standard Analysis exited with an error - Please see the  message file for possible error messages if the file exists.
+#: Error in job static_pressure_Job-3: Abaqus/Standard Analysis exited with an error - Please see the  message file for possible error messages if the file exists.
+#: Job static_pressure_Job-3 aborted due to errors.
+#: Job static_pressure_Job-3 aborted due to errors.
+mdb.jobs['static_pressure_Job-3'].submit(consistencyChecking=OFF)
+#: The job input file "static_pressure_Job-3.inp" has been submitted for analysis.
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(loads=ON, bcs=ON, 
+    predefinedFields=ON, connectors=ON)
+#: Job static_pressure_Job-3: Analysis Input File Processor completed successfully.
+o3 = session.openOdb(
+    name='C:/Users/st195764/Desktop/Spiral-Simulation/Abaqus_files/LAB_files/static_pressure_Job-3.odb')
+#: Model: C:/Users/st195764/Desktop/Spiral-Simulation/Abaqus_files/LAB_files/static_pressure_Job-3.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     1
+#: Number of Meshes:             1
+#: Number of Element Sets:       5
+#: Number of Node Sets:          7
+#: Number of Steps:              1
+session.viewports['Viewport: 1'].setValues(displayedObject=o3)
+session.viewports['Viewport: 1'].makeCurrent()
+a = mdb.models['spiral_Model_static_pressure'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+session.viewports['Viewport: 1'].setValues(
+    displayedObject=session.odbs['C:/Users/st195764/Desktop/Spiral-Simulation/Abaqus_files/LAB_files/static_pressure_Job-3.odb'])
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(loads=OFF, bcs=OFF, 
+    predefinedFields=OFF, connectors=OFF)
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    DEFORMED, ))
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    UNDEFORMED, ))
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    DEFORMED, ))
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_DEF, ))
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    DEFORMED, ))
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=14 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=14 )
+session.viewports[session.currentViewportName].odbDisplay.setFrame(
+    step='Step-1', frame=14)
+a = mdb.models['spiral_Model_static_pressure'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+#: Error in job static_traction_Job-4: Time increment required is less than the minimum specified
+#: Error in job static_traction_Job-4: THE ANALYSIS HAS BEEN TERMINATED DUE TO PREVIOUS ERRORS. ALL OUTPUT REQUESTS HAVE BEEN WRITTEN FOR THE LAST CONVERGED INCREMENT.
+#: Job static_traction_Job-4: Abaqus/Standard aborted due to errors.
+#: Error in job static_traction_Job-4: Abaqus/Standard Analysis exited with an error - Please see the  message file for possible error messages if the file exists.
+#: Job static_traction_Job-4 aborted due to errors.
+#: Error in job static_pressure_Job-3: Time increment required is less than the minimum specified
+#: Error in job static_pressure_Job-3: THE ANALYSIS HAS BEEN TERMINATED DUE TO PREVIOUS ERRORS. ALL OUTPUT REQUESTS HAVE BEEN WRITTEN FOR THE LAST CONVERGED INCREMENT.
+#: Job static_pressure_Job-3: Abaqus/Standard aborted due to errors.
+#: Error in job static_pressure_Job-3: Abaqus/Standard Analysis exited with an error - Please see the  message file for possible error messages if the file exists.
+#: Job static_pressure_Job-3 aborted due to errors.
