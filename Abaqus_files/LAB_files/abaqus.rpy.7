@@ -1,0 +1,208 @@
+# -*- coding: mbcs -*-
+#
+# Abaqus/CAE Release 2025 replay file
+# Internal Version: 2024_09_20-15.00.46 RELr427 198590
+# Run by st195764 on Fri Feb 20 23:46:05 2026
+#
+
+# from driverUtils import executeOnCaeGraphicsStartup
+# executeOnCaeGraphicsStartup()
+#: Executing "onCaeGraphicsStartup()" in the site directory ...
+from abaqus import *
+from abaqusConstants import *
+session.Viewport(name='Viewport: 1', origin=(0.0, 0.0), width=169.902587890625, 
+    height=194.592590332031)
+session.viewports['Viewport: 1'].makeCurrent()
+session.viewports['Viewport: 1'].maximize()
+from caeModules import *
+from driverUtils import executeOnCaeStartup
+executeOnCaeStartup()
+openMdb('Spiral_inLAB.cae')
+#: The model database "C:\Users\st195764\Desktop\Spiral-Simulation\Abaqus_files\LAB_files\Spiral_inLAB.cae" has been opened.
+session.viewports['Viewport: 1'].setValues(displayedObject=None)
+session.viewports['Viewport: 1'].partDisplay.geometryOptions.setValues(
+    referenceRepresentation=ON)
+p = mdb.models['spiral_Model_Dynamic'].parts['Spiral']
+session.viewports['Viewport: 1'].setValues(displayedObject=p)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.327624, 
+    farPlane=0.501604, width=0.0319675, height=0.0133089, 
+    viewOffsetX=0.0236163, viewOffsetY=0.0128718)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.332657, 
+    farPlane=0.49594, width=0.0324585, height=0.0135133, cameraPosition=(
+    0.344693, 0.220154, 0.239731), cameraUpVector=(-0.375981, 0.729167, 
+    -0.571798), cameraTarget=(0.0446742, 0.0659509, -0.00133952), 
+    viewOffsetX=0.023979, viewOffsetY=0.0130695)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.327985, 
+    farPlane=0.500611, width=0.0883141, height=0.0367674, 
+    viewOffsetX=0.0168428, viewOffsetY=0.0125213)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.321978, 
+    farPlane=0.523217, width=0.0866966, height=0.036094, cameraPosition=(
+    0.3702, 0.285474, 0.151703), cameraUpVector=(-0.508281, 0.567965, 
+    -0.647354), cameraTarget=(0.0487566, 0.070572, 0.0020501), 
+    viewOffsetX=0.0165343, viewOffsetY=0.012292)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.311694, 
+    farPlane=0.533502, width=0.213187, height=0.0887549, viewOffsetX=0.0343094, 
+    viewOffsetY=0.00834594)
+a = mdb.models['spiral_Model_Dynamic'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+o3 = session.openOdb(
+    name='C:/Users/st195764/Desktop/Spiral-Simulation/Abaqus_files/LAB_files/Statics_Job-2.odb')
+#: Model: C:/Users/st195764/Desktop/Spiral-Simulation/Abaqus_files/LAB_files/Statics_Job-2.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     1
+#: Number of Meshes:             1
+#: Number of Element Sets:       5
+#: Number of Node Sets:          7
+#: Number of Steps:              1
+session.viewports['Viewport: 1'].setValues(displayedObject=o3)
+session.viewports['Viewport: 1'].makeCurrent()
+a = mdb.models['spiral_Model_Dynamic'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+session.viewports['Viewport: 1'].setValues(
+    displayedObject=session.odbs['C:/Users/st195764/Desktop/Spiral-Simulation/Abaqus_files/LAB_files/Statics_Job-2.odb'])
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(
+    optimizationTasks=OFF, geometricRestrictions=OFF, stopConditions=OFF)
+a = mdb.models['spiral_Model_Dynamic'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+o3 = session.openOdb(
+    name='C:/Users/st195764/Desktop/Spiral-Simulation/Abaqus_files/LAB_files/static_traction_Job-4.odb')
+#: Model: C:/Users/st195764/Desktop/Spiral-Simulation/Abaqus_files/LAB_files/static_traction_Job-4.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     1
+#: Number of Meshes:             1
+#: Number of Element Sets:       5
+#: Number of Node Sets:          7
+#: Number of Steps:              1
+session.viewports['Viewport: 1'].setValues(displayedObject=o3)
+session.viewports['Viewport: 1'].makeCurrent()
+a = mdb.models['spiral_Model_Dynamic'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+session.viewports['Viewport: 1'].setValues(
+    displayedObject=session.odbs['C:/Users/st195764/Desktop/Spiral-Simulation/Abaqus_files/LAB_files/static_traction_Job-4.odb'])
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    DEFORMED, ))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.269727, 
+    farPlane=0.446785, width=0.285727, height=0.1242, cameraPosition=(0.175277, 
+    -0.265185, -0.125064), cameraUpVector=(0.680722, 0.729866, 0.0625547), 
+    cameraTarget=(0.0426329, -0.0130338, -0.0415372))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.259332, 
+    farPlane=0.444781, width=0.274715, height=0.119414, cameraPosition=(
+    -0.200946, 0.216153, -0.248467), cameraUpVector=(0.873233, -0.181131, 
+    -0.452388), cameraTarget=(-0.0217975, 0.0693984, -0.0626708))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.263332, 
+    farPlane=0.437242, width=0.278952, height=0.121256, cameraPosition=(
+    -0.24606, -0.0359519, -0.255133), cameraUpVector=(0.886528, -0.168299, 
+    -0.43098), cameraTarget=(-0.028865, 0.0299036, -0.0637151))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.266478, 
+    farPlane=0.430883, width=0.282285, height=0.122705, cameraPosition=(
+    -0.0808002, -0.0864621, -0.342324), cameraUpVector=(0.995639, 0.0775593, 
+    0.0518465), cameraTarget=(-0.0036793, 0.0222058, -0.077003))
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_DEF, ))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.290345, 
+    farPlane=0.407016, width=0.015779, height=0.00685888, 
+    viewOffsetX=-0.0377252, viewOffsetY=-0.0131019)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.31916, 
+    farPlane=0.444987, width=0.017345, height=0.00753957, cameraPosition=(
+    -0.13549, -0.284797, -0.169238), cameraUpVector=(0.940648, 0.0997246, 
+    -0.3244), cameraTarget=(-0.0239144, -0.027524, -0.0717021), 
+    viewOffsetX=-0.0414692, viewOffsetY=-0.0144021)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.315554, 
+    farPlane=0.448594, width=0.058772, height=0.0255472, 
+    viewOffsetX=-0.0364876, viewOffsetY=-0.0134005)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.322428, 
+    farPlane=0.44911, width=0.0600522, height=0.0261037, cameraPosition=(
+    -0.143491, -0.302829, -0.120965), cameraUpVector=(0.6524, 0.293208, 
+    -0.698858), cameraTarget=(-0.0436039, -0.0310505, -0.0553086), 
+    viewOffsetX=-0.0372824, viewOffsetY=-0.0136924)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.326599, 
+    farPlane=0.444939, width=0.0121741, height=0.00529186, 
+    viewOffsetX=-0.04528, viewOffsetY=-0.0201327)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.332891, 
+    farPlane=0.445114, width=0.0124086, height=0.00539381, cameraPosition=(
+    -0.131272, -0.317614, -0.0943891), cameraUpVector=(0.601725, 0.285609, 
+    -0.745892), cameraTarget=(-0.0433624, -0.0376843, -0.0489692), 
+    viewOffsetX=-0.0461523, viewOffsetY=-0.0205206)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.31785, 
+    farPlane=0.460154, width=0.20695, height=0.0899574, viewOffsetX=-0.0641132, 
+    viewOffsetY=-0.018121)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.257621, 
+    farPlane=0.417026, width=0.167734, height=0.0729112, cameraPosition=(
+    -0.192955, 0.00914666, -0.301749), cameraUpVector=(0.931689, 0.165578, 
+    -0.323325), cameraTarget=(-0.0193661, 0.0797764, -0.0714666), 
+    viewOffsetX=-0.0519643, viewOffsetY=-0.0146872)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.270527, 
+    farPlane=0.404119, width=0.067545, height=0.0293606, 
+    viewOffsetX=-0.0390801, viewOffsetY=-0.0202908)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.267095, 
+    farPlane=0.402978, width=0.066688, height=0.0289881, cameraPosition=(
+    -0.155325, -0.0268112, -0.317573), cameraUpVector=(0.962004, 0.158075, 
+    -0.222623), cameraTarget=(-0.013211, 0.0733559, -0.0769033), 
+    viewOffsetX=-0.0385843, viewOffsetY=-0.0200333)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.251085, 
+    farPlane=0.418988, width=0.229707, height=0.0998495, 
+    viewOffsetX=-0.0481916, viewOffsetY=-0.0104927)
+a = mdb.models['spiral_Model_static_traction'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(step='Step-1')
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(loads=ON, bcs=ON, 
+    predefinedFields=ON, connectors=ON)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.310781, 
+    farPlane=0.518447, width=0.206454, height=0.085952, 
+    viewOffsetX=3.47638e-05, viewOffsetY=-0.0042819)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.311578, 
+    farPlane=0.521613, width=0.206984, height=0.0861725, cameraPosition=(
+    0.372318, 0.236498, 0.190598), cameraUpVector=(-0.653276, 0.709338, 
+    -0.264709), cameraTarget=(0.0480085, 0.0616852, 0.000417226), 
+    viewOffsetX=3.4853e-05, viewOffsetY=-0.00429288)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.306755, 
+    farPlane=0.52766, width=0.20378, height=0.0848387, cameraPosition=(
+    0.403154, 0.241097, 0.117145), cameraUpVector=(-0.664521, 0.705471, 
+    -0.246422), cameraTarget=(0.0482425, 0.0617116, -0.000173243), 
+    viewOffsetX=3.43135e-05, viewOffsetY=-0.00422643)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.312996, 
+    farPlane=0.521419, width=0.13057, height=0.0543597, 
+    viewOffsetX=-0.00112895, viewOffsetY=-0.0175987)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(loads=OFF, bcs=OFF, 
+    predefinedFields=OFF, connectors=OFF)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(
+    adaptiveMeshConstraints=ON)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.312572, 
+    farPlane=0.537209, width=0.214667, height=0.0893713, 
+    viewOffsetX=0.00547638, viewOffsetY=-0.00105359)
+a = mdb.models['spiral_Model_static_displacement'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(loads=ON, bcs=ON, 
+    predefinedFields=ON, connectors=ON, adaptiveMeshConstraints=OFF)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.320904, 
+    farPlane=0.508324, width=0.101456, height=0.0422387, 
+    viewOffsetX=0.00155642, viewOffsetY=-0.0219001)
+o3 = session.openOdb(
+    name='C:/Users/st195764/Desktop/Spiral-Simulation/Abaqus_files/LAB_files/static_traction_Job-4.odb')
+session.viewports['Viewport: 1'].setValues(displayedObject=o3)
+session.viewports['Viewport: 1'].makeCurrent()
+a = mdb.models['spiral_Model_static_displacement'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+session.viewports['Viewport: 1'].setValues(
+    displayedObject=session.odbs['C:/Users/st195764/Desktop/Spiral-Simulation/Abaqus_files/LAB_files/static_traction_Job-4.odb'])
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(loads=OFF, bcs=OFF, 
+    predefinedFields=OFF, connectors=OFF)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.256602, 
+    farPlane=0.41347, width=0.172287, height=0.0748903, viewOffsetX=-0.041273, 
+    viewOffsetY=-0.00214312)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.260214, 
+    farPlane=0.411545, width=0.174712, height=0.0759443, cameraPosition=(
+    -0.092441, -0.0673839, -0.335596), cameraUpVector=(0.984089, 0.171953, 
+    -0.0447284), cameraTarget=(-0.00389249, 0.0663977, -0.0857695), 
+    viewOffsetX=-0.0418538, viewOffsetY=-0.00217328)
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    DEFORMED, ))
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_UNDEF, CONTOURS_ON_DEF, ))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.248489, 
+    farPlane=0.438994, width=0.16684, height=0.0725223, cameraPosition=(
+    -0.199857, 0.186752, -0.253239), cameraUpVector=(0.942337, 0.145497, 
+    -0.301383), cameraTarget=(-0.0132036, 0.10662, -0.0366962), 
+    viewOffsetX=-0.0399679, viewOffsetY=-0.00207535)

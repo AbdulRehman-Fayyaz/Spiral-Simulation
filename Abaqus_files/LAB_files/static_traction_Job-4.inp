@@ -53705,7 +53705,7 @@ _PickedSet18, 6, 6
 ** 
 ** Name: Load-1   Type: Surface traction
 *Dsload
-_PickedSurf21, TRVEC, 100., 0., 0., -1.
+_PickedSurf21, TRVEC, 110., 0., 0., -1.
 ** 
 ** OUTPUT REQUESTS
 ** 

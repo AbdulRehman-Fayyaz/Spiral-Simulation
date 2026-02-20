@@ -1,6 +1,6 @@
 1
 
-   Abaqus 2025                                  Date 10-Feb-2026   Time 17:06:06
+   Abaqus 2025                                  Date 20-Feb-2026   Time 21:44:04
    For use by UNIVERSITAET STUTTGART under license from Dassault Systemes or its subsidiary.
 
 
@@ -1814,12 +1814,12 @@
 
      JOB TIME SUMMARY
        USER TIME (SEC)      =      1.1    
-       SYSTEM TIME (SEC)    =     0.20    
-       TOTAL CPU TIME (SEC) =      1.3    
+       SYSTEM TIME (SEC)    =      1.0    
+       TOTAL CPU TIME (SEC) =      2.1    
        WALLCLOCK TIME (SEC) =            1
 1
 
-   Abaqus 2025                                  Date 10-Feb-2026   Time 17:06:14
+   Abaqus 2025                                  Date 20-Feb-2026   Time 21:44:10
    For use by UNIVERSITAET STUTTGART under license from Dassault Systemes or its subsidiary.
 
                                                                                                STEP    1  INCREMENT    1
@@ -1893,7 +1893,7 @@
 
 
      JOB TIME SUMMARY
-       USER TIME (SEC)      =     4.93E+02
-       SYSTEM TIME (SEC)    =      66.    
-       TOTAL CPU TIME (SEC) =     5.59E+02
-       WALLCLOCK TIME (SEC) =          479
+       USER TIME (SEC)      =     9.72E+02
+       SYSTEM TIME (SEC)    =      95.    
+       TOTAL CPU TIME (SEC) =     1.07E+03
+       WALLCLOCK TIME (SEC) =          500
