@@ -304,3 +304,62 @@ mdb.jobs['Job-10-superextrafinemesh']._Message(STATUS, {'step': 1,
     'iterations': 3, 'totalTime': 0.890227809330099, 
     'stepTime': 0.890227809330099, 'timeIncrement': 0.00563771011366043, 
     'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 45, 'phase': STANDARD_PHASE, 
+    'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(STATUS, {'step': 1, 
+    'increment': 45, 'attempts': 1, 'severe': 0, 'equilibrium': 5, 
+    'iterations': 5, 'totalTime': 0.89868437450059, 
+    'stepTime': 0.89868437450059, 'timeIncrement': 0.00845656517049065, 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 46, 'phase': STANDARD_PHASE, 
+    'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(STATUS, {'step': 1, 
+    'increment': 46, 'attempts': 1, 'severe': 0, 'equilibrium': 4, 
+    'iterations': 4, 'totalTime': 0.907140939671081, 
+    'stepTime': 0.907140939671081, 'timeIncrement': 0.00845656517049065, 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 47, 'phase': STANDARD_PHASE, 
+    'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(STATUS, {'step': 1, 
+    'increment': 47, 'attempts': 1, 'severe': 0, 'equilibrium': 3, 
+    'iterations': 3, 'totalTime': 0.915597504841571, 
+    'stepTime': 0.915597504841571, 'timeIncrement': 0.00845656517049065, 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-11-superMOREextrafinemesh']._Message(WARNING, {
+    'message': 'The system matrix has 19 negative eigenvalues.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-11-superMOREextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 48, 'phase': STANDARD_PHASE, 
+    'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(STATUS, {'step': 1, 
+    'increment': 48, 'attempts': 1, 'severe': 0, 'equilibrium': 4, 
+    'iterations': 4, 'totalTime': 0.928282352597307, 
+    'stepTime': 0.928282352597307, 'timeIncrement': 0.012684847755736, 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-11-superMOREextrafinemesh']._Message(WARNING, {
+    'message': 'EXCESSIVE DISTORTION AT A TOTAL OF 2 INTEGRATION POINTS IN SOLID (CONTINUUM) ELEMENTS', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-11-superMOREextrafinemesh'})
+mdb.jobs['Job-11-superMOREextrafinemesh']._Message(STATUS, {'step': 1, 
+    'increment': 8, 'attempts': ' 1U', 'severe': 0, 'equilibrium': 3, 
+    'iterations': 3, 'totalTime': 0.140625, 'stepTime': 0.140625, 
+    'timeIncrement': 0.0234375, 'phase': STANDARD_PHASE, 
+    'jobName': 'Job-11-superMOREextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 49, 'phase': STANDARD_PHASE, 
+    'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(STATUS, {'step': 1, 
+    'increment': 49, 'attempts': 1, 'severe': 0, 'equilibrium': 6, 
+    'iterations': 6, 'totalTime': 0.947309624230911, 
+    'stepTime': 0.947309624230911, 'timeIncrement': 0.019027271633604, 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 50, 'phase': STANDARD_PHASE, 
+    'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(STATUS, {'step': 1, 
+    'increment': 50, 'attempts': 1, 'severe': 0, 'equilibrium': 4, 
+    'iterations': 4, 'totalTime': 0.966336895864515, 
+    'stepTime': 0.966336895864515, 'timeIncrement': 0.019027271633604, 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})

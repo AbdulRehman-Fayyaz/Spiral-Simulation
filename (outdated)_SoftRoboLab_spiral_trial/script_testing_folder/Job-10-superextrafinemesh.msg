@@ -57980,3 +57980,1083 @@
         NUMBER OF EQUATIONS:  409818
         NUMBER OF RHS:        1
         NUMBER OF FLOPS:      8.048e+10
+        SOLVER ELAPSED TIME:  5.1s
+ 
+
+ ***WARNING: THE SYSTEM MATRIX HAS 1 NEGATIVE EIGENVALUES.
+             EXPLANATIONS ARE SUGGESTED AFTER THE FIRST OCCURRENCE OF THIS MESSAGE.
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     3
+
+
+ AVERAGE FORCE                      0.105       TIME AVG. FORCE       5.572E-02
+ LARGEST SCALED RESIDUAL FORCE     -4.408E-04   AT NODE        652   DOF  2
+   INSTANCE: FINAL_PART-1                                                                    
+  CORRESPONDING RESIDUAL FORCE     -4.408E-04
+ LARGEST INCREMENT OF DISP.        -1.674E-03   AT NODE        119   DOF  1
+   INSTANCE: FINAL_PART-1                                                                    
+ LARGEST CORRECTION TO DISP.        6.823E-06   AT NODE        119   DOF  1
+   INSTANCE: FINAL_PART-1                                                                    
+          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
+ 
+	SYMMETRIC PURE THREAD-BASED DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  409818
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      8.048e+10
+        SOLVER ELAPSED TIME:  5.6s
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     4
+
+
+ AVERAGE FORCE                      0.105       TIME AVG. FORCE       5.572E-02
+ LARGEST SCALED RESIDUAL FORCE     -3.205E-04   AT NODE      13277   DOF  1
+   INSTANCE: FINAL_PART-1                                                                    
+  CORRESPONDING RESIDUAL FORCE     -3.205E-04
+ LARGEST INCREMENT OF DISP.        -1.687E-03   AT NODE        119   DOF  1
+   INSTANCE: FINAL_PART-1                                                                    
+ LARGEST CORRECTION TO DISP.       -1.385E-05   AT NODE        119   DOF  1
+   INSTANCE: FINAL_PART-1                                                                    
+          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
+ 
+	SYMMETRIC PURE THREAD-BASED DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  409818
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      8.048e+10
+        SOLVER ELAPSED TIME:  6.9s
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     5
+
+
+ AVERAGE FORCE                      0.105       TIME AVG. FORCE       5.572E-02
+ LARGEST SCALED RESIDUAL FORCE     -5.510E-06   AT NODE        651   DOF  2
+   INSTANCE: FINAL_PART-1                                                                    
+  CORRESPONDING RESIDUAL FORCE     -5.510E-06
+ LARGEST INCREMENT OF DISP.        -1.688E-03   AT NODE        119   DOF  1
+   INSTANCE: FINAL_PART-1                                                                    
+ LARGEST CORRECTION TO DISP.       -8.651E-07   AT NODE        119   DOF  1
+   INSTANCE: FINAL_PART-1                                                                    
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ ITERATION SUMMARY FOR THE INCREMENT:   5 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  5 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  8.457E-03,  FRACTION OF STEP COMPLETED  0.899    
+ STEP TIME COMPLETED       0.899    ,  TOTAL TIME COMPLETED        0.899    
+
+
+  INCREMENT    46 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  8.457E-03
+ 
+	SYMMETRIC PURE THREAD-BASED DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  409818
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      8.048e+10
+        SOLVER ELAPSED TIME:  6.7s
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                      0.106       TIME AVG. FORCE       5.681E-02
+ LARGEST SCALED RESIDUAL FORCE     -0.326       AT NODE      12978   DOF  2
+   INSTANCE: FINAL_PART-1                                                                    
+  CORRESPONDING RESIDUAL FORCE     -0.326    
+ LARGEST INCREMENT OF DISP.        -1.212E-03   AT NODE        119   DOF  1
+   INSTANCE: FINAL_PART-1                                                                    
+ LARGEST CORRECTION TO DISP.        4.767E-04   AT NODE        119   DOF  1
+   INSTANCE: FINAL_PART-1                                                                    
+          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
+ 
+	SYMMETRIC PURE THREAD-BASED DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  409818
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      8.048e+10
+        SOLVER ELAPSED TIME:  7.3s
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
+
+
+ AVERAGE FORCE                      0.105       TIME AVG. FORCE       5.680E-02
+ LARGEST SCALED RESIDUAL FORCE     -1.092E-03   AT NODE        654   DOF  2
+   INSTANCE: FINAL_PART-1                                                                    
+  CORRESPONDING RESIDUAL FORCE     -1.092E-03
+ LARGEST INCREMENT OF DISP.        -1.211E-03   AT NODE        119   DOF  1
+   INSTANCE: FINAL_PART-1                                                                    
+ LARGEST CORRECTION TO DISP.        2.535E-06   AT NODE        119   DOF  2
+   INSTANCE: FINAL_PART-1                                                                    
+          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
+ 
+	SYMMETRIC PURE THREAD-BASED DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  409818
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      8.048e+10
+        SOLVER ELAPSED TIME:  7.2s
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     3
+
+
+ AVERAGE FORCE                      0.105       TIME AVG. FORCE       5.680E-02
+ LARGEST SCALED RESIDUAL FORCE     -1.110E-02   AT NODE      12978   DOF  2
+   INSTANCE: FINAL_PART-1                                                                    
+  CORRESPONDING RESIDUAL FORCE     -1.110E-02
+ LARGEST INCREMENT OF DISP.        -1.297E-03   AT NODE        119   DOF  1
+   INSTANCE: FINAL_PART-1                                                                    
+ LARGEST CORRECTION TO DISP.       -8.526E-05   AT NODE        119   DOF  1
+   INSTANCE: FINAL_PART-1                                                                    
+          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
+ 
+	SYMMETRIC PURE THREAD-BASED DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  409818
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      8.048e+10
+        SOLVER ELAPSED TIME:  6.1s
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     4
+
+
+ AVERAGE FORCE                      0.105       TIME AVG. FORCE       5.680E-02
+ LARGEST SCALED RESIDUAL FORCE      1.429E-05   AT NODE        629   DOF  2
+   INSTANCE: FINAL_PART-1                                                                    
+  CORRESPONDING RESIDUAL FORCE      1.429E-05
+ LARGEST INCREMENT OF DISP.        -1.296E-03   AT NODE        119   DOF  1
+   INSTANCE: FINAL_PART-1                                                                    
+ LARGEST CORRECTION TO DISP.        9.465E-07   AT NODE        112   DOF  1
+   INSTANCE: FINAL_PART-1                                                                    
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ ITERATION SUMMARY FOR THE INCREMENT:   4 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  4 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  8.457E-03,  FRACTION OF STEP COMPLETED  0.907    
+ STEP TIME COMPLETED       0.907    ,  TOTAL TIME COMPLETED        0.907    
+
+
+  INCREMENT    47 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  8.457E-03
+ 
+	SYMMETRIC PURE THREAD-BASED DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  409818
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      8.048e+10
+        SOLVER ELAPSED TIME:  4.8s
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                      0.106       TIME AVG. FORCE       5.785E-02
+ LARGEST SCALED RESIDUAL FORCE     -5.923E-03   AT NODE      13211   DOF  3
+   INSTANCE: FINAL_PART-1                                                                    
+  CORRESPONDING RESIDUAL FORCE     -5.923E-03
+ LARGEST INCREMENT OF DISP.        -1.229E-03   AT NODE        119   DOF  1
+   INSTANCE: FINAL_PART-1                                                                    
+ LARGEST CORRECTION TO DISP.        7.761E-05   AT NODE        120   DOF  1
+   INSTANCE: FINAL_PART-1                                                                    
+          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
+ 
+	SYMMETRIC PURE THREAD-BASED DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  409818
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      8.048e+10
+        SOLVER ELAPSED TIME:  4.9s
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
+
+
+ AVERAGE FORCE                      0.106       TIME AVG. FORCE       5.785E-02
+ LARGEST SCALED RESIDUAL FORCE     -1.585E-02   AT NODE      12978   DOF  2
+   INSTANCE: FINAL_PART-1                                                                    
+  CORRESPONDING RESIDUAL FORCE     -1.585E-02
+ LARGEST INCREMENT OF DISP.        -1.327E-03   AT NODE        119   DOF  1
+   INSTANCE: FINAL_PART-1                                                                    
+ LARGEST CORRECTION TO DISP.       -9.775E-05   AT NODE        112   DOF  1
+   INSTANCE: FINAL_PART-1                                                                    
+          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
+ 
+	SYMMETRIC PURE THREAD-BASED DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  409818
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      8.048e+10
+        SOLVER ELAPSED TIME:  4.8s
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     3
+
+
+ AVERAGE FORCE                      0.106       TIME AVG. FORCE       5.785E-02
+ LARGEST SCALED RESIDUAL FORCE      2.824E-05   AT NODE      12915   DOF  2
+   INSTANCE: FINAL_PART-1                                                                    
+  CORRESPONDING RESIDUAL FORCE      2.824E-05
+ LARGEST INCREMENT OF DISP.        -1.325E-03   AT NODE        119   DOF  1
+   INSTANCE: FINAL_PART-1                                                                    
+ LARGEST CORRECTION TO DISP.       -3.563E-06   AT NODE        113   DOF  2
+   INSTANCE: FINAL_PART-1                                                                    
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+          TIME INCREMENT MAY NOW INCREASE TO    1.268E-02
+
+ ITERATION SUMMARY FOR THE INCREMENT:   3 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  3 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  8.457E-03,  FRACTION OF STEP COMPLETED  0.916    
+ STEP TIME COMPLETED       0.916    ,  TOTAL TIME COMPLETED        0.916    
+
+
+  INCREMENT    48 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.268E-02
+ 
+	SYMMETRIC PURE THREAD-BASED DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  409818
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      8.048e+10
+        SOLVER ELAPSED TIME:  5.3s
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                      0.107       TIME AVG. FORCE       5.888E-02
+ LARGEST SCALED RESIDUAL FORCE      1.766E-02   AT NODE      10372   DOF  2
+   INSTANCE: FINAL_PART-1                                                                    
+  CORRESPONDING RESIDUAL FORCE      1.766E-02
+ LARGEST INCREMENT OF DISP.        -1.801E-03   AT NODE        119   DOF  1
+   INSTANCE: FINAL_PART-1                                                                    
+ LARGEST CORRECTION TO DISP.        1.936E-04   AT NODE        113   DOF  1
+   INSTANCE: FINAL_PART-1                                                                    
+          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
+ 
+	SYMMETRIC PURE THREAD-BASED DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  409818
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      8.048e+10
+        SOLVER ELAPSED TIME:  5.7s
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
+
+
+ AVERAGE FORCE                      0.107       TIME AVG. FORCE       5.888E-02
+ LARGEST SCALED RESIDUAL FORCE     -1.165E-03   AT NODE        651   DOF  2
+   INSTANCE: FINAL_PART-1                                                                    
+  CORRESPONDING RESIDUAL FORCE     -1.165E-03
+ LARGEST INCREMENT OF DISP.        -1.807E-03   AT NODE        112   DOF  1
+   INSTANCE: FINAL_PART-1                                                                    
+ LARGEST CORRECTION TO DISP.       -5.320E-06   AT NODE         99   DOF  1
+   INSTANCE: FINAL_PART-1                                                                    
+          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
+ 
+	SYMMETRIC PURE THREAD-BASED DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  409818
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      8.048e+10
+        SOLVER ELAPSED TIME:  6.7s
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     3
+
+
+ AVERAGE FORCE                      0.107       TIME AVG. FORCE       5.888E-02
+ LARGEST SCALED RESIDUAL FORCE     -1.323E-02   AT NODE      12978   DOF  2
+   INSTANCE: FINAL_PART-1                                                                    
+  CORRESPONDING RESIDUAL FORCE     -1.323E-02
+ LARGEST INCREMENT OF DISP.        -1.899E-03   AT NODE        119   DOF  1
+   INSTANCE: FINAL_PART-1                                                                    
+ LARGEST CORRECTION TO DISP.       -9.215E-05   AT NODE        119   DOF  1
+   INSTANCE: FINAL_PART-1                                                                    
+          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
+ 
+	SYMMETRIC PURE THREAD-BASED DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  409818
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      8.048e+10
+        SOLVER ELAPSED TIME:  7.1s
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     4
+
+
+ AVERAGE FORCE                      0.107       TIME AVG. FORCE       5.888E-02
+ LARGEST SCALED RESIDUAL FORCE     -1.775E-05   AT NODE      13211   DOF  3
+   INSTANCE: FINAL_PART-1                                                                    
+  CORRESPONDING RESIDUAL FORCE     -1.775E-05
+ LARGEST INCREMENT OF DISP.        -1.899E-03   AT NODE        119   DOF  1
+   INSTANCE: FINAL_PART-1                                                                    
+ LARGEST CORRECTION TO DISP.       -1.779E-07   AT NODE         76   DOF  1
+   INSTANCE: FINAL_PART-1                                                                    
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+          TIME INCREMENT MAY NOW INCREASE TO    1.903E-02
+
+ ITERATION SUMMARY FOR THE INCREMENT:   4 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  4 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.268E-02,  FRACTION OF STEP COMPLETED  0.928    
+ STEP TIME COMPLETED       0.928    ,  TOTAL TIME COMPLETED        0.928    
+
+
+  INCREMENT    49 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.903E-02
+ 
+	SYMMETRIC PURE THREAD-BASED DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  409818
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      8.048e+10
+        SOLVER ELAPSED TIME:  5.9s
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                      0.109       TIME AVG. FORCE       5.991E-02
+ LARGEST SCALED RESIDUAL FORCE      0.114       AT NODE      13296   DOF  1
+   INSTANCE: FINAL_PART-1                                                                    
+  CORRESPONDING RESIDUAL FORCE      0.114    
+ LARGEST INCREMENT OF DISP.        -2.704E-03   AT NODE        112   DOF  1
+   INSTANCE: FINAL_PART-1                                                                    
+ LARGEST CORRECTION TO DISP.        2.053E-04   AT NODE        120   DOF  1
+   INSTANCE: FINAL_PART-1                                                                    
+          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
+ 
+	SYMMETRIC PURE THREAD-BASED DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  409818
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      8.048e+10
+        SOLVER ELAPSED TIME:  5.0s
+ 
+
+ ***WARNING: THE SYSTEM MATRIX HAS 2 NEGATIVE EIGENVALUES.
+             EXPLANATIONS ARE SUGGESTED AFTER THE FIRST OCCURRENCE OF THIS MESSAGE.
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
+
+
+ AVERAGE FORCE                      0.110       TIME AVG. FORCE       5.992E-02
+ LARGEST SCALED RESIDUAL FORCE      2.557E-02   AT NODE      14032   DOF  1
+   INSTANCE: FINAL_PART-1                                                                    
+  CORRESPONDING RESIDUAL FORCE      2.557E-02
+ LARGEST INCREMENT OF DISP.        -2.823E-03   AT NODE        112   DOF  1
+   INSTANCE: FINAL_PART-1                                                                    
+ LARGEST CORRECTION TO DISP.       -1.518E-04   AT NODE        144   DOF  2
+   INSTANCE: FINAL_PART-1                                                                    
+          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
+ 
+	SYMMETRIC PURE THREAD-BASED DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  409818
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      8.048e+10
+        SOLVER ELAPSED TIME:  4.9s
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     3
+
+
+ AVERAGE FORCE                      0.109       TIME AVG. FORCE       5.991E-02
+ LARGEST SCALED RESIDUAL FORCE     -3.219E-02   AT NODE      12978   DOF  2
+   INSTANCE: FINAL_PART-1                                                                    
+  CORRESPONDING RESIDUAL FORCE     -3.219E-02
+ LARGEST INCREMENT OF DISP.        -2.822E-03   AT NODE        112   DOF  1
+   INSTANCE: FINAL_PART-1                                                                    
+ LARGEST CORRECTION TO DISP.        1.187E-04   AT NODE        120   DOF  2
+   INSTANCE: FINAL_PART-1                                                                    
+          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
+ 
+	SYMMETRIC PURE THREAD-BASED DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  409818
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      8.048e+10
+        SOLVER ELAPSED TIME:  5.7s
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     4
+
+
+ AVERAGE FORCE                      0.109       TIME AVG. FORCE       5.991E-02
+ LARGEST SCALED RESIDUAL FORCE     -1.530E-03   AT NODE      21078   DOF  1
+   INSTANCE: FINAL_PART-1                                                                    
+  CORRESPONDING RESIDUAL FORCE     -1.530E-03
+ LARGEST INCREMENT OF DISP.        -2.792E-03   AT NODE        112   DOF  1
+   INSTANCE: FINAL_PART-1                                                                    
+ LARGEST CORRECTION TO DISP.        4.240E-05   AT NODE        144   DOF  2
+   INSTANCE: FINAL_PART-1                                                                    
+          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
+ 
+	SYMMETRIC PURE THREAD-BASED DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  409818
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      8.048e+10
+        SOLVER ELAPSED TIME:  4.9s
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     5
+
+
+ AVERAGE FORCE                      0.109       TIME AVG. FORCE       5.991E-02
+ LARGEST SCALED RESIDUAL FORCE     -7.610E-03   AT NODE      12978   DOF  2
+   INSTANCE: FINAL_PART-1                                                                    
+  CORRESPONDING RESIDUAL FORCE     -7.610E-03
+ LARGEST INCREMENT OF DISP.        -2.851E-03   AT NODE        112   DOF  1
+   INSTANCE: FINAL_PART-1                                                                    
+ LARGEST CORRECTION TO DISP.       -5.904E-05   AT NODE        119   DOF  1
+   INSTANCE: FINAL_PART-1                                                                    
+          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
+ 
+	SYMMETRIC PURE THREAD-BASED DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  409818
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      8.048e+10
+        SOLVER ELAPSED TIME:  4.8s
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     6
+
+
+ AVERAGE FORCE                      0.109       TIME AVG. FORCE       5.991E-02
+ LARGEST SCALED RESIDUAL FORCE     -1.321E-04   AT NODE       9421   DOF  2
+   INSTANCE: FINAL_PART-1                                                                    
+  CORRESPONDING RESIDUAL FORCE     -1.321E-04
+ LARGEST INCREMENT OF DISP.        -2.861E-03   AT NODE        112   DOF  1
+   INSTANCE: FINAL_PART-1                                                                    
+ LARGEST CORRECTION TO DISP.       -1.008E-05   AT NODE         99   DOF  1
+   INSTANCE: FINAL_PART-1                                                                    
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ ITERATION SUMMARY FOR THE INCREMENT:   6 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  6 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.903E-02,  FRACTION OF STEP COMPLETED  0.947    
+ STEP TIME COMPLETED       0.947    ,  TOTAL TIME COMPLETED        0.947    
+
+
+  INCREMENT    50 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.903E-02
+ 
+	SYMMETRIC PURE THREAD-BASED DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  409818
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      8.048e+10
+        SOLVER ELAPSED TIME:  4.8s
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                      0.111       TIME AVG. FORCE       6.093E-02
+ LARGEST SCALED RESIDUAL FORCE      0.163       AT NODE      13296   DOF  1
+   INSTANCE: FINAL_PART-1                                                                    
+  CORRESPONDING RESIDUAL FORCE      0.163    
+ LARGEST INCREMENT OF DISP.        -2.723E-03   AT NODE         99   DOF  1
+   INSTANCE: FINAL_PART-1                                                                    
+ LARGEST CORRECTION TO DISP.        2.279E-04   AT NODE        120   DOF  1
+   INSTANCE: FINAL_PART-1                                                                    
+          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
+ 
+	SYMMETRIC PURE THREAD-BASED DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  409818
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      8.048e+10
+        SOLVER ELAPSED TIME:  5.4s
+ 
+
+ ***WARNING: THE SYSTEM MATRIX HAS 3 NEGATIVE EIGENVALUES.
+             EXPLANATIONS ARE SUGGESTED AFTER THE FIRST OCCURRENCE OF THIS MESSAGE.
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
+
+
+ AVERAGE FORCE                      0.111       TIME AVG. FORCE       6.093E-02
+ LARGEST SCALED RESIDUAL FORCE     -4.051E-03   AT NODE        651   DOF  2
+   INSTANCE: FINAL_PART-1                                                                    
+  CORRESPONDING RESIDUAL FORCE     -4.051E-03
+ LARGEST INCREMENT OF DISP.        -2.704E-03   AT NODE         99   DOF  1
+   INSTANCE: FINAL_PART-1                                                                    
+ LARGEST CORRECTION TO DISP.        2.313E-05   AT NODE        159   DOF  2
+   INSTANCE: FINAL_PART-1                                                                    
+          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
+ 
+	SYMMETRIC PURE THREAD-BASED DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  409818
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      8.048e+10
+        SOLVER ELAPSED TIME:  6.1s
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     3
+
+
+ AVERAGE FORCE                      0.111       TIME AVG. FORCE       6.093E-02
+ LARGEST SCALED RESIDUAL FORCE     -4.071E-02   AT NODE       9421   DOF  2
+   INSTANCE: FINAL_PART-1                                                                    
+  CORRESPONDING RESIDUAL FORCE     -4.071E-02
+ LARGEST INCREMENT OF DISP.        -2.871E-03   AT NODE         99   DOF  1
+   INSTANCE: FINAL_PART-1                                                                    
+ LARGEST CORRECTION TO DISP.       -1.676E-04   AT NODE         80   DOF  1
+   INSTANCE: FINAL_PART-1                                                                    
+          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
+ 
+	SYMMETRIC PURE THREAD-BASED DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  409818
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      8.048e+10
+        SOLVER ELAPSED TIME:  5.3s
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     4
+
+
+ AVERAGE FORCE                      0.111       TIME AVG. FORCE       6.093E-02
+ LARGEST SCALED RESIDUAL FORCE      1.008E-04   AT NODE       9421   DOF  2
+   INSTANCE: FINAL_PART-1                                                                    
+  CORRESPONDING RESIDUAL FORCE      1.008E-04
+ LARGEST INCREMENT OF DISP.        -2.874E-03   AT NODE         99   DOF  1
+   INSTANCE: FINAL_PART-1                                                                    
+ LARGEST CORRECTION TO DISP.       -2.884E-06   AT NODE         99   DOF  1
+   INSTANCE: FINAL_PART-1                                                                    
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ ITERATION SUMMARY FOR THE INCREMENT:   4 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  4 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.903E-02,  FRACTION OF STEP COMPLETED  0.966    
+ STEP TIME COMPLETED       0.966    ,  TOTAL TIME COMPLETED        0.966    
+
+
+  INCREMENT    51 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.903E-02
+ 
+	SYMMETRIC PURE THREAD-BASED DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  409818
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      8.048e+10
+        SOLVER ELAPSED TIME:  6.2s
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                      0.112       TIME AVG. FORCE       6.194E-02
+ LARGEST SCALED RESIDUAL FORCE      0.171       AT NODE      12169   DOF  1
+   INSTANCE: FINAL_PART-1                                                                    
+  CORRESPONDING RESIDUAL FORCE      0.171    
+ LARGEST INCREMENT OF DISP.        -2.753E-03   AT NODE         99   DOF  1
+   INSTANCE: FINAL_PART-1                                                                    
+ LARGEST CORRECTION TO DISP.        2.223E-04   AT NODE        120   DOF  1
+   INSTANCE: FINAL_PART-1                                                                    
+          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
+ 
+	SYMMETRIC PURE THREAD-BASED DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  409818
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      8.048e+10
+        SOLVER ELAPSED TIME:  6.4s
+ 
+
+ ***WARNING: THE SYSTEM MATRIX HAS 3 NEGATIVE EIGENVALUES.
+             EXPLANATIONS ARE SUGGESTED AFTER THE FIRST OCCURRENCE OF THIS MESSAGE.
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
+
+
+ AVERAGE FORCE                      0.112       TIME AVG. FORCE       6.194E-02
+ LARGEST SCALED RESIDUAL FORCE     -3.906E-03   AT NODE        651   DOF  2
+   INSTANCE: FINAL_PART-1                                                                    
+  CORRESPONDING RESIDUAL FORCE     -3.906E-03
+ LARGEST INCREMENT OF DISP.        -2.739E-03   AT NODE         99   DOF  1
+   INSTANCE: FINAL_PART-1                                                                    
+ LARGEST CORRECTION TO DISP.        1.717E-05   AT NODE        159   DOF  2
+   INSTANCE: FINAL_PART-1                                                                    
+          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
+ 
+	SYMMETRIC PURE THREAD-BASED DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  409818
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      8.048e+10
+        SOLVER ELAPSED TIME:  7.3s
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     3
+
+
+ AVERAGE FORCE                      0.112       TIME AVG. FORCE       6.194E-02
+ LARGEST SCALED RESIDUAL FORCE     -6.482E-02   AT NODE       9421   DOF  2
+   INSTANCE: FINAL_PART-1                                                                    
+  CORRESPONDING RESIDUAL FORCE     -6.482E-02
+ LARGEST INCREMENT OF DISP.        -2.938E-03   AT NODE         99   DOF  1
+   INSTANCE: FINAL_PART-1                                                                    
+ LARGEST CORRECTION TO DISP.       -1.984E-04   AT NODE         80   DOF  1
+   INSTANCE: FINAL_PART-1                                                                    
+          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
+ 
+	SYMMETRIC PURE THREAD-BASED DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  409818
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      8.048e+10
+        SOLVER ELAPSED TIME:  7.0s
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     4
+
+
+ AVERAGE FORCE                      0.112       TIME AVG. FORCE       6.194E-02
+ LARGEST SCALED RESIDUAL FORCE      1.702E-04   AT NODE       9421   DOF  2
+   INSTANCE: FINAL_PART-1                                                                    
+  CORRESPONDING RESIDUAL FORCE      1.702E-04
+ LARGEST INCREMENT OF DISP.        -2.939E-03   AT NODE         99   DOF  1
+   INSTANCE: FINAL_PART-1                                                                    
+ LARGEST CORRECTION TO DISP.       -1.713E-06   AT NODE        100   DOF  1
+   INSTANCE: FINAL_PART-1                                                                    
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ ITERATION SUMMARY FOR THE INCREMENT:   4 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  4 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.903E-02,  FRACTION OF STEP COMPLETED  0.985    
+ STEP TIME COMPLETED       0.985    ,  TOTAL TIME COMPLETED        0.985    
+
+
+  INCREMENT    52 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.464E-02
+ 
+	SYMMETRIC PURE THREAD-BASED DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  409818
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      8.048e+10
+        SOLVER ELAPSED TIME:  4.9s
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                      0.114       TIME AVG. FORCE       6.293E-02
+ LARGEST SCALED RESIDUAL FORCE      9.791E-02   AT NODE      12345   DOF  1
+   INSTANCE: FINAL_PART-1                                                                    
+  CORRESPONDING RESIDUAL FORCE      9.791E-02
+ LARGEST INCREMENT OF DISP.        -2.137E-03   AT NODE         99   DOF  1
+   INSTANCE: FINAL_PART-1                                                                    
+ LARGEST CORRECTION TO DISP.        1.823E-04   AT NODE        120   DOF  1
+   INSTANCE: FINAL_PART-1                                                                    
+          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
+ 
+	SYMMETRIC PURE THREAD-BASED DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  409818
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      8.048e+10
+        SOLVER ELAPSED TIME:  4.9s
+ 
+
+ ***WARNING: THE SYSTEM MATRIX HAS 3 NEGATIVE EIGENVALUES.
+             EXPLANATIONS ARE SUGGESTED AFTER THE FIRST OCCURRENCE OF THIS MESSAGE.
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
+
+
+ AVERAGE FORCE                      0.113       TIME AVG. FORCE       6.292E-02
+ LARGEST SCALED RESIDUAL FORCE      2.442E-02   AT NODE      18652   DOF  1
+   INSTANCE: FINAL_PART-1                                                                    
+  CORRESPONDING RESIDUAL FORCE      2.442E-02
+ LARGEST INCREMENT OF DISP.        -2.003E-03   AT NODE         99   DOF  1
+   INSTANCE: FINAL_PART-1                                                                    
+ LARGEST CORRECTION TO DISP.        1.579E-04   AT NODE         19   DOF  1
+   INSTANCE: FINAL_PART-1                                                                    
+          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
+ 
+	SYMMETRIC PURE THREAD-BASED DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  409818
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      8.048e+10
+        SOLVER ELAPSED TIME:  4.9s
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     3
+
+
+ AVERAGE FORCE                      0.113       TIME AVG. FORCE       6.293E-02
+ LARGEST SCALED RESIDUAL FORCE     -2.557E-02   AT NODE      12978   DOF  1
+   INSTANCE: FINAL_PART-1                                                                    
+  CORRESPONDING RESIDUAL FORCE     -2.557E-02
+ LARGEST INCREMENT OF DISP.        -2.031E-03   AT NODE         99   DOF  1
+   INSTANCE: FINAL_PART-1                                                                    
+ LARGEST CORRECTION TO DISP.       -1.069E-04   AT NODE        113   DOF  2
+   INSTANCE: FINAL_PART-1                                                                    
+          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
+ 
+	SYMMETRIC PURE THREAD-BASED DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  409818
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      8.048e+10
+        SOLVER ELAPSED TIME:  4.9s
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     4
+
+
+ AVERAGE FORCE                      0.114       TIME AVG. FORCE       6.293E-02
+ LARGEST SCALED RESIDUAL FORCE      5.635E-03   AT NODE      18652   DOF  1
+   INSTANCE: FINAL_PART-1                                                                    
+  CORRESPONDING RESIDUAL FORCE      5.635E-03
+ LARGEST INCREMENT OF DISP.        -2.100E-03   AT NODE         99   DOF  1
+   INSTANCE: FINAL_PART-1                                                                    
+ LARGEST CORRECTION TO DISP.       -7.332E-05   AT NODE        144   DOF  2
+   INSTANCE: FINAL_PART-1                                                                    
+          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
+ 
+	SYMMETRIC PURE THREAD-BASED DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  409818
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      8.048e+10
+        SOLVER ELAPSED TIME:  5.0s
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     5
+
+
+ AVERAGE FORCE                      0.114       TIME AVG. FORCE       6.293E-02
+ LARGEST SCALED RESIDUAL FORCE     -3.117E-03   AT NODE       9421   DOF  2
+   INSTANCE: FINAL_PART-1                                                                    
+  CORRESPONDING RESIDUAL FORCE     -3.117E-03
+ LARGEST INCREMENT OF DISP.        -2.139E-03   AT NODE         99   DOF  1
+   INSTANCE: FINAL_PART-1                                                                    
+ LARGEST CORRECTION TO DISP.       -3.818E-05   AT NODE         80   DOF  1
+   INSTANCE: FINAL_PART-1                                                                    
+          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
+ 
+	SYMMETRIC PURE THREAD-BASED DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  409818
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      8.048e+10
+        SOLVER ELAPSED TIME:  5.2s
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     6
+
+
+ AVERAGE FORCE                      0.114       TIME AVG. FORCE       6.293E-02
+ LARGEST SCALED RESIDUAL FORCE     -4.667E-03   AT NODE       9421   DOF  2
+   INSTANCE: FINAL_PART-1                                                                    
+  CORRESPONDING RESIDUAL FORCE     -4.667E-03
+ LARGEST INCREMENT OF DISP.        -2.190E-03   AT NODE         99   DOF  1
+   INSTANCE: FINAL_PART-1                                                                    
+ LARGEST CORRECTION TO DISP.       -5.149E-05   AT NODE         80   DOF  1
+   INSTANCE: FINAL_PART-1                                                                    
+          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
+ 
+	SYMMETRIC PURE THREAD-BASED DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  409818
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      8.048e+10
+        SOLVER ELAPSED TIME:  5.5s
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     7
+
+
+ AVERAGE FORCE                      0.114       TIME AVG. FORCE       6.293E-02
+ LARGEST SCALED RESIDUAL FORCE     -1.496E-03   AT NODE       9421   DOF  2
+   INSTANCE: FINAL_PART-1                                                                    
+  CORRESPONDING RESIDUAL FORCE     -1.496E-03
+ LARGEST INCREMENT OF DISP.        -2.217E-03   AT NODE         99   DOF  1
+   INSTANCE: FINAL_PART-1                                                                    
+ LARGEST CORRECTION TO DISP.       -2.653E-05   AT NODE         80   DOF  1
+   INSTANCE: FINAL_PART-1                                                                    
+          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
+ 
+	SYMMETRIC PURE THREAD-BASED DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  409818
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      8.048e+10
+        SOLVER ELAPSED TIME:  6.3s
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     8
+
+
+ AVERAGE FORCE                      0.114       TIME AVG. FORCE       6.293E-02
+ LARGEST SCALED RESIDUAL FORCE     -6.627E-03   AT NODE       9421   DOF  2
+   INSTANCE: FINAL_PART-1                                                                    
+  CORRESPONDING RESIDUAL FORCE     -6.627E-03
+ LARGEST INCREMENT OF DISP.        -2.273E-03   AT NODE         99   DOF  1
+   INSTANCE: FINAL_PART-1                                                                    
+ LARGEST CORRECTION TO DISP.       -5.653E-05   AT NODE         99   DOF  1
+   INSTANCE: FINAL_PART-1                                                                    
+          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
+ 
+
+ ***NOTE: THE SOLUTION APPEARS TO BE DIVERGING. CONVERGENCE IS JUDGED UNLIKELY.
+
+
+  INCREMENT    52 STARTS. ATTEMPT NUMBER  2, TIME INCREMENT  3.659E-03
+ 
+	SYMMETRIC PURE THREAD-BASED DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  409818
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      8.048e+10
+        SOLVER ELAPSED TIME:  7.0s
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                      0.113       TIME AVG. FORCE       6.292E-02
+ LARGEST SCALED RESIDUAL FORCE     -2.505E-02   AT NODE       9421   DOF  2
+   INSTANCE: FINAL_PART-1                                                                    
+  CORRESPONDING RESIDUAL FORCE     -2.505E-02
+ LARGEST INCREMENT OF DISP.        -6.708E-04   AT NODE         99   DOF  1
+   INSTANCE: FINAL_PART-1                                                                    
+ LARGEST CORRECTION TO DISP.       -1.147E-04   AT NODE        100   DOF  1
+   INSTANCE: FINAL_PART-1                                                                    
+          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
+ 
+	SYMMETRIC PURE THREAD-BASED DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  409818
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      8.048e+10
+        SOLVER ELAPSED TIME:  8.3s
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
+
+
+ AVERAGE FORCE                      0.113       TIME AVG. FORCE       6.292E-02
+ LARGEST SCALED RESIDUAL FORCE     -3.360E-04   AT NODE        651   DOF  2
+   INSTANCE: FINAL_PART-1                                                                    
+  CORRESPONDING RESIDUAL FORCE     -3.360E-04
+ LARGEST INCREMENT OF DISP.        -6.721E-04   AT NODE         99   DOF  1
+   INSTANCE: FINAL_PART-1                                                                    
+ LARGEST CORRECTION TO DISP.       -1.358E-06   AT NODE         76   DOF  1
+   INSTANCE: FINAL_PART-1                                                                    
+          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
+ 
+	SYMMETRIC PURE THREAD-BASED DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  409818
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      8.048e+10
+        SOLVER ELAPSED TIME:  7.4s
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     3
+
+
+ AVERAGE FORCE                      0.113       TIME AVG. FORCE       6.292E-02
+ LARGEST SCALED RESIDUAL FORCE     -9.308E-04   AT NODE       9421   DOF  2
+   INSTANCE: FINAL_PART-1                                                                    
+  CORRESPONDING RESIDUAL FORCE     -9.308E-04
+ LARGEST INCREMENT OF DISP.        -6.940E-04   AT NODE         99   DOF  1
+   INSTANCE: FINAL_PART-1                                                                    
+ LARGEST CORRECTION TO DISP.       -2.190E-05   AT NODE         80   DOF  1
+   INSTANCE: FINAL_PART-1                                                                    
+          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
+ 
+	SYMMETRIC PURE THREAD-BASED DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  409818
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      8.048e+10
+        SOLVER ELAPSED TIME:  5.1s
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     4
+
+
+ AVERAGE FORCE                      0.113       TIME AVG. FORCE       6.292E-02
+ LARGEST SCALED RESIDUAL FORCE     -3.049E-06   AT NODE       1382   DOF  1
+   INSTANCE: FINAL_PART-1                                                                    
+  CORRESPONDING RESIDUAL FORCE     -3.049E-06
+ LARGEST INCREMENT OF DISP.        -6.940E-04   AT NODE         99   DOF  1
+   INSTANCE: FINAL_PART-1                                                                    
+ LARGEST CORRECTION TO DISP.       -4.164E-08   AT NODE        100   DOF  1
+   INSTANCE: FINAL_PART-1                                                                    
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+          TIME INCREMENT MAY NOW INCREASE TO    5.488E-03
+
+ ITERATION SUMMARY FOR THE INCREMENT:   4 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  4 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  3.659E-03,  FRACTION OF STEP COMPLETED  0.989    
+ STEP TIME COMPLETED       0.989    ,  TOTAL TIME COMPLETED        0.989    
+
+
+  INCREMENT    53 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  5.488E-03
+ 
+	SYMMETRIC PURE THREAD-BASED DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  409818
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      8.048e+10
+        SOLVER ELAPSED TIME:  4.8s
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                      0.113       TIME AVG. FORCE       6.387E-02
+ LARGEST SCALED RESIDUAL FORCE     -9.456E-02   AT NODE       9421   DOF  2
+   INSTANCE: FINAL_PART-1                                                                    
+  CORRESPONDING RESIDUAL FORCE     -9.456E-02
+ LARGEST INCREMENT OF DISP.        -8.105E-04   AT NODE         99   DOF  1
+   INSTANCE: FINAL_PART-1                                                                    
+ LARGEST CORRECTION TO DISP.        2.305E-04   AT NODE         99   DOF  1
+   INSTANCE: FINAL_PART-1                                                                    
+          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
+ 
+	SYMMETRIC PURE THREAD-BASED DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  409818
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      8.048e+10
+        SOLVER ELAPSED TIME:  4.8s
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
+
+
+ AVERAGE FORCE                      0.113       TIME AVG. FORCE       6.387E-02
+ LARGEST SCALED RESIDUAL FORCE     -3.447E-04   AT NODE        654   DOF  2
+   INSTANCE: FINAL_PART-1                                                                    
+  CORRESPONDING RESIDUAL FORCE     -3.447E-04
+ LARGEST INCREMENT OF DISP.        -8.107E-04   AT NODE         99   DOF  1
+   INSTANCE: FINAL_PART-1                                                                    
+ LARGEST CORRECTION TO DISP.       -6.459E-07   AT NODE        160   DOF  1
+   INSTANCE: FINAL_PART-1                                                                    
+          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
+ 
+	SYMMETRIC PURE THREAD-BASED DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  409818
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      8.048e+10
+        SOLVER ELAPSED TIME:  4.8s
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     3
+
+
+ AVERAGE FORCE                      0.113       TIME AVG. FORCE       6.387E-02
+ LARGEST SCALED RESIDUAL FORCE     -2.380E-03   AT NODE       9421   DOF  2
+   INSTANCE: FINAL_PART-1                                                                    
+  CORRESPONDING RESIDUAL FORCE     -2.380E-03
+ LARGEST INCREMENT OF DISP.        -8.453E-04   AT NODE         99   DOF  1
+   INSTANCE: FINAL_PART-1                                                                    
+ LARGEST CORRECTION TO DISP.       -3.460E-05   AT NODE         80   DOF  1
+   INSTANCE: FINAL_PART-1                                                                    
+          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
+ 
+	SYMMETRIC PURE THREAD-BASED DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  409818
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      8.048e+10
+        SOLVER ELAPSED TIME:  4.9s
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     4
+
+
+ AVERAGE FORCE                      0.113       TIME AVG. FORCE       6.387E-02
+ LARGEST SCALED RESIDUAL FORCE     -4.232E-06   AT NODE        654   DOF  1
+   INSTANCE: FINAL_PART-1                                                                    
+  CORRESPONDING RESIDUAL FORCE     -4.232E-06
+ LARGEST INCREMENT OF DISP.        -8.451E-04   AT NODE         99   DOF  1
+   INSTANCE: FINAL_PART-1                                                                    
+ LARGEST CORRECTION TO DISP.        1.677E-07   AT NODE         99   DOF  1
+   INSTANCE: FINAL_PART-1                                                                    
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ ITERATION SUMMARY FOR THE INCREMENT:   4 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  4 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  5.488E-03,  FRACTION OF STEP COMPLETED  0.995    
+ STEP TIME COMPLETED       0.995    ,  TOTAL TIME COMPLETED        0.995    
+
+
+  INCREMENT    54 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  5.488E-03
+ 
+	SYMMETRIC PURE THREAD-BASED DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  409818
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      8.048e+10
+        SOLVER ELAPSED TIME:  5.7s
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                      0.114       TIME AVG. FORCE       6.479E-02
+ LARGEST SCALED RESIDUAL FORCE     -3.128E-03   AT NODE      13211   DOF  3
+   INSTANCE: FINAL_PART-1                                                                    
+  CORRESPONDING RESIDUAL FORCE     -3.128E-03
+ LARGEST INCREMENT OF DISP.        -8.115E-04   AT NODE         99   DOF  1
+   INSTANCE: FINAL_PART-1                                                                    
+ LARGEST CORRECTION TO DISP.        3.510E-05   AT NODE        119   DOF  1
+   INSTANCE: FINAL_PART-1                                                                    
+          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
+ 
+	SYMMETRIC PURE THREAD-BASED DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  409818
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      8.048e+10
+        SOLVER ELAPSED TIME:  6.4s
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
+
+
+ AVERAGE FORCE                      0.114       TIME AVG. FORCE       6.479E-02
+ LARGEST SCALED RESIDUAL FORCE     -5.711E-03   AT NODE       9421   DOF  2
+   INSTANCE: FINAL_PART-1                                                                    
+  CORRESPONDING RESIDUAL FORCE     -5.711E-03
+ LARGEST INCREMENT OF DISP.        -8.638E-04   AT NODE         99   DOF  1
+   INSTANCE: FINAL_PART-1                                                                    
+ LARGEST CORRECTION TO DISP.       -5.228E-05   AT NODE         99   DOF  1
+   INSTANCE: FINAL_PART-1                                                                    
+          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
+ 
+	SYMMETRIC PURE THREAD-BASED DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  409818
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      8.048e+10
+        SOLVER ELAPSED TIME:  7.3s
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     3
+
+
+ AVERAGE FORCE                      0.114       TIME AVG. FORCE       6.479E-02
+ LARGEST SCALED RESIDUAL FORCE     -1.721E-05   AT NODE        658   DOF  1
+   INSTANCE: FINAL_PART-1                                                                    
+  CORRESPONDING RESIDUAL FORCE     -1.721E-05
+ LARGEST INCREMENT OF DISP.        -8.615E-04   AT NODE         99   DOF  1
+   INSTANCE: FINAL_PART-1                                                                    
+ LARGEST CORRECTION TO DISP.        2.288E-06   AT NODE         99   DOF  1
+   INSTANCE: FINAL_PART-1                                                                    
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ ITERATION SUMMARY FOR THE INCREMENT:   3 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  3 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  5.488E-03,  FRACTION OF STEP COMPLETED   1.00    
+ STEP TIME COMPLETED        1.00    ,  TOTAL TIME COMPLETED         1.00    
+
+
+          THE ANALYSIS HAS BEEN COMPLETED
+
+
+
+     ANALYSIS SUMMARY:
+     TOTAL OF         54  INCREMENTS
+                      10  CUTBACKS IN AUTOMATIC INCREMENTATION
+                     291  ITERATIONS INCLUDING CONTACT ITERATIONS IF PRESENT
+                     291  PASSES THROUGH THE EQUATION SOLVER OF WHICH 
+                     291  INVOLVE MATRIX DECOMPOSITION, INCLUDING
+                       0  DECOMPOSITION(S) OF THE MASS MATRIX
+                       1  REORDERING OF EQUATIONS TO MINIMIZE WAVEFRONT
+                       0  ADDITIONAL RESIDUAL EVALUATIONS FOR LINE SEARCHES
+                       0  ADDITIONAL OPERATOR EVALUATIONS FOR LINE SEARCHES
+                       1  WARNING MESSAGES DURING USER INPUT PROCESSING
+                  408527  WARNING MESSAGES DURING ANALYSIS
+                  408478  ANALYSIS WARNINGS ARE NUMERICAL PROBLEM MESSAGES
+                      44  ANALYSIS WARNINGS ARE NEGATIVE EIGENVALUE MESSAGES
+                       0  ERROR MESSAGES
+
+
+
+     JOB TIME SUMMARY
+       USER TIME (SEC)      =     5.99E+03
+       SYSTEM TIME (SEC)    =     9.97E+02
+       TOTAL CPU TIME (SEC) =     6.98E+03
+       WALLCLOCK TIME (SEC) =         3622
+       MEMORY PEAK (GB)     =            0
