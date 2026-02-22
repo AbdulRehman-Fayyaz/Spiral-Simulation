@@ -1,0 +1,320 @@
+1
+
+   Abaqus 2025                                  Date 22-Feb-2026   Time 22:29:47
+   For use by UNIVERSITAET STUTTGART under license from Dassault Systemes or its subsidiary.
+
+
+
+                         The Abaqus Software is a product of:
+
+                           Dassault Systemes Americas Corp.
+                           1301 Atwood Avenue, Suite 101W
+                              Johnston, RI 02919, USA
+ 
+
+
+                   The Abaqus Software is available only under license
+                   from Dassault Systemes or its subsidiary and may be
+                   used or reproduced only in accordance with the terms
+                   of such license.
+ 
+                          On machine MIB40-GAUSS 
+                          you are authorized to run
+                          Abaqus/Standard until 31-Mar-2025
+
+                          Your site id is: 200000000017928 
+
+
+ 
+                    For assistance or any other information you may
+                    obtain contact information for your local office
+                    from the world wide web at:
+
+                      https://www.3ds.com/products-services/simulia/services-support/
+
+ 
+                * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+                *                                                         * 
+                *                   *****************                     * 
+                *                   *  N O T I C E  *                     * 
+                *                   *****************                     * 
+                *                                                         * 
+                *                                                         * 
+                *                       Abaqus 2025                       * 
+                *                                                         * 
+                *       BUILD ID: 2024_09_20-15.00.46 RELr427 198590      * 
+                *                                                         * 
+                *                                                         * 
+                *  Please make sure you are using                         * 
+                *  release Abaqus 2025 manuals                            * 
+                *  plus the notes accompanying this release.              * 
+                *                                                         * 
+                *                                                         * 
+                *                                                         * 
+                *                                                         * 
+                *                                                         * 
+                *   This program may not be used for commercial purposes  * 
+                *           without payment of a commercial fee.          * 
+                *                                                         * 
+                * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+
+ 
+
+
+
+     PROCESSING PART, INSTANCE, AND ASSEMBLY INFORMATION
+   *******************************************************
+
+
+     END PROCESSING PART, INSTANCE, AND ASSEMBLY INFORMATION
+   ***********************************************************
+
+
+
+
+     OPTIONS BEING PROCESSED
+   ***************************
+
+
+  *Element, type=C3D8R
+  *Elset, elset=ASSEMBLY_FINAL_PART-1__PICKEDSET26
+  *Elset, elset=ASSEMBLY_FINAL_PART-1__PICKEDSET27
+  *Elset, elset=ASSEMBLY__PICKEDSET47
+  *Elset, elset=ASSEMBLY___PICKEDSURF45_S2
+  *Elset, elset=ASSEMBLY___PICKEDSURF48_S2
+  *heading
+  *material, name=PLYWOOD_MATERIAL
+  *density
+  *elastic
+  *material, name=TAPE_MATERIAL
+  *density
+  *elastic
+  *solidsection, elset=ASSEMBLY_FINAL_PART-1__PICKEDSET26, material=TAPE_MATERIAL
+  *solidsection, elset=ASSEMBLY_FINAL_PART-1__PICKEDSET27, material=PLYWOOD_MATERIAL
+  *solidsection, elset=ASSEMBLY_FINAL_PART-1__PICKEDSET26, material=TAPE_MATERIAL
+  *solidsection, elset=ASSEMBLY_FINAL_PART-1__PICKEDSET27, material=PLYWOOD_MATERIAL
+  *surface, type=ELEMENT, name=ASSEMBLY__PICKEDSURF45
+  *surface, type=ELEMENT, name=ASSEMBLY__PICKEDSURF48
+  *surface, type=ELEMENT, name=ASSEMBLY__PICKEDSURF45
+  *surface, type=ELEMENT, name=ASSEMBLY__PICKEDSURF48
+  *boundary
+  *boundary
+  *surface, type=ELEMENT, name=ASSEMBLY__PICKEDSURF45
+  *surface, type=ELEMENT, name=ASSEMBLY__PICKEDSURF48
+  *output, field, variable=PRESELECT
+  *output, history, variable=PRESELECT
+  *output, field, variable=PRESELECT
+  *output, history, variable=PRESELECT
+  *output, field, variable=PRESELECT
+  *output, history, variable=PRESELECT
+  
+                               E L E M E N T   Q U A L I T Y  C H E C K S        
+  
+  
+ ***NOTES: DISTORTED ISOPARAMETRIC ELEMENTS: ANGLE BETWEEN ISOPARAMETRIC LINES 
+           IS LESS THAN 45 DEGREES OR GREATER THAN 135 DEGREES.
+  
+           TETRAHEDRAL QUALITY MEASURE: VOLUME OF TETRAHEDRON DIVIDED BY THE 
+           VOLUME OF EQUILATERAL TETRAHEDRON WITH SAME CIRCUMSPHERE RADIUS; 
+           0 FOR DEGENERATE TETRAHEDRON AND 1 FOR EQUILATERIAL TETRAHEDRON. IT 
+           IS RECOMMENDED THAT THE TETRAHEDRAL QUALITY MEASURE BE GREATER THAN 
+           0.02, THE MIN INTERIOR (DIHEDRAL) ANGLE BE GREATER THAN 10 DEGREES, 
+           AND THE MAX INTERIOR (DIHEDRAL) ANGLE BE LESS THAN 160 DEGREES. 
+  
+           MODIFIED TETRAHEDRAL QUALITY MEASURE: ANGLES BETWEEN THE TWO LINE 
+           SEGMENTS ON EACH EDGE; THE EDGES OF MODIFIED TETRAHEDRAL SHOULD BE 
+           AS STRAIGHT AS POSSIBLE. IT IS RECOMMENDED THAT THE ANGLE BETWEEN 
+           THE TWO LINE SEGMENTS ON EACH EDGE IS BETWEEN 160 AND 180 DEGREES. 
+  
+           TRIANGULAR QUALITY MEASURE: AREA OF TRIANGLE DIVIDED BY THE AREA OF 
+           EQUILATERAL TRIANGLE WITH SAME CIRCUMCIRCLE RADIUS; 0 FOR DEGENERATE 
+           TRIANGLE AND 1 FOR EQUILATERAL TRIANGLE. IT IS RECOMMENDED THAT THE
+           TRIANGULAR QUALITY MEASURE BE GREATER THAN 0.01, THE MIN INTERIOR 
+           ANGLE BE GREATER THAN 10 DEGREES, AND THE MAX INTERIOR ANGLE BE LESS 
+           THAN 160 DEGREES. 
+  
+           NODAL ADJUSTMENTS ARISING FROM CONTACT INTERACTIONS AND/OR TIE 
+           CONSTRAINTS CAN CAUSE SEVERE ELEMENT DISTORTION. IT MAY BE NECESSARY 
+           TO REMESH IN ORDER TO REDUCE THE AMOUNT OF ADJUSTMENT. 
+
+ ***WARNING: 123 elements are distorted. Either the isoparametric angles are 
+             out of the suggested limits or the triangular or tetrahedral 
+             quality measure is bad. The elements have been identified in 
+             element set WarnElemDistorted.
+  
+ --------------------------------------------------------------------------------
+ Distorted isoparametric elements
+  
+        Element          Min/max angle   Adjusted nodes 
+ ---------------------- ---------------- -------------- 
+       FINAL_PART-1.328          37.6881       NO       
+       FINAL_PART-1.329          38.9554       NO       
+       FINAL_PART-1.330          40.2955       NO       
+       FINAL_PART-1.331          41.7139       NO       
+       FINAL_PART-1.332          43.2162       NO       
+       FINAL_PART-1.333          44.8073       NO       
+       FINAL_PART-1.351          38.2163       NO       
+       FINAL_PART-1.352          39.4893       NO       
+       FINAL_PART-1.353          40.8344       NO       
+       FINAL_PART-1.354          42.2559       NO       
+       FINAL_PART-1.355          43.7603       NO       
+       FINAL_PART-1.391          44.8073       NO       
+       FINAL_PART-1.392          43.2162       NO       
+       FINAL_PART-1.393          41.7139       NO       
+       FINAL_PART-1.394          40.2955       NO       
+       FINAL_PART-1.395          38.9554       NO       
+       FINAL_PART-1.396          37.6881       NO       
+       FINAL_PART-1.415          43.7603       NO       
+       FINAL_PART-1.416          42.2559       NO       
+       FINAL_PART-1.417          40.8345       NO       
+       FINAL_PART-1.418          39.4893       NO       
+       FINAL_PART-1.419          38.2163       NO       
+       FINAL_PART-1.524          44.6971       NO       
+      FINAL_PART-1.2866          44.7162       NO       
+      FINAL_PART-1.5231          44.8014       NO       
+      FINAL_PART-1.5232          40.9632       NO       
+      FINAL_PART-1.5281          43.7694       NO       
+      FINAL_PART-1.5283          42.3625       NO       
+      FINAL_PART-1.5285          39.5934       NO       
+      FINAL_PART-1.6520          42.0588       NO       
+      FINAL_PART-1.6530          39.5651       NO       
+      FINAL_PART-1.6651          40.7397       NO       
+      FINAL_PART-1.6653          43.5383       NO       
+      FINAL_PART-1.7787          44.9852       NO       
+      FINAL_PART-1.7788          43.7912       NO       
+      FINAL_PART-1.7789          42.6471       NO       
+      FINAL_PART-1.7790          41.5511       NO       
+      FINAL_PART-1.7791          40.5004       NO       
+      FINAL_PART-1.7792          39.4928       NO       
+      FINAL_PART-1.7793          38.5261       NO       
+      FINAL_PART-1.7794          37.5988       NO       
+     FINAL_PART-1.14609          44.0889       NO       
+     FINAL_PART-1.14610          43.1947       NO       
+     FINAL_PART-1.14611          42.3298       NO       
+     FINAL_PART-1.14612          41.4921       NO       
+     FINAL_PART-1.14613          40.6807       NO       
+     FINAL_PART-1.14614          39.8955       NO       
+     FINAL_PART-1.14615          39.1354       NO       
+     FINAL_PART-1.14616          38.3989       NO       
+     FINAL_PART-1.14617          37.6859       NO       
+     FINAL_PART-1.14618          36.9956       NO       
+     FINAL_PART-1.14664          36.9956       NO       
+     FINAL_PART-1.14665          37.6859       NO       
+     FINAL_PART-1.14666          38.3989       NO       
+     FINAL_PART-1.14667          39.1354       NO       
+     FINAL_PART-1.14668          39.8955       NO       
+     FINAL_PART-1.14669          40.6807       NO       
+     FINAL_PART-1.14670          41.4921       NO       
+     FINAL_PART-1.14671          42.3297       NO       
+     FINAL_PART-1.14672          43.1947       NO       
+     FINAL_PART-1.14673          44.0889       NO       
+     FINAL_PART-1.15462          44.8969       NO       
+     FINAL_PART-1.21905          44.8352       NO       
+     FINAL_PART-1.28838          36.9481       NO       
+     FINAL_PART-1.28839          37.4592       NO       
+     FINAL_PART-1.28840          37.9822       NO       
+     FINAL_PART-1.28841          38.5181       NO       
+     FINAL_PART-1.28842          39.0668       NO       
+     FINAL_PART-1.28843          39.6286       NO       
+     FINAL_PART-1.28844          40.2039       NO       
+     FINAL_PART-1.28845          40.7935       NO       
+     FINAL_PART-1.28846          41.3976       NO       
+     FINAL_PART-1.28847          42.0161       NO       
+     FINAL_PART-1.28848          42.6498       NO       
+     FINAL_PART-1.28849          43.2994       NO       
+     FINAL_PART-1.28850          43.9648       NO       
+     FINAL_PART-1.28851          44.6467       NO       
+     FINAL_PART-1.49358          44.4987       NO       
+     FINAL_PART-1.49359          43.9961       NO       
+     FINAL_PART-1.49360          43.5026       NO       
+     FINAL_PART-1.49361          43.0181       NO       
+     FINAL_PART-1.49362          42.5421       NO       
+     FINAL_PART-1.49363          42.0746       NO       
+     FINAL_PART-1.49364          41.6152       NO       
+     FINAL_PART-1.49365          41.1641       NO       
+     FINAL_PART-1.49366           40.721       NO       
+     FINAL_PART-1.49367          40.2857       NO       
+     FINAL_PART-1.49368           39.858       NO       
+     FINAL_PART-1.49369          39.4378       NO       
+     FINAL_PART-1.49370          39.0251       NO       
+     FINAL_PART-1.49371          38.6196       NO       
+     FINAL_PART-1.49372          38.2211       NO       
+     FINAL_PART-1.49373          37.8294       NO       
+     FINAL_PART-1.49374          37.4445       NO       
+     FINAL_PART-1.49375          37.0664       NO       
+     FINAL_PART-1.49453          36.3233       NO       
+     FINAL_PART-1.49458          37.5222       NO       
+     FINAL_PART-1.49459          38.7786       NO       
+     FINAL_PART-1.49468            39.22       NO       
+     FINAL_PART-1.49571          43.9104       NO       
+     FINAL_PART-1.49573          42.4584       NO       
+     FINAL_PART-1.49574          43.4201       NO       
+     FINAL_PART-1.50555           37.115       NO       
+     FINAL_PART-1.50557          39.6682       NO       
+     FINAL_PART-1.50558           40.122       NO       
+     FINAL_PART-1.50561          40.5719       NO       
+     FINAL_PART-1.51692          41.4926       NO       
+     FINAL_PART-1.51695          41.9718       NO       
+     FINAL_PART-1.51696          42.9359       NO       
+     FINAL_PART-1.52098          36.7155       NO       
+     FINAL_PART-1.52114          41.0232       NO       
+     FINAL_PART-1.52118          37.9319       NO       
+     FINAL_PART-1.52119          38.3512       NO       
+     FINAL_PART-1.52138          44.4118       NO       
+     FINAL_PART-1.52139          44.9182       NO       
+     FINAL_PART-1.76142          44.2806       NO       
+     FINAL_PART-1.76143          43.4399       NO       
+     FINAL_PART-1.77163          44.7054       NO       
+     FINAL_PART-1.77173           42.251       NO       
+     FINAL_PART-1.78180          43.0308       NO       
+     FINAL_PART-1.78181          42.6376       NO       
+     FINAL_PART-1.78182          41.8911       NO       
+     FINAL_PART-1.78578          43.8571       NO       
+  
+  
+  *step, name=Step-1, nlgeom=YES
+  *step, name=Step-1, nlgeom=YES
+  *output, field, variable=PRESELECT
+  *output, history, variable=PRESELECT
+  *step, name=Step-1, nlgeom=YES
+  *step, name=Step-1, nlgeom=YES
+  *static
+  *boundary
+  *dsload
+  *dsload
+  *output, field, variable=PRESELECT
+  *output, history, variable=PRESELECT
+  *endstep
+  *step, name=Step-1, nlgeom=YES
+  *static
+  *boundary
+  *endstep
+
+     - (RAMP) OR (STEP) - INDICATE USE OF DEFAULT AMPLITUDES ASSOCIATED WITH THE STEP
+
+     - (RAMP) OR (STEP) - INDICATE USE OF DEFAULT AMPLITUDES ASSOCIATED WITH THE STEP
+
+
+
+                            P R O B L E M   S I Z E
+
+
+          NUMBER OF ELEMENTS IS                                102457
+          NUMBER OF NODES IS                                   136606
+          NUMBER OF NODES DEFINED BY THE USER                  136606
+          TOTAL NUMBER OF VARIABLES IN THE MODEL               409818
+          (DEGREES OF FREEDOM PLUS MAX NO. OF ANY LAGRANGE MULTIPLIER
+           VARIABLES. INCLUDE *PRINT,SOLVE=YES TO GET THE ACTUAL NUMBER.)
+
+
+
+                              END OF USER INPUT PROCESSING
+
+
+
+     JOB TIME SUMMARY
+       USER TIME (SEC)      =      8.1    
+       SYSTEM TIME (SEC)    =     0.70    
+       TOTAL CPU TIME (SEC) =      8.8    
+       WALLCLOCK TIME (SEC) =            6

@@ -1,0 +1,53 @@
+<Description>
+   ABAQUS/standard rank 0 received the ABORT signal
+
+</Description>
+
+<Context>
+   SOLVER
+</Context>
+
+<Phase>
+   Increment | Attempt | Iteration | CallSolver | DmpSolve | Bwd
+</Phase>
+
+<Callstack>
+  1)  ucrtbase.dll                    abort                                   
+  2)  ABQSMAEliLicenseModule.dll      eli_HeartbeatTask::KillExecution        
+  3)  ABQSMAEliLicenseModule.dll      eli_HeartbeatTask::RunHeartbeat         
+  4)  ABQSMAAbuBasicUtils.dll         thr_ThreadPool::ThreadDriver            
+  5)  ucrtbase.dll                    wcsrchr                                 
+  6)  KERNEL32.DLL                    BaseThreadInitThunk                     
+  7)  ntdll.dll                       RtlUserThreadStart                      
+</Callstack>
+
+<Memory>
+   <Current>           15 GB </Current>
+   <Resident>           4 GB </Resident>
+   <Physical>          15 GB </Physical>
+   <Limit>             15 GB </Limit>
+   <Accessible>        15 GB </Accessible>
+   <Free>               1 GB </Free>
+   <Allocator>            DL </Allocator>
+</Memory>
+
+<Swap>
+       <Size>          36 GB </Size>
+       <Used>          31 GB </Used>
+       <Free>           4 GB </Free>
+</Swap>
+
+<Directories>
+  <current> C:\Users\st195764\AppData\Local\Temp\st195764_Job-11-superMOREextrafinemesh_15336 </current> <free>    278 GB </free>   <used>    196 GB </used> 
+    <indir> C:\Users\st195764\Desktop\Spiral-Simulation\(outdated)_SoftRoboLab_Spiral_Trial\script_testing_folder </indir>   <free>    278 GB </free>  
+   <outdir> C:\Users\st195764\Desktop\Spiral-Simulation\(outdated)_SoftRoboLab_Spiral_Trial\script_testing_folder </outdir>  <free>    278 GB </free> 
+   <tmpdir> C:\Users\st195764\AppData\Local\Temp\st195764_Job-11-superMOREextrafinemesh_15336 </tmpdir>  <free>    278 GB </free> 
+     <temp> C:\Users\st195764\AppData\Local\Temp </temp>    <free>    278 GB </free>
+</Directories>
+
+<Installation>
+     <Version> 2025 6.25-1 </Version>
+       <Build> 2024_09_20-15.00.46 RELr427 198590 </Build>
+  <Executable> C:\SIMULIA\EstProducts\2025\win_b64\code\bin\standard.exe </Executable>
+</Installation>
+

@@ -1,0 +1,1147 @@
+1
+
+   Abaqus 2025                                  Date 22-Feb-2026   Time 15:38:41
+   For use by UNIVERSITAET STUTTGART under license from Dassault Systemes or its subsidiary.
+
+
+
+                         The Abaqus Software is a product of:
+
+                           Dassault Systemes Americas Corp.
+                           1301 Atwood Avenue, Suite 101W
+                              Johnston, RI 02919, USA
+ 
+
+
+                   The Abaqus Software is available only under license
+                   from Dassault Systemes or its subsidiary and may be
+                   used or reproduced only in accordance with the terms
+                   of such license.
+ 
+                          On machine MIB40-GAUSS 
+                          you are authorized to run
+                          Abaqus/Standard until 31-Mar-2025
+
+                          Your site id is: 200000000017928 
+
+
+ 
+                    For assistance or any other information you may
+                    obtain contact information for your local office
+                    from the world wide web at:
+
+                      https://www.3ds.com/products-services/simulia/services-support/
+
+ 
+                * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+                *                                                         * 
+                *                   *****************                     * 
+                *                   *  N O T I C E  *                     * 
+                *                   *****************                     * 
+                *                                                         * 
+                *                                                         * 
+                *                       Abaqus 2025                       * 
+                *                                                         * 
+                *       BUILD ID: 2024_09_20-15.00.46 RELr427 198590      * 
+                *                                                         * 
+                *                                                         * 
+                *  Please make sure you are using                         * 
+                *  release Abaqus 2025 manuals                            * 
+                *  plus the notes accompanying this release.              * 
+                *                                                         * 
+                *                                                         * 
+                *                                                         * 
+                *                                                         * 
+                *                                                         * 
+                *   This program may not be used for commercial purposes  * 
+                *           without payment of a commercial fee.          * 
+                *                                                         * 
+                * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+
+ 
+
+
+
+     PROCESSING PART, INSTANCE, AND ASSEMBLY INFORMATION
+   *******************************************************
+
+
+     END PROCESSING PART, INSTANCE, AND ASSEMBLY INFORMATION
+   ***********************************************************
+
+
+
+
+     OPTIONS BEING PROCESSED
+   ***************************
+
+
+  *Element, type=C3D8R
+  *Elset, elset=ASSEMBLY_FINAL_PART-1__PICKEDSET26
+  *Elset, elset=ASSEMBLY_FINAL_PART-1__PICKEDSET27
+  *Elset, elset=ASSEMBLY__PICKEDSET47
+  *Elset, elset=ASSEMBLY___PICKEDSURF45_S2
+  *Elset, elset=ASSEMBLY___PICKEDSURF48_S2
+  *heading
+  *material, name=PLYWOOD_MATERIAL
+  *density
+  *elastic
+  *material, name=TAPE_MATERIAL
+  *density
+  *elastic
+  *solidsection, elset=ASSEMBLY_FINAL_PART-1__PICKEDSET26, material=TAPE_MATERIAL
+  *solidsection, elset=ASSEMBLY_FINAL_PART-1__PICKEDSET27, material=PLYWOOD_MATERIAL
+  *solidsection, elset=ASSEMBLY_FINAL_PART-1__PICKEDSET26, material=TAPE_MATERIAL
+  *solidsection, elset=ASSEMBLY_FINAL_PART-1__PICKEDSET27, material=PLYWOOD_MATERIAL
+  *surface, type=ELEMENT, name=ASSEMBLY__PICKEDSURF45
+  *surface, type=ELEMENT, name=ASSEMBLY__PICKEDSURF48
+  *surface, type=ELEMENT, name=ASSEMBLY__PICKEDSURF45
+  *surface, type=ELEMENT, name=ASSEMBLY__PICKEDSURF48
+  *boundary
+  *boundary
+  *surface, type=ELEMENT, name=ASSEMBLY__PICKEDSURF45
+  *surface, type=ELEMENT, name=ASSEMBLY__PICKEDSURF48
+  *output, field, variable=PRESELECT
+  *output, history, variable=PRESELECT
+  *output, field, variable=PRESELECT
+  *output, history, variable=PRESELECT
+  *output, field, variable=PRESELECT
+  *output, history, variable=PRESELECT
+  
+                               E L E M E N T   Q U A L I T Y  C H E C K S        
+  
+  
+ ***NOTES: DISTORTED ISOPARAMETRIC ELEMENTS: ANGLE BETWEEN ISOPARAMETRIC LINES 
+           IS LESS THAN 45 DEGREES OR GREATER THAN 135 DEGREES.
+  
+           TETRAHEDRAL QUALITY MEASURE: VOLUME OF TETRAHEDRON DIVIDED BY THE 
+           VOLUME OF EQUILATERAL TETRAHEDRON WITH SAME CIRCUMSPHERE RADIUS; 
+           0 FOR DEGENERATE TETRAHEDRON AND 1 FOR EQUILATERIAL TETRAHEDRON. IT 
+           IS RECOMMENDED THAT THE TETRAHEDRAL QUALITY MEASURE BE GREATER THAN 
+           0.02, THE MIN INTERIOR (DIHEDRAL) ANGLE BE GREATER THAN 10 DEGREES, 
+           AND THE MAX INTERIOR (DIHEDRAL) ANGLE BE LESS THAN 160 DEGREES. 
+  
+           MODIFIED TETRAHEDRAL QUALITY MEASURE: ANGLES BETWEEN THE TWO LINE 
+           SEGMENTS ON EACH EDGE; THE EDGES OF MODIFIED TETRAHEDRAL SHOULD BE 
+           AS STRAIGHT AS POSSIBLE. IT IS RECOMMENDED THAT THE ANGLE BETWEEN 
+           THE TWO LINE SEGMENTS ON EACH EDGE IS BETWEEN 160 AND 180 DEGREES. 
+  
+           TRIANGULAR QUALITY MEASURE: AREA OF TRIANGLE DIVIDED BY THE AREA OF 
+           EQUILATERAL TRIANGLE WITH SAME CIRCUMCIRCLE RADIUS; 0 FOR DEGENERATE 
+           TRIANGLE AND 1 FOR EQUILATERAL TRIANGLE. IT IS RECOMMENDED THAT THE
+           TRIANGULAR QUALITY MEASURE BE GREATER THAN 0.01, THE MIN INTERIOR 
+           ANGLE BE GREATER THAN 10 DEGREES, AND THE MAX INTERIOR ANGLE BE LESS 
+           THAN 160 DEGREES. 
+  
+           NODAL ADJUSTMENTS ARISING FROM CONTACT INTERACTIONS AND/OR TIE 
+           CONSTRAINTS CAN CAUSE SEVERE ELEMENT DISTORTION. IT MAY BE NECESSARY 
+           TO REMESH IN ORDER TO REDUCE THE AMOUNT OF ADJUSTMENT. 
+
+ ***WARNING: 871 elements are distorted. Either the isoparametric angles are 
+             out of the suggested limits or the triangular or tetrahedral 
+             quality measure is bad. The elements have been identified in 
+             element set WarnElemDistorted.
+  
+ --------------------------------------------------------------------------------
+ Distorted isoparametric elements
+  
+        Element          Min/max angle   Adjusted nodes 
+ ---------------------- ---------------- -------------- 
+       FINAL_PART-1.183           38.551       NO       
+       FINAL_PART-1.184          39.0314       NO       
+       FINAL_PART-1.185          22.5082       NO       
+       FINAL_PART-1.186          24.2475       NO       
+       FINAL_PART-1.187          26.2579       NO       
+       FINAL_PART-1.188           28.601       NO       
+       FINAL_PART-1.189          31.3574       NO       
+       FINAL_PART-1.190          34.6303       NO       
+       FINAL_PART-1.191           38.551       NO       
+       FINAL_PART-1.192          43.2832       NO       
+       FINAL_PART-1.198          22.8584       NO       
+       FINAL_PART-1.199          24.6181       NO       
+       FINAL_PART-1.200          26.6501       NO       
+       FINAL_PART-1.201          29.0165       NO       
+       FINAL_PART-1.202          31.7968       NO       
+       FINAL_PART-1.203          35.0923       NO       
+       FINAL_PART-1.204          39.0314       NO       
+       FINAL_PART-1.205          43.7741       NO       
+       FINAL_PART-1.215          44.3396       NO       
+       FINAL_PART-1.216          38.6437       NO       
+       FINAL_PART-1.217            34.08       NO       
+       FINAL_PART-1.218          30.3846       NO       
+       FINAL_PART-1.219          27.3549       NO       
+       FINAL_PART-1.220          24.8392       NO       
+       FINAL_PART-1.221          22.7244       NO       
+       FINAL_PART-1.222          20.9264       NO       
+       FINAL_PART-1.227           44.827       NO       
+       FINAL_PART-1.228          39.1201       NO       
+       FINAL_PART-1.229          34.5336       NO       
+       FINAL_PART-1.230          30.8112       NO       
+       FINAL_PART-1.231          27.7544       NO       
+       FINAL_PART-1.232          25.2128       NO       
+       FINAL_PART-1.233          23.0738       NO       
+       FINAL_PART-1.234          21.2536       NO       
+       FINAL_PART-1.235          36.2383       NO       
+       FINAL_PART-1.236          36.7041       NO       
+       FINAL_PART-1.241          30.4637       NO       
+       FINAL_PART-1.246          33.1956       NO       
+       FINAL_PART-1.267          29.4583       NO       
+       FINAL_PART-1.269          35.7941       NO       
+       FINAL_PART-1.270          36.8341       NO       
+       FINAL_PART-1.274          40.8278       NO       
+       FINAL_PART-1.295          26.0055       NO       
+       FINAL_PART-1.352          30.2452       NO       
+       FINAL_PART-1.354          38.4189       NO       
+       FINAL_PART-1.355          36.6132       NO       
+       FINAL_PART-1.357          43.4551       NO       
+       FINAL_PART-1.365          40.0762       NO       
+       FINAL_PART-1.373          36.3542       NO       
+       FINAL_PART-1.374          44.4576       NO       
+       FINAL_PART-1.396          27.5045       NO       
+       FINAL_PART-1.399          26.7836       NO       
+       FINAL_PART-1.400          35.5789       NO       
+       FINAL_PART-1.401          38.6291       NO       
+       FINAL_PART-1.402          38.5109       NO       
+       FINAL_PART-1.403          38.3842       NO       
+       FINAL_PART-1.404          38.2494       NO       
+       FINAL_PART-1.405          38.1059       NO       
+       FINAL_PART-1.406          37.9541       NO       
+       FINAL_PART-1.407          37.7949       NO       
+       FINAL_PART-1.408          37.6275       NO       
+       FINAL_PART-1.409          37.4525       NO       
+       FINAL_PART-1.410          37.2701       NO       
+       FINAL_PART-1.411          37.0809       NO       
+       FINAL_PART-1.412           36.885       NO       
+       FINAL_PART-1.413          36.6827       NO       
+       FINAL_PART-1.414          33.7411       NO       
+       FINAL_PART-1.415          30.3931       NO       
+       FINAL_PART-1.778          30.7306       NO       
+       FINAL_PART-1.780          28.8947       NO       
+       FINAL_PART-1.788          33.4332       NO       
+       FINAL_PART-1.790          27.7621       NO       
+       FINAL_PART-1.805          30.1979       NO       
+       FINAL_PART-1.806          29.3676       NO       
+       FINAL_PART-1.819          36.1566       NO       
+       FINAL_PART-1.864           38.354       NO       
+       FINAL_PART-1.896          34.2481       NO       
+       FINAL_PART-1.902          44.4982       NO       
+       FINAL_PART-1.903           40.289       NO       
+       FINAL_PART-1.905          36.6474       NO       
+       FINAL_PART-1.909          40.8775       NO       
+       FINAL_PART-1.911          43.5682       NO       
+       FINAL_PART-1.915          32.0621       NO       
+       FINAL_PART-1.952          28.4096       NO       
+       FINAL_PART-1.953          36.6103       NO       
+       FINAL_PART-1.954          39.4457       NO       
+       FINAL_PART-1.955          39.2617       NO       
+       FINAL_PART-1.956          39.0695       NO       
+       FINAL_PART-1.957          38.8694       NO       
+       FINAL_PART-1.958          38.6614       NO       
+       FINAL_PART-1.959          38.4461       NO       
+       FINAL_PART-1.960          38.2241       NO       
+       FINAL_PART-1.961          37.9953       NO       
+       FINAL_PART-1.962          37.7605       NO       
+       FINAL_PART-1.963          37.5197       NO       
+       FINAL_PART-1.964          37.2734       NO       
+       FINAL_PART-1.965           39.067       NO       
+       FINAL_PART-1.966          38.8162       NO       
+       FINAL_PART-1.967          33.7677       NO       
+       FINAL_PART-1.968           30.391       NO       
+      FINAL_PART-1.1359          43.9809       NO       
+      FINAL_PART-1.1374           39.998       NO       
+      FINAL_PART-1.1375          36.4307       NO       
+      FINAL_PART-1.1376          33.1459       NO       
+      FINAL_PART-1.1377          29.8664       NO       
+      FINAL_PART-1.1402          26.6677       NO       
+      FINAL_PART-1.1436          26.9312       NO       
+      FINAL_PART-1.1467          34.2903       NO       
+      FINAL_PART-1.1692          38.6953       NO       
+      FINAL_PART-1.1693          29.9125       NO       
+      FINAL_PART-1.1699          32.8156       NO       
+      FINAL_PART-1.1715          23.4137       NO       
+      FINAL_PART-1.1716          24.2362       NO       
+      FINAL_PART-1.1717          43.7526       NO       
+      FINAL_PART-1.1770          35.2366       NO       
+      FINAL_PART-1.1796          32.5771       NO       
+      FINAL_PART-1.2019          37.4693       NO       
+      FINAL_PART-1.2028            40.98       NO       
+      FINAL_PART-1.2029          37.4696       NO       
+      FINAL_PART-1.2030          34.4423       NO       
+      FINAL_PART-1.2031          31.8189       NO       
+      FINAL_PART-1.2032          29.5327       NO       
+      FINAL_PART-1.2033          27.5284       NO       
+      FINAL_PART-1.2034          25.7615       NO       
+      FINAL_PART-1.2035           24.195       NO       
+      FINAL_PART-1.2036          22.7984       NO       
+      FINAL_PART-1.2037          21.5467       NO       
+      FINAL_PART-1.2047          42.8062       NO       
+      FINAL_PART-1.2048          39.9628       NO       
+      FINAL_PART-1.2049          37.4201       NO       
+      FINAL_PART-1.2050          35.1422       NO       
+      FINAL_PART-1.2051          33.0949       NO       
+      FINAL_PART-1.2052          31.2499       NO       
+      FINAL_PART-1.2053          29.5824       NO       
+      FINAL_PART-1.2054          28.0695       NO       
+      FINAL_PART-1.2059          35.8358       NO       
+      FINAL_PART-1.2061           34.374       NO       
+      FINAL_PART-1.2072          40.0655       NO       
+      FINAL_PART-1.2076          33.4477       NO       
+      FINAL_PART-1.2093          33.1701       NO       
+      FINAL_PART-1.2107          39.1063       NO       
+      FINAL_PART-1.2109          37.3642       NO       
+      FINAL_PART-1.2169           37.881       NO       
+      FINAL_PART-1.2174          44.8439       NO       
+      FINAL_PART-1.2180          35.5859       NO       
+      FINAL_PART-1.2186          40.8641       NO       
+      FINAL_PART-1.2190          44.6431       NO       
+      FINAL_PART-1.2237          31.7329       NO       
+      FINAL_PART-1.2238          33.4216       NO       
+      FINAL_PART-1.2249           42.699       NO       
+      FINAL_PART-1.2250           35.007       NO       
+      FINAL_PART-1.2257          42.3604       NO       
+      FINAL_PART-1.2311          31.9123       NO       
+      FINAL_PART-1.2312          35.5477       NO       
+      FINAL_PART-1.2313          38.1115       NO       
+      FINAL_PART-1.2314          38.0409       NO       
+      FINAL_PART-1.2315           37.968       NO       
+      FINAL_PART-1.2316          37.8923       NO       
+      FINAL_PART-1.2317          37.8135       NO       
+      FINAL_PART-1.2318           37.732       NO       
+      FINAL_PART-1.2319          37.6471       NO       
+      FINAL_PART-1.2320          37.5599       NO       
+      FINAL_PART-1.2321          37.4701       NO       
+      FINAL_PART-1.2322          37.3769       NO       
+      FINAL_PART-1.2323          37.2809       NO       
+      FINAL_PART-1.2324          37.1823       NO       
+      FINAL_PART-1.2325           37.081       NO       
+      FINAL_PART-1.2326          36.9771       NO       
+      FINAL_PART-1.2327          36.8705       NO       
+      FINAL_PART-1.2328          36.7612       NO       
+      FINAL_PART-1.2329          36.6493       NO       
+      FINAL_PART-1.2330          36.5346       NO       
+      FINAL_PART-1.2331          36.4164       NO       
+      FINAL_PART-1.2332          36.2963       NO       
+      FINAL_PART-1.2333           34.006       NO       
+      FINAL_PART-1.2895          32.5009       NO       
+      FINAL_PART-1.2901          37.6791       NO       
+      FINAL_PART-1.2902          40.0329       NO       
+      FINAL_PART-1.2926          31.2589       NO       
+      FINAL_PART-1.2930           35.152       NO       
+      FINAL_PART-1.2962          30.0592       NO       
+      FINAL_PART-1.3002          35.6667       NO       
+      FINAL_PART-1.3020          44.6167       NO       
+      FINAL_PART-1.3022          36.5135       NO       
+      FINAL_PART-1.3028          41.0479       NO       
+      FINAL_PART-1.3067          29.4348       NO       
+      FINAL_PART-1.3068          32.3394       NO       
+      FINAL_PART-1.3078          34.6291       NO       
+      FINAL_PART-1.3079           34.898       NO       
+      FINAL_PART-1.3080          42.6819       NO       
+      FINAL_PART-1.3081          40.7442       NO       
+      FINAL_PART-1.3090          34.6877       NO       
+      FINAL_PART-1.3091          42.6687       NO       
+      FINAL_PART-1.3146           31.098       NO       
+      FINAL_PART-1.3147          38.1793       NO       
+      FINAL_PART-1.3148          38.1115       NO       
+      FINAL_PART-1.3149          38.0409       NO       
+      FINAL_PART-1.3150           37.968       NO       
+      FINAL_PART-1.3151          37.8923       NO       
+      FINAL_PART-1.3152          37.8135       NO       
+      FINAL_PART-1.3153           37.732       NO       
+      FINAL_PART-1.3154          37.6471       NO       
+      FINAL_PART-1.3155          37.5599       NO       
+      FINAL_PART-1.3156          37.4701       NO       
+      FINAL_PART-1.3157          37.3769       NO       
+      FINAL_PART-1.3158          37.2809       NO       
+      FINAL_PART-1.3159          37.1823       NO       
+      FINAL_PART-1.3160           37.081       NO       
+      FINAL_PART-1.3161          36.9771       NO       
+      FINAL_PART-1.3162          36.8705       NO       
+      FINAL_PART-1.3163          36.7612       NO       
+      FINAL_PART-1.3164          36.6493       NO       
+      FINAL_PART-1.3165          36.5346       NO       
+      FINAL_PART-1.3166          36.4164       NO       
+      FINAL_PART-1.3167          33.7364       NO       
+      FINAL_PART-1.3168           30.769       NO       
+      FINAL_PART-1.3727          27.7654       NO       
+      FINAL_PART-1.3728          29.2677       NO       
+      FINAL_PART-1.3729           30.925       NO       
+      FINAL_PART-1.3730          32.7595       NO       
+      FINAL_PART-1.3731          34.7966       NO       
+      FINAL_PART-1.3732          37.0662       NO       
+      FINAL_PART-1.3733          39.6016       NO       
+      FINAL_PART-1.3734          42.4399       NO       
+      FINAL_PART-1.3744          28.0695       NO       
+      FINAL_PART-1.3745          29.5823       NO       
+      FINAL_PART-1.3746          31.2499       NO       
+      FINAL_PART-1.3747          33.0949       NO       
+      FINAL_PART-1.3748          35.1421       NO       
+      FINAL_PART-1.3749          37.4201       NO       
+      FINAL_PART-1.3750          39.9627       NO       
+      FINAL_PART-1.3751          42.8062       NO       
+      FINAL_PART-1.3761          37.5163       NO       
+      FINAL_PART-1.3772           42.905       NO       
+      FINAL_PART-1.3773          40.0605       NO       
+      FINAL_PART-1.3774          37.5163       NO       
+      FINAL_PART-1.3775          35.2357       NO       
+      FINAL_PART-1.3776           33.186       NO       
+      FINAL_PART-1.3777          31.3383       NO       
+      FINAL_PART-1.3778          29.6677       NO       
+      FINAL_PART-1.3779           28.152       NO       
+      FINAL_PART-1.3780          26.7727       NO       
+      FINAL_PART-1.3781          25.5138       NO       
+      FINAL_PART-1.3782          24.3608       NO       
+      FINAL_PART-1.3783          23.3019       NO       
+      FINAL_PART-1.3784          22.3267       NO       
+      FINAL_PART-1.3785          21.4261       NO       
+      FINAL_PART-1.3798          43.5586       NO       
+      FINAL_PART-1.3799           41.363       NO       
+      FINAL_PART-1.3800          39.3431       NO       
+      FINAL_PART-1.3801          37.4835       NO       
+      FINAL_PART-1.3802          35.7685       NO       
+      FINAL_PART-1.3803          34.1851       NO       
+      FINAL_PART-1.3804          32.7212       NO       
+      FINAL_PART-1.3805          31.3648       NO       
+      FINAL_PART-1.3806          30.1062       NO       
+      FINAL_PART-1.3807          28.9365       NO       
+      FINAL_PART-1.3808          27.8468       NO       
+      FINAL_PART-1.3811          37.5162       NO       
+      FINAL_PART-1.3813          21.4261       NO       
+      FINAL_PART-1.3814          22.3267       NO       
+      FINAL_PART-1.3815          23.3019       NO       
+      FINAL_PART-1.3816          24.3608       NO       
+      FINAL_PART-1.3817          25.5137       NO       
+      FINAL_PART-1.3818          26.7727       NO       
+      FINAL_PART-1.3819           28.152       NO       
+      FINAL_PART-1.3820          29.6677       NO       
+      FINAL_PART-1.3821          31.3383       NO       
+      FINAL_PART-1.3822          33.1859       NO       
+      FINAL_PART-1.3823          35.2356       NO       
+      FINAL_PART-1.3824          37.5162       NO       
+      FINAL_PART-1.3825          40.0605       NO       
+      FINAL_PART-1.3826           42.905       NO       
+      FINAL_PART-1.3836          27.8468       NO       
+      FINAL_PART-1.3837          28.9365       NO       
+      FINAL_PART-1.3838          30.1062       NO       
+      FINAL_PART-1.3839          31.3648       NO       
+      FINAL_PART-1.3840          32.7211       NO       
+      FINAL_PART-1.3841          34.1851       NO       
+      FINAL_PART-1.3842          35.7685       NO       
+      FINAL_PART-1.3843          37.4834       NO       
+      FINAL_PART-1.3844          39.3431       NO       
+      FINAL_PART-1.3845           41.363       NO       
+      FINAL_PART-1.3846          43.5586       NO       
+      FINAL_PART-1.3865          40.8087       NO       
+      FINAL_PART-1.3873          38.7617       NO       
+      FINAL_PART-1.3874          36.8542       NO       
+      FINAL_PART-1.3876          31.0207       NO       
+      FINAL_PART-1.3878           29.071       NO       
+      FINAL_PART-1.3879          34.0647       NO       
+      FINAL_PART-1.3924           36.943       NO       
+      FINAL_PART-1.3925          38.1797       NO       
+      FINAL_PART-1.3926          35.2924       NO       
+      FINAL_PART-1.3927           32.795       NO       
+      FINAL_PART-1.3946          44.5472       NO       
+      FINAL_PART-1.3948          41.0295       NO       
+      FINAL_PART-1.3949          31.6509       NO       
+      FINAL_PART-1.3950          30.5913       NO       
+      FINAL_PART-1.3951          29.6083       NO       
+      FINAL_PART-1.3954          43.6613       NO       
+      FINAL_PART-1.3955          28.8394       NO       
+      FINAL_PART-1.3956          28.5728       NO       
+      FINAL_PART-1.3991          34.0507       NO       
+      FINAL_PART-1.4027          35.2835       NO       
+      FINAL_PART-1.4030          43.0674       NO       
+      FINAL_PART-1.4080          27.8438       NO       
+      FINAL_PART-1.4081          28.5122       NO       
+      FINAL_PART-1.4082          32.8069       NO       
+      FINAL_PART-1.4095             29.1       NO       
+      FINAL_PART-1.4096          39.4313       NO       
+      FINAL_PART-1.4097           42.756       NO       
+      FINAL_PART-1.4122          43.9929       NO       
+      FINAL_PART-1.4197          29.5822       NO       
+      FINAL_PART-1.4347          42.7549       NO       
+      FINAL_PART-1.4384          30.9764       NO       
+      FINAL_PART-1.4385          39.2548       NO       
+      FINAL_PART-1.4386          39.1785       NO       
+      FINAL_PART-1.4387          39.0994       NO       
+      FINAL_PART-1.4388          39.0174       NO       
+      FINAL_PART-1.4389          38.9327       NO       
+      FINAL_PART-1.4390          38.8455       NO       
+      FINAL_PART-1.4391          38.7555       NO       
+      FINAL_PART-1.4392          38.6627       NO       
+      FINAL_PART-1.4393          38.5675       NO       
+      FINAL_PART-1.4394          38.4697       NO       
+      FINAL_PART-1.4395          38.3688       NO       
+      FINAL_PART-1.4396          38.2654       NO       
+      FINAL_PART-1.4397          38.1595       NO       
+      FINAL_PART-1.4398          38.0511       NO       
+      FINAL_PART-1.4399          37.9404       NO       
+      FINAL_PART-1.4400          39.6158       NO       
+      FINAL_PART-1.4401          39.5079       NO       
+      FINAL_PART-1.4402          37.5938       NO       
+      FINAL_PART-1.4403          37.4739       NO       
+      FINAL_PART-1.4404          37.3521       NO       
+      FINAL_PART-1.4405          37.2282       NO       
+      FINAL_PART-1.4406           37.102       NO       
+      FINAL_PART-1.4407          36.9738       NO       
+      FINAL_PART-1.4408          36.8436       NO       
+      FINAL_PART-1.4409          36.7115       NO       
+      FINAL_PART-1.4410          36.5777       NO       
+      FINAL_PART-1.4411          36.4421       NO       
+      FINAL_PART-1.4412          36.3048       NO       
+      FINAL_PART-1.4413          33.3313       NO       
+      FINAL_PART-1.4414           29.683       NO       
+      FINAL_PART-1.5528          28.9705       NO       
+      FINAL_PART-1.5529          27.4878       NO       
+      FINAL_PART-1.5562          38.6523       NO       
+      FINAL_PART-1.5563          35.7773       NO       
+      FINAL_PART-1.5564          30.6528       NO       
+      FINAL_PART-1.5565          29.7476       NO       
+      FINAL_PART-1.5568           39.136       NO       
+      FINAL_PART-1.5584          42.1908       NO       
+      FINAL_PART-1.5585          28.1948       NO       
+      FINAL_PART-1.5586          28.6388       NO       
+      FINAL_PART-1.5587          41.5057       NO       
+      FINAL_PART-1.5589          43.2992       NO       
+      FINAL_PART-1.5591          35.0494       NO       
+      FINAL_PART-1.5592          36.2001       NO       
+      FINAL_PART-1.5593          37.7436       NO       
+      FINAL_PART-1.5600          39.3732       NO       
+      FINAL_PART-1.5702           43.124       NO       
+      FINAL_PART-1.5707          31.8597       NO       
+      FINAL_PART-1.5720           33.948       NO       
+      FINAL_PART-1.5721          44.7466       NO       
+      FINAL_PART-1.5747          30.7636       NO       
+      FINAL_PART-1.5753          41.0636       NO       
+      FINAL_PART-1.5755          33.3188       NO       
+      FINAL_PART-1.5756          28.2346       NO       
+      FINAL_PART-1.5766          28.3353       NO       
+      FINAL_PART-1.5770          40.8048       NO       
+      FINAL_PART-1.5771            31.79       NO       
+      FINAL_PART-1.5772          29.7161       NO       
+      FINAL_PART-1.5801          44.9055       NO       
+      FINAL_PART-1.5885          42.8817       NO       
+      FINAL_PART-1.5888          32.8785       NO       
+      FINAL_PART-1.6077          27.8784       NO       
+      FINAL_PART-1.6078          36.2798       NO       
+      FINAL_PART-1.6079          39.1785       NO       
+      FINAL_PART-1.6080          39.0994       NO       
+      FINAL_PART-1.6081          39.0174       NO       
+      FINAL_PART-1.6082          38.9327       NO       
+      FINAL_PART-1.6083          38.8455       NO       
+      FINAL_PART-1.6084          38.7555       NO       
+      FINAL_PART-1.6085          38.6627       NO       
+      FINAL_PART-1.6086          38.5675       NO       
+      FINAL_PART-1.6087          38.4697       NO       
+      FINAL_PART-1.6088          38.3688       NO       
+      FINAL_PART-1.6089          38.2654       NO       
+      FINAL_PART-1.6090          38.1595       NO       
+      FINAL_PART-1.6091          38.0511       NO       
+      FINAL_PART-1.6092          37.9404       NO       
+      FINAL_PART-1.6093           37.827       NO       
+      FINAL_PART-1.6094          37.7115       NO       
+      FINAL_PART-1.6095          37.5938       NO       
+      FINAL_PART-1.6096          37.4739       NO       
+      FINAL_PART-1.6097          37.3521       NO       
+      FINAL_PART-1.6098          37.2282       NO       
+      FINAL_PART-1.6099           37.102       NO       
+      FINAL_PART-1.6100          36.9738       NO       
+      FINAL_PART-1.6101          36.8436       NO       
+      FINAL_PART-1.6102          36.7115       NO       
+      FINAL_PART-1.6103          36.5777       NO       
+      FINAL_PART-1.6104          36.4421       NO       
+      FINAL_PART-1.6105          36.3048       NO       
+      FINAL_PART-1.6106          33.3313       NO       
+      FINAL_PART-1.6107           29.683       NO       
+      FINAL_PART-1.7272          36.5653       NO       
+      FINAL_PART-1.7273           44.888       NO       
+      FINAL_PART-1.7274          20.6638       NO       
+      FINAL_PART-1.7275          21.3247       NO       
+      FINAL_PART-1.7276          22.0271       NO       
+      FINAL_PART-1.7277          22.7748       NO       
+      FINAL_PART-1.7278          23.5721       NO       
+      FINAL_PART-1.7279          24.4237       NO       
+      FINAL_PART-1.7280          25.3347       NO       
+      FINAL_PART-1.7281          26.3115       NO       
+      FINAL_PART-1.7282          27.3608       NO       
+      FINAL_PART-1.7283          28.4898       NO       
+      FINAL_PART-1.7284          29.7073       NO       
+      FINAL_PART-1.7285          31.0225       NO       
+      FINAL_PART-1.7286          32.4466       NO       
+      FINAL_PART-1.7287          33.9916       NO       
+      FINAL_PART-1.7288          35.6708       NO       
+      FINAL_PART-1.7289           37.499       NO       
+      FINAL_PART-1.7290          39.4932       NO       
+      FINAL_PART-1.7291          41.6714       NO       
+      FINAL_PART-1.7292          44.0525       NO       
+      FINAL_PART-1.7304          26.8617       NO       
+      FINAL_PART-1.7305          27.6663       NO       
+      FINAL_PART-1.7306          28.5165       NO       
+      FINAL_PART-1.7307          29.4157       NO       
+      FINAL_PART-1.7308          30.3679       NO       
+      FINAL_PART-1.7309          31.3773       NO       
+      FINAL_PART-1.7310          32.4485       NO       
+      FINAL_PART-1.7311          33.5866       NO       
+      FINAL_PART-1.7312          34.7972       NO       
+      FINAL_PART-1.7313          36.0863       NO       
+      FINAL_PART-1.7314          37.4603       NO       
+      FINAL_PART-1.7315           38.926       NO       
+      FINAL_PART-1.7316          40.4911       NO       
+      FINAL_PART-1.7317          42.1626       NO       
+      FINAL_PART-1.7318          43.9489       NO       
+      FINAL_PART-1.7371          43.1224       NO       
+      FINAL_PART-1.7372          41.4509       NO       
+      FINAL_PART-1.7381          35.6396       NO       
+      FINAL_PART-1.7382          34.4702       NO       
+      FINAL_PART-1.7383          32.5622       NO       
+      FINAL_PART-1.7397          31.4649       NO       
+      FINAL_PART-1.7398          30.4171       NO       
+      FINAL_PART-1.7399           29.133       NO       
+      FINAL_PART-1.7400          28.6664       NO       
+      FINAL_PART-1.7401          28.2533       NO       
+      FINAL_PART-1.7405          29.6179       NO       
+      FINAL_PART-1.7442          33.2545       NO       
+      FINAL_PART-1.7444          34.4223       NO       
+      FINAL_PART-1.7445          34.9826       NO       
+      FINAL_PART-1.7455          30.1001       NO       
+      FINAL_PART-1.7456          31.3618       NO       
+      FINAL_PART-1.7459          35.3123       NO       
+      FINAL_PART-1.7464          37.5744       NO       
+      FINAL_PART-1.7465          39.4219       NO       
+      FINAL_PART-1.7467          41.4721       NO       
+      FINAL_PART-1.7468          42.6011       NO       
+      FINAL_PART-1.7469          44.8853       NO       
+      FINAL_PART-1.7588          44.9172       NO       
+      FINAL_PART-1.7589           39.875       NO       
+      FINAL_PART-1.7648          38.4856       NO       
+      FINAL_PART-1.7654          36.9243       NO       
+      FINAL_PART-1.7655          33.4824       NO       
+      FINAL_PART-1.7669          32.3607       NO       
+      FINAL_PART-1.7677          40.3813       NO       
+      FINAL_PART-1.7678          36.7708       NO       
+      FINAL_PART-1.7679          30.5585       NO       
+      FINAL_PART-1.7778          44.9737       NO       
+      FINAL_PART-1.7795          43.7359       NO       
+      FINAL_PART-1.7802          35.9764       NO       
+      FINAL_PART-1.7805          32.1179       NO       
+      FINAL_PART-1.7839          38.3479       NO       
+      FINAL_PART-1.8082          27.4235       NO       
+      FINAL_PART-1.8083          35.2611       NO       
+      FINAL_PART-1.8084          37.8766       NO       
+      FINAL_PART-1.8085          37.8341       NO       
+      FINAL_PART-1.8086          37.7906       NO       
+      FINAL_PART-1.8087          37.7466       NO       
+      FINAL_PART-1.8088          37.7018       NO       
+      FINAL_PART-1.8089           37.656       NO       
+      FINAL_PART-1.8090          37.6098       NO       
+      FINAL_PART-1.8091          38.6695       NO       
+      FINAL_PART-1.8092          38.6252       NO       
+      FINAL_PART-1.8093           37.466       NO       
+      FINAL_PART-1.8094          37.4166       NO       
+      FINAL_PART-1.8095          37.3665       NO       
+      FINAL_PART-1.8096          37.3157       NO       
+      FINAL_PART-1.8097          37.2639       NO       
+      FINAL_PART-1.8098          37.2116       NO       
+      FINAL_PART-1.8099          37.1584       NO       
+      FINAL_PART-1.8100          37.1044       NO       
+      FINAL_PART-1.8101          37.0501       NO       
+      FINAL_PART-1.8102          36.9949       NO       
+      FINAL_PART-1.8103          36.9389       NO       
+      FINAL_PART-1.8104          36.8823       NO       
+      FINAL_PART-1.8105          36.8247       NO       
+      FINAL_PART-1.8106          36.7666       NO       
+      FINAL_PART-1.8107          36.7079       NO       
+      FINAL_PART-1.8108          36.6483       NO       
+      FINAL_PART-1.8109           36.588       NO       
+      FINAL_PART-1.8110          36.5271       NO       
+      FINAL_PART-1.8111          36.4654       NO       
+      FINAL_PART-1.8112          36.4031       NO       
+      FINAL_PART-1.8113          37.7955       NO       
+      FINAL_PART-1.8114          37.7384       NO       
+      FINAL_PART-1.8115          36.2122       NO       
+      FINAL_PART-1.8116          36.1471       NO       
+      FINAL_PART-1.8117          36.0815       NO       
+      FINAL_PART-1.8118          36.0152       NO       
+      FINAL_PART-1.8119          35.9482       NO       
+      FINAL_PART-1.8120          35.8806       NO       
+      FINAL_PART-1.8121          35.8123       NO       
+      FINAL_PART-1.8122          33.6457       NO       
+      FINAL_PART-1.9702          33.6327       NO       
+      FINAL_PART-1.9703          34.5985       NO       
+      FINAL_PART-1.9704          38.0028       NO       
+      FINAL_PART-1.9705          39.0486       NO       
+      FINAL_PART-1.9706          41.4745       NO       
+      FINAL_PART-1.9711          36.9339       NO       
+      FINAL_PART-1.9712          32.7384       NO       
+      FINAL_PART-1.9803          36.1296       NO       
+      FINAL_PART-1.9805          32.2567       NO       
+      FINAL_PART-1.9821          44.8363       NO       
+      FINAL_PART-1.9823          43.6806       NO       
+      FINAL_PART-1.9830            41.51       NO       
+      FINAL_PART-1.9831          40.6374       NO       
+      FINAL_PART-1.9833          37.8926       NO       
+      FINAL_PART-1.9834           38.802       NO       
+      FINAL_PART-1.9835           31.918       NO       
+      FINAL_PART-1.9939          34.5786       NO       
+      FINAL_PART-1.9943           40.244       NO       
+      FINAL_PART-1.9949          44.4224       NO       
+      FINAL_PART-1.9986          32.6641       NO       
+      FINAL_PART-1.9992          33.8619       NO       
+     FINAL_PART-1.10010          35.6698       NO       
+     FINAL_PART-1.10021          31.2232       NO       
+     FINAL_PART-1.10022          31.5964       NO       
+     FINAL_PART-1.10023          33.1876       NO       
+     FINAL_PART-1.10024          35.3162       NO       
+     FINAL_PART-1.10025          36.9848       NO       
+     FINAL_PART-1.10026          39.8204       NO       
+     FINAL_PART-1.10027          42.5587       NO       
+     FINAL_PART-1.10050          32.0077       NO       
+     FINAL_PART-1.10051          32.2139       NO       
+     FINAL_PART-1.10193          42.8589       NO       
+     FINAL_PART-1.10457          31.3438       NO       
+     FINAL_PART-1.10458          35.2611       NO       
+     FINAL_PART-1.10459          37.8766       NO       
+     FINAL_PART-1.10460          37.8341       NO       
+     FINAL_PART-1.10461          37.7906       NO       
+     FINAL_PART-1.10462          37.7466       NO       
+     FINAL_PART-1.10463          37.7018       NO       
+     FINAL_PART-1.10464          38.8079       NO       
+     FINAL_PART-1.10465          38.7655       NO       
+     FINAL_PART-1.10466          37.5627       NO       
+     FINAL_PART-1.10467          37.5145       NO       
+     FINAL_PART-1.10468           37.466       NO       
+     FINAL_PART-1.10469          37.4166       NO       
+     FINAL_PART-1.10470          37.3665       NO       
+     FINAL_PART-1.10471          37.3157       NO       
+     FINAL_PART-1.10472          37.2639       NO       
+     FINAL_PART-1.10473          37.2116       NO       
+     FINAL_PART-1.10474          37.1584       NO       
+     FINAL_PART-1.10475          37.1044       NO       
+     FINAL_PART-1.10476          37.0501       NO       
+     FINAL_PART-1.10477          36.9949       NO       
+     FINAL_PART-1.10478           36.939       NO       
+     FINAL_PART-1.10479          36.8823       NO       
+     FINAL_PART-1.10480          36.8247       NO       
+     FINAL_PART-1.10481          36.7666       NO       
+     FINAL_PART-1.10482          36.7079       NO       
+     FINAL_PART-1.10483          36.6483       NO       
+     FINAL_PART-1.10484          36.5881       NO       
+     FINAL_PART-1.10485          36.5271       NO       
+     FINAL_PART-1.10486          36.4654       NO       
+     FINAL_PART-1.10487          36.4031       NO       
+     FINAL_PART-1.10488          36.3401       NO       
+     FINAL_PART-1.10489          36.2766       NO       
+     FINAL_PART-1.10490          36.2122       NO       
+     FINAL_PART-1.10491          36.1471       NO       
+     FINAL_PART-1.10492          36.0815       NO       
+     FINAL_PART-1.10493          36.0152       NO       
+     FINAL_PART-1.10494          35.9482       NO       
+     FINAL_PART-1.10495          35.8806       NO       
+     FINAL_PART-1.10496          33.2891       NO       
+     FINAL_PART-1.10497          30.3973       NO       
+     FINAL_PART-1.12092          44.6822       NO       
+     FINAL_PART-1.12093           44.888       NO       
+     FINAL_PART-1.12109          43.7435       NO       
+     FINAL_PART-1.12110          41.9575       NO       
+     FINAL_PART-1.12111          40.2873       NO       
+     FINAL_PART-1.12112          38.7248       NO       
+     FINAL_PART-1.12113          37.2618       NO       
+     FINAL_PART-1.12114          35.8909       NO       
+     FINAL_PART-1.12115          34.6049       NO       
+     FINAL_PART-1.12116          33.3972       NO       
+     FINAL_PART-1.12117          32.2623       NO       
+     FINAL_PART-1.12118          31.1946       NO       
+     FINAL_PART-1.12119          30.1886       NO       
+     FINAL_PART-1.12120          29.2399       NO       
+     FINAL_PART-1.12121          28.3441       NO       
+     FINAL_PART-1.12122          27.4973       NO       
+     FINAL_PART-1.12123          26.6962       NO       
+     FINAL_PART-1.12139          43.9489       NO       
+     FINAL_PART-1.12140          42.1626       NO       
+     FINAL_PART-1.12141          40.4911       NO       
+     FINAL_PART-1.12142          38.9261       NO       
+     FINAL_PART-1.12143          37.4603       NO       
+     FINAL_PART-1.12144          36.0864       NO       
+     FINAL_PART-1.12145          34.7972       NO       
+     FINAL_PART-1.12146          33.5866       NO       
+     FINAL_PART-1.12147          32.4485       NO       
+     FINAL_PART-1.12148          31.3773       NO       
+     FINAL_PART-1.12149          30.3679       NO       
+     FINAL_PART-1.12150          29.4157       NO       
+     FINAL_PART-1.12151          28.5165       NO       
+     FINAL_PART-1.12152          27.6663       NO       
+     FINAL_PART-1.12153          26.8617       NO       
+     FINAL_PART-1.12171          44.9942       NO       
+     FINAL_PART-1.12172          43.2041       NO       
+     FINAL_PART-1.12173          41.5257       NO       
+     FINAL_PART-1.12174          39.9517       NO       
+     FINAL_PART-1.12175          38.4744       NO       
+     FINAL_PART-1.12176          37.0872       NO       
+     FINAL_PART-1.12177          35.7834       NO       
+     FINAL_PART-1.12178           34.557       NO       
+     FINAL_PART-1.12179          33.4024       NO       
+     FINAL_PART-1.12180          32.3143       NO       
+     FINAL_PART-1.12181          31.2877       NO       
+     FINAL_PART-1.12182          30.3184       NO       
+     FINAL_PART-1.12183          29.4021       NO       
+     FINAL_PART-1.12184          28.5351       NO       
+     FINAL_PART-1.12185          27.7137       NO       
+     FINAL_PART-1.12186          26.9347       NO       
+     FINAL_PART-1.12187          26.1954       NO       
+     FINAL_PART-1.12188           25.493       NO       
+     FINAL_PART-1.12189          24.8249       NO       
+     FINAL_PART-1.12190          24.1888       NO       
+     FINAL_PART-1.12191          23.5827       NO       
+     FINAL_PART-1.12192          23.0046       NO       
+     FINAL_PART-1.12193          22.4527       NO       
+     FINAL_PART-1.12194          21.9255       NO       
+     FINAL_PART-1.12195          21.4213       NO       
+     FINAL_PART-1.12196          20.9387       NO       
+     FINAL_PART-1.12218          44.0167       NO       
+     FINAL_PART-1.12219          42.7164       NO       
+     FINAL_PART-1.12220          41.4771       NO       
+     FINAL_PART-1.12221          40.2957       NO       
+     FINAL_PART-1.12222           39.169       NO       
+     FINAL_PART-1.12223          38.0942       NO       
+     FINAL_PART-1.12224          37.0685       NO       
+     FINAL_PART-1.12225          36.0892       NO       
+     FINAL_PART-1.12226          35.1538       NO       
+     FINAL_PART-1.12227          34.2598       NO       
+     FINAL_PART-1.12228          33.4049       NO       
+     FINAL_PART-1.12229          32.5871       NO       
+     FINAL_PART-1.12230          31.8043       NO       
+     FINAL_PART-1.12231          31.0545       NO       
+     FINAL_PART-1.12232          30.3358       NO       
+     FINAL_PART-1.12233          29.6467       NO       
+     FINAL_PART-1.12234          28.9857       NO       
+     FINAL_PART-1.12235           28.351       NO       
+     FINAL_PART-1.12236          27.7413       NO       
+     FINAL_PART-1.12237          27.1554       NO       
+     FINAL_PART-1.12238          37.0871       NO       
+     FINAL_PART-1.12240          16.5647       NO       
+     FINAL_PART-1.12241          41.9095       NO       
+     FINAL_PART-1.12262          36.5183       NO       
+     FINAL_PART-1.12263          37.9904       NO       
+     FINAL_PART-1.12264           39.447       NO       
+     FINAL_PART-1.12265          41.9147       NO       
+     FINAL_PART-1.12274          35.2025       NO       
+     FINAL_PART-1.12275          30.9533       NO       
+     FINAL_PART-1.12276          32.8274       NO       
+     FINAL_PART-1.12280          42.1368       NO       
+     FINAL_PART-1.12283          38.5803       NO       
+     FINAL_PART-1.12284          26.6803       NO       
+     FINAL_PART-1.12285          16.2835       NO       
+     FINAL_PART-1.12286          16.8205       NO       
+     FINAL_PART-1.12287          18.0094       NO       
+     FINAL_PART-1.12288          23.0978       NO       
+     FINAL_PART-1.12289          19.8389       NO       
+     FINAL_PART-1.12290          29.4175       NO       
+     FINAL_PART-1.12291           43.752       NO       
+     FINAL_PART-1.12292           24.738       NO       
+     FINAL_PART-1.12293          26.9787       NO       
+     FINAL_PART-1.12349          44.0411       NO       
+     FINAL_PART-1.12690          28.8202       NO       
+     FINAL_PART-1.12691           24.202       NO       
+     FINAL_PART-1.12692          37.5499       NO       
+     FINAL_PART-1.12693          20.1277       NO       
+     FINAL_PART-1.12694          43.2163       NO       
+     FINAL_PART-1.12696          15.2554       NO       
+     FINAL_PART-1.12697          21.2162       NO       
+     FINAL_PART-1.12699          28.5512       NO       
+     FINAL_PART-1.12700          27.6408       NO       
+     FINAL_PART-1.12701          24.0661       NO       
+     FINAL_PART-1.12702          31.4958       NO       
+     FINAL_PART-1.12703          23.0745       NO       
+     FINAL_PART-1.12705          33.6837       NO       
+     FINAL_PART-1.12706          22.3334       NO       
+     FINAL_PART-1.12707          23.8553       NO       
+     FINAL_PART-1.12708          31.7809       NO       
+     FINAL_PART-1.12709          39.5121       NO       
+     FINAL_PART-1.12969          15.6029       NO       
+     FINAL_PART-1.12970           15.766       NO       
+     FINAL_PART-1.12971          22.3055       NO       
+     FINAL_PART-1.12972          17.3778       NO       
+     FINAL_PART-1.12973          18.8568       NO       
+     FINAL_PART-1.12974          23.2253       NO       
+     FINAL_PART-1.12975          25.5955       NO       
+     FINAL_PART-1.12977          43.3509       NO       
+     FINAL_PART-1.13068          33.8994       NO       
+     FINAL_PART-1.13103          32.8742       NO       
+     FINAL_PART-1.13110          42.7213       NO       
+     FINAL_PART-1.13211          36.6213       NO       
+     FINAL_PART-1.13212          32.2293       NO       
+     FINAL_PART-1.13213          15.5006       NO       
+     FINAL_PART-1.13214          20.8618       NO       
+     FINAL_PART-1.13215          40.5619       NO       
+     FINAL_PART-1.13216          21.5801       NO       
+     FINAL_PART-1.13217          43.4655       NO       
+     FINAL_PART-1.13218          38.8692       NO       
+     FINAL_PART-1.13219          21.3188       NO       
+     FINAL_PART-1.13229          24.8936       NO       
+     FINAL_PART-1.13241          29.6801       NO       
+     FINAL_PART-1.13242          26.7235       NO       
+     FINAL_PART-1.13249          39.0883       NO       
+     FINAL_PART-1.13250          37.8083       NO       
+     FINAL_PART-1.13266          32.5645       NO       
+     FINAL_PART-1.13282          32.0237       NO       
+     FINAL_PART-1.13305          41.0964       NO       
+     FINAL_PART-1.13306           36.103       NO       
+     FINAL_PART-1.13332          30.4376       NO       
+     FINAL_PART-1.13364          34.7085       NO       
+     FINAL_PART-1.13382          44.0451       NO       
+     FINAL_PART-1.13397          36.4559       NO       
+     FINAL_PART-1.13398          27.4505       NO       
+     FINAL_PART-1.13407          44.0311       NO       
+     FINAL_PART-1.13408          37.6231       NO       
+     FINAL_PART-1.13418            33.81       NO       
+     FINAL_PART-1.13447          43.6284       NO       
+     FINAL_PART-1.13473          25.5982       NO       
+     FINAL_PART-1.13487          41.3253       NO       
+     FINAL_PART-1.13563          38.5631       NO       
+     FINAL_PART-1.13570          37.0418       NO       
+     FINAL_PART-1.13571          35.6968       NO       
+     FINAL_PART-1.13624          31.8896       NO       
+     FINAL_PART-1.13773          31.6163       NO       
+     FINAL_PART-1.14082          25.8092       NO       
+     FINAL_PART-1.14144          43.5572       NO       
+     FINAL_PART-1.14159          22.9732       NO       
+     FINAL_PART-1.14160          33.4074       NO       
+     FINAL_PART-1.18180          42.7763       NO       
+     FINAL_PART-1.18181          41.9039       NO       
+     FINAL_PART-1.18191          40.4287       NO       
+     FINAL_PART-1.18196          33.8707       NO       
+     FINAL_PART-1.18197          29.5479       NO       
+     FINAL_PART-1.18198           26.951       NO       
+     FINAL_PART-1.18199          31.9676       NO       
+     FINAL_PART-1.18200          44.1479       NO       
+     FINAL_PART-1.18223          23.8449       NO       
+     FINAL_PART-1.18224          21.9803       NO       
+     FINAL_PART-1.18225          21.1632       NO       
+     FINAL_PART-1.18226          20.4952       NO       
+     FINAL_PART-1.18227           20.124       NO       
+     FINAL_PART-1.18228           19.331       NO       
+     FINAL_PART-1.18229          20.9657       NO       
+     FINAL_PART-1.18230          22.8931       NO       
+     FINAL_PART-1.18238          30.9855       NO       
+     FINAL_PART-1.18239          36.1742       NO       
+     FINAL_PART-1.18245          17.3374       NO       
+     FINAL_PART-1.18246          16.8738       NO       
+     FINAL_PART-1.18247          24.6211       NO       
+     FINAL_PART-1.18248          38.7576       NO       
+     FINAL_PART-1.18249          17.1343       NO       
+     FINAL_PART-1.18250          27.5292       NO       
+     FINAL_PART-1.18251          38.9186       NO       
+     FINAL_PART-1.18252          43.0002       NO       
+     FINAL_PART-1.18553          30.6317       NO       
+     FINAL_PART-1.18554          41.0213       NO       
+     FINAL_PART-1.18555          37.8026       NO       
+     FINAL_PART-1.18556          35.8068       NO       
+     FINAL_PART-1.18645          35.2635       NO       
+     FINAL_PART-1.18646          21.5076       NO       
+     FINAL_PART-1.18884          39.0804       NO       
+     FINAL_PART-1.18885          28.2994       NO       
+     FINAL_PART-1.18886          24.7197       NO       
+     FINAL_PART-1.18887           29.651       NO       
+     FINAL_PART-1.18888          24.9461       NO       
+     FINAL_PART-1.18889          18.6356       NO       
+     FINAL_PART-1.19007          33.2886       NO       
+     FINAL_PART-1.19023          40.6374       NO       
+     FINAL_PART-1.19118          43.8992       NO       
+     FINAL_PART-1.19121          27.5916       NO       
+     FINAL_PART-1.19122          26.5225       NO       
+     FINAL_PART-1.19123          27.5327       NO       
+     FINAL_PART-1.19124          37.8514       NO       
+     FINAL_PART-1.19128          33.5171       NO       
+     FINAL_PART-1.19129          25.6757       NO       
+     FINAL_PART-1.19130          27.1688       NO       
+     FINAL_PART-1.19131          18.5343       NO       
+     FINAL_PART-1.19132          43.4351       NO       
+     FINAL_PART-1.19133          44.2912       NO       
+     FINAL_PART-1.19134          22.8536       NO       
+     FINAL_PART-1.19148          32.7757       NO       
+     FINAL_PART-1.19150          39.1079       NO       
+     FINAL_PART-1.19158          40.0051       NO       
+     FINAL_PART-1.19175          38.9178       NO       
+     FINAL_PART-1.19176          28.8802       NO       
+     FINAL_PART-1.19177          19.9582       NO       
+     FINAL_PART-1.19178          26.4596       NO       
+     FINAL_PART-1.19219          28.3642       NO       
+     FINAL_PART-1.19222          40.9199       NO       
+     FINAL_PART-1.19223           42.983       NO       
+     FINAL_PART-1.19238           39.569       NO       
+     FINAL_PART-1.19294           30.684       NO       
+     FINAL_PART-1.19318           33.405       NO       
+     FINAL_PART-1.19327          40.8779       NO       
+     FINAL_PART-1.19334           37.061       NO       
+     FINAL_PART-1.19358          42.1986       NO       
+     FINAL_PART-1.19532          43.0284       NO       
+     FINAL_PART-1.20089          25.9183       NO       
+     FINAL_PART-1.20090          33.4119       NO       
+     FINAL_PART-1.24110          27.0299       NO       
+     FINAL_PART-1.24111           27.614       NO       
+     FINAL_PART-1.24112          28.2218       NO       
+     FINAL_PART-1.24113          28.8546       NO       
+     FINAL_PART-1.24114          29.5138       NO       
+     FINAL_PART-1.24115           30.201       NO       
+     FINAL_PART-1.24116          30.9178       NO       
+     FINAL_PART-1.24117          31.6658       NO       
+     FINAL_PART-1.24118          32.4468       NO       
+     FINAL_PART-1.24119          33.2629       NO       
+     FINAL_PART-1.24120          34.1159       NO       
+     FINAL_PART-1.24121          35.0083       NO       
+     FINAL_PART-1.24122          35.9421       NO       
+     FINAL_PART-1.24123          36.9197       NO       
+     FINAL_PART-1.24124          37.9439       NO       
+     FINAL_PART-1.24125          39.0174       NO       
+     FINAL_PART-1.24126           40.143       NO       
+     FINAL_PART-1.24127          41.3235       NO       
+     FINAL_PART-1.24128          42.5621       NO       
+     FINAL_PART-1.24129           43.862       NO       
+     FINAL_PART-1.24151          27.1554       NO       
+     FINAL_PART-1.24152          27.7413       NO       
+     FINAL_PART-1.24153           28.351       NO       
+     FINAL_PART-1.24154          28.9857       NO       
+     FINAL_PART-1.24155          29.6467       NO       
+     FINAL_PART-1.24156          30.3358       NO       
+     FINAL_PART-1.24157          31.0545       NO       
+     FINAL_PART-1.24158          31.8043       NO       
+     FINAL_PART-1.24159          32.5871       NO       
+     FINAL_PART-1.24160          33.4049       NO       
+     FINAL_PART-1.24161          34.2598       NO       
+     FINAL_PART-1.24162          35.1537       NO       
+     FINAL_PART-1.24163          36.0892       NO       
+     FINAL_PART-1.24164          37.0684       NO       
+     FINAL_PART-1.24165          38.0941       NO       
+     FINAL_PART-1.24166           39.169       NO       
+     FINAL_PART-1.24167          40.2956       NO       
+     FINAL_PART-1.24168          41.4771       NO       
+     FINAL_PART-1.24169          42.7164       NO       
+     FINAL_PART-1.24170          44.0166       NO       
+  
+  
+  *step, name=Step-1, nlgeom=YES
+  *step, name=Step-1, nlgeom=YES
+  *output, field, variable=PRESELECT
+  *output, history, variable=PRESELECT
+  *step, name=Step-1, nlgeom=YES
+  *step, name=Step-1, nlgeom=YES
+  *static
+  *boundary
+  *dsload
+  *dsload
+  *output, field, variable=PRESELECT
+  *output, history, variable=PRESELECT
+  *endstep
+  *step, name=Step-1, nlgeom=YES
+  *static
+  *boundary
+  *endstep
+
+     - (RAMP) OR (STEP) - INDICATE USE OF DEFAULT AMPLITUDES ASSOCIATED WITH THE STEP
+
+     - (RAMP) OR (STEP) - INDICATE USE OF DEFAULT AMPLITUDES ASSOCIATED WITH THE STEP
+
+
+
+                            P R O B L E M   S I Z E
+
+
+          NUMBER OF ELEMENTS IS                                 24191
+          NUMBER OF NODES IS                                    35954
+          NUMBER OF NODES DEFINED BY THE USER                   35954
+          TOTAL NUMBER OF VARIABLES IN THE MODEL               107862
+          (DEGREES OF FREEDOM PLUS MAX NO. OF ANY LAGRANGE MULTIPLIER
+           VARIABLES. INCLUDE *PRINT,SOLVE=YES TO GET THE ACTUAL NUMBER.)
+
+
+
+                              END OF USER INPUT PROCESSING
+
+
+
+     JOB TIME SUMMARY
+       USER TIME (SEC)      =      4.2    
+       SYSTEM TIME (SEC)    =     0.40    
+       TOTAL CPU TIME (SEC) =      4.6    
+       WALLCLOCK TIME (SEC) =            1
+1
+
+   Abaqus 2025                                  Date 22-Feb-2026   Time 15:38:47
+   For use by UNIVERSITAET STUTTGART under license from Dassault Systemes or its subsidiary.
+
+                                                                                               STEP    1  INCREMENT    1
+                                                                                          TIME COMPLETED IN THIS STEP   0.00    
+
+
+                        S T E P       1     S T A T I C   A N A L Y S I S
+
+
+                                                                                          
+
+     AUTOMATIC TIME CONTROL WITH -
+          A SUGGESTED INITIAL TIME INCREMENT OF                 1.00    
+          AND A TOTAL TIME PERIOD OF                            1.00    
+          THE MINIMUM TIME INCREMENT ALLOWED IS                1.000E-05
+          THE MAXIMUM TIME INCREMENT ALLOWED IS                 1.00    
+
+     LINEAR EQUATION SOLVER TYPE         DIRECT SPARSE
+
+          LARGE DISPLACEMENT THEORY WILL BE USED
+  
+                   M E M O R Y   E S T I M A T E
+  
+ PROCESS      FLOATING PT       MINIMUM MEMORY        MEMORY TO
+              OPERATIONS           REQUIRED          MINIMIZE I/O
+             PER ITERATION           (MB)               (MB)
+  
+     1          7.48E+09               71                336
+  
+ NOTE:
+      (1) SINCE ABAQUS DOES NOT PRE-ALLOCATE MEMORY AND ONLY ALLOCATES MEMORY AS NEEDED DURING THE ANALYSIS,
+          THE MEMORY REQUIREMENT PRINTED HERE CAN ONLY BE VIEWED AS A GENERAL GUIDELINE BASED ON THE BEST
+          KNOWLEDGE AVAILABLE AT THE BEGINNING OF A STEP BEFORE THE SOLUTION PROCESS HAS BEGUN.
+      (2) THE ESTIMATE IS NORMALLY UPDATED AT THE BEGINNING OF EVERY STEP. IT IS THE MAXIMUM VALUE OF THE
+          ESTIMATE FROM THE CURRENT STEP TO THE LAST STEP OF THE ANALYSIS, WITH UNSYMMETRIC SOLUTION TAKEN
+          INTO ACCOUNT IF APPLICABLE. 
+      (3) SINCE THE ESTIMATE IS BASED ON THE ACTIVE DEGREES OF FREEDOM IN THE FIRST ITERATION OF THE 
+          CURRENT STEP, THE MEMORY ESTIMATE MIGHT BE SIGNIFICANTLY DIFFERENT THAN ACTUAL USAGE FOR 
+          PROBLEMS WITH SUBSTANTIAL CHANGES IN ACTIVE DEGREES OF FREEDOM BETWEEN STEPS (OR EVEN WITHIN
+          THE SAME STEP). EXAMPLES ARE: PROBLEMS WITH SIGNIFICANT CONTACT CHANGES, PROBLEMS WITH MODEL
+          CHANGE, PROBLEMS WITH BOTH STATIC STEP AND STEADY STATE DYNAMIC PROCEDURES WHERE ACOUSTIC 
+          ELEMENTS WILL ONLY BE ACTIVATED IN THE STEADY STATE DYNAMIC STEPS.
+      (4) FOR MULTI-PROCESS EXECUTION, THE ESTIMATED VALUE OF FLOATING POINT OPERATIONS FOR EACH PROCESS
+          IS BASED ON AN INITIAL SCHEDULING OF OPERATIONS AND MIGHT NOT REFLECT THE ACTUAL FLOATING 
+          POINT OPERATIONS COMPLETED ON EACH PROCESS. OPERATIONS ARE DYNAMICALLY BALANCED DURING EXECUTION, 
+          SO THE ACTUAL BALANCE OF OPERATIONS BETWEEN PROCESSES IS EXPECTED TO BE BETTER THAN THE ESTIMATE
+          PRINTED HERE.
+      (5) THE UPPER LIMIT OF MEMORY THAT CAN BE ALLOCATED BY ABAQUS WILL IN GENERAL DEPEND ON THE VALUE OF
+          THE "MEMORY" PARAMETER AND THE AMOUNT OF PHYSICAL MEMORY AVAILABLE ON THE MACHINE. PLEASE SEE
+          THE "ABAQUS ANALYSIS USER'S MANUAL" FOR MORE DETAILS. THE ACTUAL USAGE OF MEMORY AND OF DISK
+          SPACE FOR SCRATCH DATA WILL DEPEND ON THIS UPPER LIMIT AS WELL AS THE MEMORY REQUIRED TO MINIMIZE
+          I/O. IF THE MEMORY UPPER LIMIT IS GREATER THAN THE MEMORY REQUIRED TO MINIMIZE I/O, THEN THE ACTUAL
+          MEMORY USAGE WILL BE CLOSE TO THE ESTIMATED "MEMORY TO MINIMIZE I/O" VALUE, AND THE SCRATCH DISK
+          USAGE WILL BE CLOSE-TO-ZERO; OTHERWISE, THE ACTUAL MEMORY USED WILL BE CLOSE TO THE PREVIOUSLY
+          MENTIONED MEMORY LIMIT, AND THE SCRATCH DISK USAGE WILL BE ROUGHLY PROPORTIONAL TO THE DIFFERENCE
+          BETWEEN THE ESTIMATED "MEMORY TO MINIMIZE I/O" AND THE MEMORY UPPER LIMIT. HOWEVER ACCURATE
+          ESTIMATE OF THE SCRATCH DISK SPACE IS NOT POSSIBLE.
+      (6) USING "*RESTART, WRITE" CAN GENERATE A LARGE AMOUNT OF DATA WRITTEN IN THE WORK DIRECTORY.
+
+
+          THE ANALYSIS HAS BEEN COMPLETED
+
+
+
+                              ANALYSIS COMPLETE
+                              WITH      1 WARNING MESSAGES ON THE DAT FILE
+                              AND      40 WARNING MESSAGES ON THE MSG FILE
+                                       37 WARNINGS ARE FOR NEGATIVE EIGENVALUES
+
+
+
+     JOB TIME SUMMARY
+       USER TIME (SEC)      =     1.26E+03
+       SYSTEM TIME (SEC)    =      86.    
+       TOTAL CPU TIME (SEC) =     1.34E+03
+       WALLCLOCK TIME (SEC) =          400
