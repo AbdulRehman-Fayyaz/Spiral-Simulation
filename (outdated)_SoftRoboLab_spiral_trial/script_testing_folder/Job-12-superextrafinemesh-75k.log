@@ -1,0 +1,23 @@
+Analysis initiated from SIMULIA established products
+Abaqus JOB Job-12-superextrafinemesh-75k
+Abaqus 2025
+Abaqus License Manager checked out the following licenses:
+Abaqus/Standard checked out 5 tokens from Flexnet server hlrslic1.hlrs.de.
+<309 out of 400 licenses remain available>.
+Begin Analysis Input File Processor
+2/22/2026 11:38:37 PM
+Run pre.exe
+2/22/2026 11:38:49 PM
+End Analysis Input File Processor
+Begin Abaqus/Standard Analysis
+2/22/2026 11:38:49 PM
+Run standard.exe
+2/22/2026 11:42:04 PM
+Abaqus Error: Abaqus/Standard Analysis exited with an error - Please see the 
+message file for possible error messages if the file exists.
+Begin SIM Wrap-up
+2/22/2026 11:42:04 PM
+Run SMASimUtility.exe
+2/22/2026 11:42:04 PM
+End SIM Wrap-up
+Abaqus/Analysis exited with errors
