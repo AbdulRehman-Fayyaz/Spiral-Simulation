@@ -26355,3 +26355,1449 @@ mdb.jobs['Job-10-superextrafinemesh']._Message(ODB_FRAME, {'step': 0,
     'frame': 0, 'phase': STANDARD_PHASE, 
     'jobName': 'Job-10-superextrafinemesh'})
 # Save by st195764 on 2026_02_22-22.15.17; build 2025 2024_09_20-15.00.46 RELr427 198590
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+mdb.jobs['Job-10-superextrafinemesh']._Message(MEMORY_ESTIMATE, {
+    'memory': 1646.0, 'phase': STANDARD_PHASE, 
+    'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(PHYSICAL_MEMORY, {
+    'physical_memory': 16071.0, 'phase': STANDARD_PHASE, 
+    'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(MINIMUM_MEMORY, {
+    'minimum_memory': 273.0, 'phase': STANDARD_PHASE, 
+    'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'EXCESSIVE DISTORTION AT A TOTAL OF 99 INTEGRATION POINTS IN SOLID (CONTINUUM) ELEMENTS', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(STATUS, {'step': 1, 
+    'increment': 1, 'attempts': ' 1U', 'severe': 0, 'equilibrium': 1, 
+    'iterations': 1, 'totalTime': 0.0, 'stepTime': 0.0, 'timeIncrement': 1.0, 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'The system matrix has 167097 negative eigenvalues.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'EXCESSIVE DISTORTION AT A TOTAL OF 51389 INTEGRATION POINTS IN SOLID (CONTINUUM) ELEMENTS', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(STATUS, {'step': 1, 
+    'increment': 1, 'attempts': ' 2U', 'severe': 0, 'equilibrium': 2, 
+    'iterations': 2, 'totalTime': 0.0, 'stepTime': 0.0, 'timeIncrement': 0.25, 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'The system matrix has 590 negative eigenvalues.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'The system matrix has 808 negative eigenvalues.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.43701 D.O.F. 1.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.43701 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.43701 D.O.F. 3.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.41804 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.38017 D.O.F. 1.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.38017 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.38017 D.O.F. 3.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.42527 D.O.F. 1.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.42527 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.42527 D.O.F. 3.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.117172 D.O.F. 1.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.117172 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.41447 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.41798 D.O.F. 1.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.41798 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.41798 D.O.F. 3.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.42794 D.O.F. 1.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.42794 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.42794 D.O.F. 3.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.42918 D.O.F. 1.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.42918 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.42918 D.O.F. 3.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.43494 D.O.F. 1.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.43494 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.43494 D.O.F. 3.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.115275 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.116389 D.O.F. 1.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.116389 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.116965 D.O.F. 1.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.116965 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.116965 D.O.F. 3.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.43365 D.O.F. 1.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.43365 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.43365 D.O.F. 3.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.40683 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.43043 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.41809 D.O.F. 1.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.41809 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.41809 D.O.F. 3.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.43101 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.38044 D.O.F. 1.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.38044 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.38044 D.O.F. 3.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.38045 D.O.F. 1.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.38045 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.40241 D.O.F. 1.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.40241 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.40241 D.O.F. 3.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.40445 D.O.F. 1.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.40445 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.40445 D.O.F. 3.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.40860 D.O.F. 1.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.40860 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.40860 D.O.F. 3.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.115280 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.48290 D.O.F. 3.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.48705 D.O.F. 3.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.102610 D.O.F. 1.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.102610 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.102610 D.O.F. 3.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.103902 D.O.F. 1.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.103902 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.113916 D.O.F. 1.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.113916 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.114331 D.O.F. 1.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.114331 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.114331 D.O.F. 3.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.38016 D.O.F. 1.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.38016 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.38016 D.O.F. 3.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.45861 D.O.F. 1.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.45861 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.45861 D.O.F. 3.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.49098 D.O.F. 1.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.49098 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.49098 D.O.F. 3.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.40851 D.O.F. 1.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.40851 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.40851 D.O.F. 3.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.48485 D.O.F. 1.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.48485 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.48485 D.O.F. 3.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.41253 D.O.F. 1.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.41253 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.41253 D.O.F. 3.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.38049 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.42394 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.43316 D.O.F. 1.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.43316 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.43316 D.O.F. 3.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.41039 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.41908 D.O.F. 1.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.41908 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.41908 D.O.F. 3.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.42146 D.O.F. 1.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.42146 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.42146 D.O.F. 3.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.42265 D.O.F. 1.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.42265 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.42265 D.O.F. 3.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.7779 D.O.F. 1.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.7779 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.7779 D.O.F. 3.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.7778 D.O.F. 1.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.7778 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.7778 D.O.F. 3.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.7777 D.O.F. 1.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.7777 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.7777 D.O.F. 3.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.45958 D.O.F. 3.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.7545 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.7545 D.O.F. 3.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.7544 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.7544 D.O.F. 3.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.40036 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.40036 D.O.F. 3.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.7543 D.O.F. 1.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.7543 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.7543 D.O.F. 3.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.38113 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.38113 D.O.F. 3.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.41120 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.41120 D.O.F. 3.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.44653 D.O.F. 1.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.44653 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.44653 D.O.F. 3.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.44654 D.O.F. 1.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.44654 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.44654 D.O.F. 3.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.44655 D.O.F. 1.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.44655 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.44655 D.O.F. 3.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.111584 D.O.F. 1.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.111584 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.112841 D.O.F. 1.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.112841 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.40858 D.O.F. 1.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.40858 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.48047 D.O.F. 3.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.48165 D.O.F. 1.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.48165 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.48165 D.O.F. 3.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.47967 D.O.F. 1.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.47967 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.47967 D.O.F. 3.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.40320 D.O.F. 1.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.40320 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.40320 D.O.F. 3.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.48703 D.O.F. 1.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.48703 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.48703 D.O.F. 3.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.40202 D.O.F. 1.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.40202 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.40202 D.O.F. 3.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.113673 D.O.F. 1.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.113673 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.40122 D.O.F. 1.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.40122 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.40122 D.O.F. 3.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.107258 D.O.F. 1.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.107258 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.38048 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.38048 D.O.F. 3.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.42099 D.O.F. 1.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.42099 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.42099 D.O.F. 3.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.50139 D.O.F. 1.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.50139 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.50139 D.O.F. 3.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.38081 D.O.F. 1.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.38081 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.38081 D.O.F. 3.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.48999 D.O.F. 3.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.50348 D.O.F. 3.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.42294 D.O.F. 1.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.42294 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.42294 D.O.F. 3.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.47853 D.O.F. 1.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.47853 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.47853 D.O.F. 3.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.45925 D.O.F. 1.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.45925 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.45925 D.O.F. 3.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.48523 D.O.F. 1.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.48523 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.48523 D.O.F. 3.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.45926 D.O.F. 1.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.45926 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.45926 D.O.F. 3.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.41154 D.O.F. 1.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.41154 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.41154 D.O.F. 3.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.102900 D.O.F. 1.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.102900 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.41044 D.O.F. 1.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(STATUS, {'step': 1, 
+    'increment': 1, 'attempts': ' 3U', 'severe': 0, 'equilibrium': 3, 
+    'iterations': 3, 'totalTime': 0.0, 'stepTime': 0.0, 
+    'timeIncrement': 0.0625, 'phase': STANDARD_PHASE, 
+    'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(STATUS, {'step': 1, 
+    'increment': 1, 'attempts': ' 4U', 'severe': 0, 'equilibrium': 4, 
+    'iterations': 4, 'totalTime': 0.0, 'stepTime': 0.0, 
+    'timeIncrement': 0.015625, 'phase': STANDARD_PHASE, 
+    'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(STATUS, {'step': 1, 
+    'increment': 1, 'attempts': ' 5U', 'severe': 0, 'equilibrium': 5, 
+    'iterations': 5, 'totalTime': 0.0, 'stepTime': 0.0, 
+    'timeIncrement': 0.00390625, 'phase': STANDARD_PHASE, 
+    'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(ERROR, {
+    'message': 'Too many attempts made for this increment', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(ABORTED, {
+    'message': 'Analysis phase failed due to errors', 'phase': STANDARD_PHASE, 
+    'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-11-superMOREextrafinemesh']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 2, 'phase': STANDARD_PHASE, 
+    'jobName': 'Job-11-superMOREextrafinemesh'})
+mdb.jobs['Job-11-superMOREextrafinemesh']._Message(STATUS, {'step': 1, 
+    'increment': 2, 'attempts': 1, 'severe': 0, 'equilibrium': 4, 
+    'iterations': 4, 'totalTime': 0.03125, 'stepTime': 0.03125, 
+    'timeIncrement': 0.015625, 'phase': STANDARD_PHASE, 
+    'jobName': 'Job-11-superMOREextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(ERROR, {
+    'message': 'Abaqus/Standard Analysis exited with an error - Please see the  message file for possible error messages if the file exists.', 
+    'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(JOB_ABORTED, {
+    'message': 'Abaqus/Standard Analysis exited with an error - Please see the  message file for possible error messages if the file exists.', 
+    'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-11-superMOREextrafinemesh']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 3, 'phase': STANDARD_PHASE, 
+    'jobName': 'Job-11-superMOREextrafinemesh'})
+mdb.jobs['Job-11-superMOREextrafinemesh']._Message(STATUS, {'step': 1, 
+    'increment': 3, 'attempts': 1, 'severe': 0, 'equilibrium': 4, 
+    'iterations': 4, 'totalTime': 0.046875, 'stepTime': 0.046875, 
+    'timeIncrement': 0.015625, 'phase': STANDARD_PHASE, 
+    'jobName': 'Job-11-superMOREextrafinemesh'})
+mdb.models['Model-3-superextrafinemesh'].loads['Load-1'].setValues(magnitude=
+    7000.0)
+mdb.models['Model-3-superextrafinemesh'].loads['Load-2'].setValues(magnitude=
+    7000.0)
+mdb.jobs['Job-10-superextrafinemesh'].submit(consistencyChecking=OFF)
+mdb.jobs['Job-10-superextrafinemesh']._Message(STARTED, {
+    'phase': BATCHPRE_PHASE, 'jobName': 'Job-10-superextrafinemesh', 
+    'clientHost': 'MIB40-GAUSS', 'handle': 0})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': '123 elements are distorted. Either the isoparametric angles are out of the suggested limits or the triangular or tetrahedral quality measure is bad. The elements have been identified in element set WarnElemDistorted.', 
+    'phase': BATCHPRE_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(ODB_FILE, {
+    'file': 'C:\\Users\\st195764\\Desktop\\Spiral-Simulation\\(outdated)_SoftRoboLab_Spiral_Trial\\script_testing_folder\\Job-10-superextrafinemesh.odb', 
+    'phase': BATCHPRE_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(COMPLETED, {
+    'message': 'Analysis phase complete', 'phase': BATCHPRE_PHASE, 
+    'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(STARTED, {
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh', 
+    'clientHost': 'MIB40-GAUSS', 'handle': 20120})
+mdb.jobs['Job-10-superextrafinemesh']._Message(STEP, {'stepId': 1, 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 0, 'phase': STANDARD_PHASE, 
+    'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(MEMORY_ESTIMATE, {
+    'memory': 1646.0, 'phase': STANDARD_PHASE, 
+    'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(PHYSICAL_MEMORY, {
+    'physical_memory': 16071.0, 'phase': STANDARD_PHASE, 
+    'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(MINIMUM_MEMORY, {
+    'minimum_memory': 273.0, 'phase': STANDARD_PHASE, 
+    'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'EXCESSIVE DISTORTION AT A TOTAL OF 99 INTEGRATION POINTS IN SOLID (CONTINUUM) ELEMENTS', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(STATUS, {'step': 1, 
+    'increment': 1, 'attempts': ' 1U', 'severe': 0, 'equilibrium': 1, 
+    'iterations': 1, 'totalTime': 0.0, 'stepTime': 0.0, 'timeIncrement': 1.0, 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'The system matrix has 142356 negative eigenvalues.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'EXCESSIVE DISTORTION AT A TOTAL OF 51572 INTEGRATION POINTS IN SOLID (CONTINUUM) ELEMENTS', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(STATUS, {'step': 1, 
+    'increment': 1, 'attempts': ' 2U', 'severe': 0, 'equilibrium': 2, 
+    'iterations': 2, 'totalTime': 0.0, 'stepTime': 0.0, 'timeIncrement': 0.25, 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'The system matrix has 418 negative eigenvalues.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'The system matrix has 999 negative eigenvalues.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.268 D.O.F. 3.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.8216 D.O.F. 3.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.5366 D.O.F. 3.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.66111 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.40806 D.O.F. 1.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.40806 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.40806 D.O.F. 3.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.101607 D.O.F. 1.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.101607 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.101607 D.O.F. 3.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.38046 D.O.F. 1.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.38046 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.38046 D.O.F. 3.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.41592 D.O.F. 1.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.41592 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.41592 D.O.F. 3.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.98847 D.O.F. 1.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.98847 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.98847 D.O.F. 3.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.102393 D.O.F. 1.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.102393 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.102393 D.O.F. 3.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.48651 D.O.F. 1.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.48651 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.48651 D.O.F. 3.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.114277 D.O.F. 1.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.114277 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.114277 D.O.F. 3.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.45891 D.O.F. 1.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.45891 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.45891 D.O.F. 3.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.49437 D.O.F. 1.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.49437 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.49437 D.O.F. 3.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.111517 D.O.F. 1.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.111517 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.111517 D.O.F. 3.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.115063 D.O.F. 1.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.115063 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.115063 D.O.F. 3.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.108728 D.O.F. 1.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.108728 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.108728 D.O.F. 3.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.105182 D.O.F. 1.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.105182 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.105182 D.O.F. 3.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.107942 D.O.F. 1.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.107942 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.107942 D.O.F. 3.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.42293 D.O.F. 1.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.42293 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.42293 D.O.F. 3.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.43652 D.O.F. 1.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.43652 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.43652 D.O.F. 3.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.43701 D.O.F. 1.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.43701 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.43701 D.O.F. 3.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.41804 D.O.F. 1.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.41804 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.41804 D.O.F. 3.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.38047 D.O.F. 1.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.38047 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.38047 D.O.F. 3.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.109429 D.O.F. 1.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.109429 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.109429 D.O.F. 3.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.110788 D.O.F. 1.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.110788 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.110788 D.O.F. 3.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.110837 D.O.F. 1.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.110837 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.110837 D.O.F. 3.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.108940 D.O.F. 1.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.108940 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.108940 D.O.F. 3.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.104502 D.O.F. 1.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.104502 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.104502 D.O.F. 3.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.98848 D.O.F. 1.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.98848 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.98848 D.O.F. 3.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.102605 D.O.F. 1.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.102605 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.102605 D.O.F. 3.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.103094 D.O.F. 1.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.103094 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.103094 D.O.F. 3.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.104453 D.O.F. 1.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.104453 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.104453 D.O.F. 3.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.105183 D.O.F. 1.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.105183 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.105183 D.O.F. 3.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.50138 D.O.F. 1.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.50138 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.50138 D.O.F. 3.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.51497 D.O.F. 1.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.51497 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.51497 D.O.F. 3.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.51546 D.O.F. 1.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.51546 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.51546 D.O.F. 3.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.49649 D.O.F. 1.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.49649 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.49649 D.O.F. 3.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.51623 D.O.F. 1.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.51623 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.51623 D.O.F. 3.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.50497 D.O.F. 1.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.50497 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.50497 D.O.F. 3.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.50639 D.O.F. 1.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.50639 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.50639 D.O.F. 3.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.49788 D.O.F. 1.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.49788 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.49788 D.O.F. 3.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.115414 D.O.F. 1.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.115414 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.115414 D.O.F. 3.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.49647 D.O.F. 1.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.49647 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.49647 D.O.F. 3.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.115273 D.O.F. 1.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.115273 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.115273 D.O.F. 3.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.50372 D.O.F. 1.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.50372 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.50372 D.O.F. 3.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.45862 D.O.F. 1.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.45862 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.45862 D.O.F. 3.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.50763 D.O.F. 1.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.50763 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.50763 D.O.F. 3.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.51339 D.O.F. 1.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.51339 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.51339 D.O.F. 3.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.41943 D.O.F. 1.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.41943 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.41943 D.O.F. 3.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.102744 D.O.F. 1.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.102744 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.102744 D.O.F. 3.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.41802 D.O.F. 1.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.41802 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.41802 D.O.F. 3.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.102603 D.O.F. 1.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.102603 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.102603 D.O.F. 3.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.43778 D.O.F. 1.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.43778 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.43778 D.O.F. 3.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.42652 D.O.F. 1.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.42652 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.42652 D.O.F. 3.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.110914 D.O.F. 1.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.110914 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.110914 D.O.F. 3.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.109788 D.O.F. 1.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.109788 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.109788 D.O.F. 3.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.104579 D.O.F. 1.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.104579 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.104579 D.O.F. 3.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.103453 D.O.F. 1.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.103453 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.103453 D.O.F. 3.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.103328 D.O.F. 1.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.103328 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.103328 D.O.F. 3.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.38017 D.O.F. 1.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.38017 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.38017 D.O.F. 3.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.42527 D.O.F. 1.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.42527 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.42527 D.O.F. 3.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.98818 D.O.F. 1.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.98818 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.98818 D.O.F. 3.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.117249 D.O.F. 1.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.117249 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.117249 D.O.F. 3.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.105153 D.O.F. 1.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.105153 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.105153 D.O.F. 3.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.108938 D.O.F. 1.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.108938 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.108938 D.O.F. 3.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.109079 D.O.F. 1.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.109079 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.109079 D.O.F. 3.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.109663 D.O.F. 1.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(WARNING, {
+    'message': 'Solver problem. Zero pivot when processing node FINAL_PART-1.109663 D.O.F. 2.', 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(STATUS, {'step': 1, 
+    'increment': 1, 'attempts': ' 3U', 'severe': 0, 'equilibrium': 3, 
+    'iterations': 3, 'totalTime': 0.0, 'stepTime': 0.0, 
+    'timeIncrement': 0.0625, 'phase': STANDARD_PHASE, 
+    'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(STATUS, {'step': 1, 
+    'increment': 1, 'attempts': ' 4U', 'severe': 0, 'equilibrium': 4, 
+    'iterations': 4, 'totalTime': 0.0, 'stepTime': 0.0, 
+    'timeIncrement': 0.015625, 'phase': STANDARD_PHASE, 
+    'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-11-superMOREextrafinemesh']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 4, 'phase': STANDARD_PHASE, 
+    'jobName': 'Job-11-superMOREextrafinemesh'})
+mdb.jobs['Job-11-superMOREextrafinemesh']._Message(STATUS, {'step': 1, 
+    'increment': 4, 'attempts': 1, 'severe': 0, 'equilibrium': 5, 
+    'iterations': 5, 'totalTime': 0.0703125, 'stepTime': 0.0703125, 
+    'timeIncrement': 0.0234375, 'phase': STANDARD_PHASE, 
+    'jobName': 'Job-11-superMOREextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 1, 'phase': STANDARD_PHASE, 
+    'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(STATUS, {'step': 1, 
+    'increment': 1, 'attempts': 5, 'severe': 0, 'equilibrium': 8, 
+    'iterations': 8, 'totalTime': 0.00390625, 'stepTime': 0.00390625, 
+    'timeIncrement': 0.00390625, 'phase': STANDARD_PHASE, 
+    'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 2, 'phase': STANDARD_PHASE, 
+    'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(STATUS, {'step': 1, 
+    'increment': 2, 'attempts': 1, 'severe': 0, 'equilibrium': 4, 
+    'iterations': 4, 'totalTime': 0.0078125, 'stepTime': 0.0078125, 
+    'timeIncrement': 0.00390625, 'phase': STANDARD_PHASE, 
+    'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 3, 'phase': STANDARD_PHASE, 
+    'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(STATUS, {'step': 1, 
+    'increment': 3, 'attempts': 1, 'severe': 0, 'equilibrium': 4, 
+    'iterations': 4, 'totalTime': 0.01171875, 'stepTime': 0.01171875, 
+    'timeIncrement': 0.00390625, 'phase': STANDARD_PHASE, 
+    'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 4, 'phase': STANDARD_PHASE, 
+    'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(STATUS, {'step': 1, 
+    'increment': 4, 'attempts': 1, 'severe': 0, 'equilibrium': 4, 
+    'iterations': 4, 'totalTime': 0.017578125, 'stepTime': 0.017578125, 
+    'timeIncrement': 0.005859375, 'phase': STANDARD_PHASE, 
+    'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 5, 'phase': STANDARD_PHASE, 
+    'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(STATUS, {'step': 1, 
+    'increment': 5, 'attempts': 1, 'severe': 0, 'equilibrium': 5, 
+    'iterations': 5, 'totalTime': 0.0263671875, 'stepTime': 0.0263671875, 
+    'timeIncrement': 0.0087890625, 'phase': STANDARD_PHASE, 
+    'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 6, 'phase': STANDARD_PHASE, 
+    'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(STATUS, {'step': 1, 
+    'increment': 6, 'attempts': 1, 'severe': 0, 'equilibrium': 5, 
+    'iterations': 5, 'totalTime': 0.03515625, 'stepTime': 0.03515625, 
+    'timeIncrement': 0.0087890625, 'phase': STANDARD_PHASE, 
+    'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 7, 'phase': STANDARD_PHASE, 
+    'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(STATUS, {'step': 1, 
+    'increment': 7, 'attempts': 1, 'severe': 0, 'equilibrium': 4, 
+    'iterations': 4, 'totalTime': 0.0439453125, 'stepTime': 0.0439453125, 
+    'timeIncrement': 0.0087890625, 'phase': STANDARD_PHASE, 
+    'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 8, 'phase': STANDARD_PHASE, 
+    'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(STATUS, {'step': 1, 
+    'increment': 8, 'attempts': 1, 'severe': 0, 'equilibrium': 4, 
+    'iterations': 4, 'totalTime': 0.052734375, 'stepTime': 0.052734375, 
+    'timeIncrement': 0.0087890625, 'phase': STANDARD_PHASE, 
+    'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 9, 'phase': STANDARD_PHASE, 
+    'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(STATUS, {'step': 1, 
+    'increment': 9, 'attempts': 1, 'severe': 0, 'equilibrium': 4, 
+    'iterations': 4, 'totalTime': 0.06591796875, 'stepTime': 0.06591796875, 
+    'timeIncrement': 0.01318359375, 'phase': STANDARD_PHASE, 
+    'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 10, 'phase': STANDARD_PHASE, 
+    'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(STATUS, {'step': 1, 
+    'increment': 10, 'attempts': 1, 'severe': 0, 'equilibrium': 5, 
+    'iterations': 5, 'totalTime': 0.085693359375, 'stepTime': 0.085693359375, 
+    'timeIncrement': 0.019775390625, 'phase': STANDARD_PHASE, 
+    'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 11, 'phase': STANDARD_PHASE, 
+    'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(STATUS, {'step': 1, 
+    'increment': 11, 'attempts': 1, 'severe': 0, 'equilibrium': 4, 
+    'iterations': 4, 'totalTime': 0.10546875, 'stepTime': 0.10546875, 
+    'timeIncrement': 0.019775390625, 'phase': STANDARD_PHASE, 
+    'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 12, 'phase': STANDARD_PHASE, 
+    'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(STATUS, {'step': 1, 
+    'increment': 12, 'attempts': 1, 'severe': 0, 'equilibrium': 4, 
+    'iterations': 4, 'totalTime': 0.125244140625, 'stepTime': 0.125244140625, 
+    'timeIncrement': 0.019775390625, 'phase': STANDARD_PHASE, 
+    'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-11-superMOREextrafinemesh']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 5, 'phase': STANDARD_PHASE, 
+    'jobName': 'Job-11-superMOREextrafinemesh'})
+mdb.jobs['Job-11-superMOREextrafinemesh']._Message(STATUS, {'step': 1, 
+    'increment': 5, 'attempts': 1, 'severe': 0, 'equilibrium': 5, 
+    'iterations': 5, 'totalTime': 0.09375, 'stepTime': 0.09375, 
+    'timeIncrement': 0.0234375, 'phase': STANDARD_PHASE, 
+    'jobName': 'Job-11-superMOREextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(ODB_FRAME, {'step': 0, 
+    'frame': 13, 'phase': STANDARD_PHASE, 
+    'jobName': 'Job-10-superextrafinemesh'})
+mdb.jobs['Job-10-superextrafinemesh']._Message(STATUS, {'step': 1, 
+    'increment': 13, 'attempts': 1, 'severe': 0, 'equilibrium': 5, 
+    'iterations': 5, 'totalTime': 0.1549072265625, 'stepTime': 0.1549072265625, 
+    'timeIncrement': 0.0296630859375, 'phase': STANDARD_PHASE, 
+    'jobName': 'Job-10-superextrafinemesh'})
+# Save by st195764 on 2026_02_22-22.46.46; build 2025 2024_09_20-15.00.46 RELr427 198590

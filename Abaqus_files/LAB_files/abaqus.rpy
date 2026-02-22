@@ -54075,3 +54075,5 @@ session.viewports['Viewport: 1'].view.setValues(nearPlane=0.302479,
     viewOffsetX=-0.00752696, viewOffsetY=0.00959665)
 mdb.save()
 #: The model database has been saved to "C:\Users\st195764\Desktop\Spiral-Simulation\Abaqus_files\LAB_files\Spiral_inLAB.cae".
+mdb.save()
+#: The model database has been saved to "C:\Users\st195764\Desktop\Spiral-Simulation\Abaqus_files\LAB_files\Spiral_inLAB.cae".

@@ -1,3 +1,14 @@
 Analysis initiated from SIMULIA established products
 Abaqus JOB Job-10-superextrafinemesh
 Abaqus 2025
+Abaqus License Manager checked out the following licenses:
+Abaqus/Standard checked out 5 tokens from Flexnet server hlrslic1.hlrs.de.
+<317 out of 400 licenses remain available>.
+Begin Analysis Input File Processor
+2/22/2026 10:29:42 PM
+Run pre.exe
+2/22/2026 10:29:53 PM
+End Analysis Input File Processor
+Begin Abaqus/Standard Analysis
+2/22/2026 10:29:53 PM
+Run standard.exe
