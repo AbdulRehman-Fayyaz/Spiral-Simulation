@@ -1,6 +1,6 @@
 1
 
-   Abaqus 2025                                  Date 22-Feb-2026   Time 23:40:57
+   Abaqus 2025                                  Date 22-Feb-2026   Time 23:48:00
    For use by UNIVERSITAET STUTTGART under license from Dassault Systemes or its subsidiary.
 
 
@@ -149,22 +149,33 @@
 
 
      JOB TIME SUMMARY
-       USER TIME (SEC)      =      78.    
-       SYSTEM TIME (SEC)    =      6.5    
-       TOTAL CPU TIME (SEC) =      84.    
-       WALLCLOCK TIME (SEC) =           24
+       USER TIME (SEC)      =      47.    
+       SYSTEM TIME (SEC)    =      12.    
+       TOTAL CPU TIME (SEC) =      59.    
+       WALLCLOCK TIME (SEC) =           30
 1
 
-   Abaqus 2025                                  Date 22-Feb-2026   Time 23:41:27
+   Abaqus 2025                                  Date 22-Feb-2026   Time 23:48:35
    For use by UNIVERSITAET STUTTGART under license from Dassault Systemes or its subsidiary.
 
                                                                                                STEP    1  INCREMENT    1
                                                                                           TIME COMPLETED IN THIS STEP   0.00    
 
 
-                        A N A L Y S I S    D A T A C H E C K
+                        S T E P       1     S T A T I C   A N A L Y S I S
 
 
+                                                                                          
+
+     AUTOMATIC TIME CONTROL WITH -
+          A SUGGESTED INITIAL TIME INCREMENT OF                 1.00    
+          AND A TOTAL TIME PERIOD OF                            1.00    
+          THE MINIMUM TIME INCREMENT ALLOWED IS                1.000E-05
+          THE MAXIMUM TIME INCREMENT ALLOWED IS                 1.00    
+
+     LINEAR EQUATION SOLVER TYPE         DIRECT SPARSE
+
+          LARGE DISPLACEMENT THEORY WILL BE USED
   
                    M E M O R Y   E S T I M A T E
   
@@ -172,7 +183,7 @@
               OPERATIONS           REQUIRED          MINIMIZE I/O
              PER ITERATION           (MB)               (MB)
   
-     1          1.31E+12             1403               9326
+     1          1.19E+12             1244              10405
   
  NOTE:
       (1) SINCE ABAQUS DOES NOT PRE-ALLOCATE MEMORY AND ONLY ALLOCATES MEMORY AS NEEDED DURING THE ANALYSIS,
@@ -206,12 +217,15 @@
 
 
 
-                              ANALYSIS DATACHECK COMPLETE
+                              ANALYSIS COMPLETE
+                              WITH      2 ERROR MESSAGES ON THE MSG FILE
+                              AND      16 WARNING MESSAGES ON THE MSG FILE
+                                       14 WARNINGS ARE FOR NEGATIVE EIGENVALUES
 
 
 
      JOB TIME SUMMARY
-       USER TIME (SEC)      =     1.39E+02
-       SYSTEM TIME (SEC)    =      11.    
-       TOTAL CPU TIME (SEC) =     1.50E+02
-       WALLCLOCK TIME (SEC) =           39
+       USER TIME (SEC)      =     3.94E+04
+       SYSTEM TIME (SEC)    =     7.58E+03
+       TOTAL CPU TIME (SEC) =     4.70E+04
+       WALLCLOCK TIME (SEC) =        63616

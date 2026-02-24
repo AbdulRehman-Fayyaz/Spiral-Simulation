@@ -54077,3 +54077,5 @@ mdb.save()
 #: The model database has been saved to "C:\Users\st195764\Desktop\Spiral-Simulation\Abaqus_files\LAB_files\Spiral_inLAB.cae".
 mdb.save()
 #: The model database has been saved to "C:\Users\st195764\Desktop\Spiral-Simulation\Abaqus_files\LAB_files\Spiral_inLAB.cae".
+mdb.save()
+#: The model database has been saved to "C:\Users\st195764\Desktop\Spiral-Simulation\Abaqus_files\LAB_files\Spiral_inLAB.cae".

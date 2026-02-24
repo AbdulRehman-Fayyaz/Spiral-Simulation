@@ -3,21 +3,20 @@ Abaqus JOB Job-13-superextrafinemesh-8k
 Abaqus 2025
 Abaqus License Manager checked out the following licenses:
 Abaqus/Standard checked out 5 tokens from Flexnet server hlrslic1.hlrs.de.
-<320 out of 400 licenses remain available>.
+<307 out of 400 licenses remain available>.
 Begin Analysis Input File Processor
-2/22/2026 11:39:43 PM
+2/22/2026 11:48:47 PM
 Run pre.exe
-2/22/2026 11:39:53 PM
+2/22/2026 11:48:58 PM
 End Analysis Input File Processor
 Begin Abaqus/Standard Analysis
-2/22/2026 11:39:53 PM
+2/22/2026 11:48:58 PM
 Run standard.exe
-2/22/2026 11:43:04 PM
-Abaqus Error: Abaqus/Standard Analysis exited with an error - Please see the 
-message file for possible error messages if the file exists.
+2/23/2026 9:42:55 AM
+End Abaqus/Standard Analysis
 Begin SIM Wrap-up
-2/22/2026 11:43:06 PM
+2/23/2026 9:42:56 AM
 Run SMASimUtility.exe
-2/22/2026 11:43:06 PM
+2/23/2026 9:42:56 AM
 End SIM Wrap-up
-Abaqus/Analysis exited with errors
+Abaqus JOB Job-13-superextrafinemesh-8k COMPLETED

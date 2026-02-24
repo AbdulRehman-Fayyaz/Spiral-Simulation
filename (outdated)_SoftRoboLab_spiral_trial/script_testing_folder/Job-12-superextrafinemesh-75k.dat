@@ -1,6 +1,6 @@
 1
 
-   Abaqus 2025                                  Date 22-Feb-2026   Time 23:38:43
+   Abaqus 2025                                  Date 22-Feb-2026   Time 23:48:30
    For use by UNIVERSITAET STUTTGART under license from Dassault Systemes or its subsidiary.
 
 
@@ -314,13 +314,13 @@
 
 
      JOB TIME SUMMARY
-       USER TIME (SEC)      =      8.8    
-       SYSTEM TIME (SEC)    =     0.60    
-       TOTAL CPU TIME (SEC) =      9.4    
-       WALLCLOCK TIME (SEC) =            6
+       USER TIME (SEC)      =      13.    
+       SYSTEM TIME (SEC)    =      2.0    
+       TOTAL CPU TIME (SEC) =      15.    
+       WALLCLOCK TIME (SEC) =            5
 1
 
-   Abaqus 2025                                  Date 22-Feb-2026   Time 23:38:55
+   Abaqus 2025                                  Date 22-Feb-2026   Time 23:48:40
    For use by UNIVERSITAET STUTTGART under license from Dassault Systemes or its subsidiary.
 
                                                                                                STEP    1  INCREMENT    1
@@ -381,22 +381,19 @@
       (6) USING "*RESTART, WRITE" CAN GENERATE A LARGE AMOUNT OF DATA WRITTEN IN THE WORK DIRECTORY.
 
 
-          THE ANALYSIS IS ENDED BECAUSE OF THE PROBLEMS ENCOUNTERED
-          LOOK AT THE MSG FILE FOR THE CAUSE OF THE TERMINATION
+          THE ANALYSIS HAS BEEN COMPLETED
 
 
 
-                              ANALYSIS IS ENDED
-                              WITH      1 ERROR MESSAGES ON THE MSG FILE
-                              AND       1 WARNING MESSAGES ON THE DAT FILE
-                              AND  108256 WARNING MESSAGES ON THE MSG FILE
-                                   108245 WARNINGS ARE FOR NUMERICAL PROBLEMS
-                                        6 WARNINGS ARE FOR NEGATIVE EIGENVALUES
+                              ANALYSIS COMPLETE
+                              WITH      1 WARNING MESSAGES ON THE DAT FILE
+                              AND      51 WARNING MESSAGES ON THE MSG FILE
+                                       48 WARNINGS ARE FOR NEGATIVE EIGENVALUES
 
 
 
      JOB TIME SUMMARY
-       USER TIME (SEC)      =     4.72E+02
-       SYSTEM TIME (SEC)    =      74.    
-       TOTAL CPU TIME (SEC) =     5.45E+02
-       WALLCLOCK TIME (SEC) =          182
+       USER TIME (SEC)      =     1.14E+04
+       SYSTEM TIME (SEC)    =     1.70E+03
+       TOTAL CPU TIME (SEC) =     1.31E+04
+       WALLCLOCK TIME (SEC) =        35151
