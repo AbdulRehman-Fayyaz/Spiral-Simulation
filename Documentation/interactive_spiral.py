@@ -13,7 +13,7 @@ from matplotlib.widgets import Slider
 theta = np.linspace(0, 100, 2000)
 
 # Initial parameter values from the image
-a_init = -0.1
+a_init = 0.00001
 b_init = 0.2
 
 # Function to calculate coordinates based on parameters
