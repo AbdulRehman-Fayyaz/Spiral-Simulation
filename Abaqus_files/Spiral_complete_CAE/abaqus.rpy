@@ -2110,3 +2110,7 @@ a = mdb.models['Spiral_Model_8'].rootAssembly
 session.viewports['Viewport: 1'].setValues(displayedObject=a)
 mdb.save()
 #: The model database has been saved to "C:\Users\st195764\Desktop\Spiral-Simulation\Abaqus_files\Spiral_complete_CAE\Spiral_Final_CAE.cae".
+mdb.save()
+#: The model database has been saved to "C:\Users\st195764\Desktop\Spiral-Simulation\Abaqus_files\Spiral_complete_CAE\Spiral_Final_CAE.cae".
+mdb.save()
+#: The model database has been saved to "C:\Users\st195764\Desktop\Spiral-Simulation\Abaqus_files\Spiral_complete_CAE\Spiral_Final_CAE.cae".
