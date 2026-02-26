@@ -4,7 +4,7 @@ from matplotlib.widgets import Slider
 import numpy as np
 
 # 1. Define file path and sheet name
-file_path = r"C:\Users\st195764\Desktop\Spiral-Simulation\Abaqus_files\Abaqus_to_Excel.xlsx"
+file_path = r"D:\Universitat Stuttgart - MSc COMMAS\ccSemester-III\Spiral Simulation with Prof Ankit and MSc George\Abaqus_files\Abaqus_to_Excel.xlsx"
 sheet_name = "Final_refined"
 
 # 2. Read the data from Excel

@@ -1,3 +1,7 @@
+## To run this program you might need to install the following libraries if you haven't already:
+## pip install pandas matplotlib numpy scipy
+## Also you need to have the Excel file "Abaqus_to_Excel.xlsx" with the correct sheet "Plot_mapping" in the path.
+
 import pandas as pd
 import matplotlib.pyplot as plt
 from matplotlib.widgets import Slider
@@ -5,7 +9,9 @@ import numpy as np
 from scipy.optimize import minimize
 
 # --- 1. Data Loading and Preparation ---
-file_path = r"C:\Users\st195764\Desktop\Spiral-Simulation\Abaqus_files\Abaqus_to_Excel.xlsx"
+# Update the file path and sheet name as needed. 
+# file_path = r"C:\Users\st195764\Desktop\Spiral-Simulation\Abaqus_files\Abaqus_to_Excel.xlsx"
+file_path = r"D:\Universitat Stuttgart - MSc COMMAS\ccSemester-III\Spiral Simulation with Prof Ankit and MSc George\Abaqus_files\Abaqus_to_Excel.xlsx"
 sheet_name = "Plot_mapping"
 
 try:
@@ -16,6 +22,7 @@ except Exception as e:
 
 df.columns = df.columns.str.strip()
 
+# Reference coordinates for each node (Q1 to Q6 and Q6 Tip) to ensure the spiral is correctly positioned.
 ref_coords = {
     'Quad_1_xaxis': 0.0,
     'Quad_1_yaxis': 0.0,
@@ -33,55 +40,50 @@ ref_coords = {
     'Quad_6_Tip_yaxis': 107.1510e-3
 }
 
+# Convert columns to numeric and add reference values to ensure correct positioning of the spiral.
 for col, ref_val in ref_coords.items():
     if col in df.columns:
         if df[col].dtype == object:
             df[col] = df[col].astype(str).str.replace(',', '.').astype(float)
         df[col] = df[col] + ref_val
 
+# Define the columns for x and y coordinates of the nodes 
 x_cols = ['Quad_1_xaxis', 'Quad_2_xaxis', 'Quad_3_xaxis', 'Quad_4_xaxis', 'Quad_5_xaxis', 'Quad_6_xaxis', 'Quad_6_Tip_xaxis']
 y_cols = ['Quad_1_yaxis', 'Quad_2_yaxis', 'Quad_3_yaxis', 'Quad_4_yaxis', 'Quad_5_yaxis', 'Quad_6_yaxis', 'Quad_6_Tip_yaxis']
 
-# --- 2. Automated Spiral Solver (STRICT ENDPOINT) ---
+# --- 2. Automated Best-Fit Spiral Solver ---
 def optimize_spiral_parameters(x_nodes, y_nodes):
-    """Finds a, b, phase (phi), and theta range strictly terminating at Q1."""
+    """Finds a, b, phase, and Theta (t_end) that best fits ALL nodes."""
     tip_x, tip_y = x_nodes[-1], y_nodes[-1]
-    q1_x, q1_y = x_nodes[0], y_nodes[0]
-    q3_x, q3_y = x_nodes[2], y_nodes[2]
     
     def objective(params):
         a, b, phi, t_end = params
         
-        # Generate the spiral curve
-        t_vals = np.linspace(0, t_end, 150)
+        # Generate the spiral curve up to Theta (t_end)
+        t_vals = np.linspace(0, t_end, 150) #the max angle in Abaqus simulation is 150deg (you can refer to export data in Excel file), so we limit the curve to that range for better fitting and to avoid infinite tails
         r = a * np.exp(b * t_vals)
         
         xs = r * np.cos(t_vals + phi) - a * np.cos(phi) + tip_x
         ys = r * np.sin(t_vals + phi) - a * np.sin(phi) + tip_y
         
-        # 1. STRICT ENDPOINT CONSTRAINT: The very last value in the array MUST equal Q1
-        dist_end_to_q1 = (xs[-1] - q1_x)**2 + (ys[-1] - q1_y)**2
-        
-        # 2. STRICT WAYPOINT CONSTRAINT: Curve MUST pass through Q3
-        dists_to_q3 = (xs - q3_x)**2 + (ys - q3_y)**2
-        min_dist_q3 = np.min(dists_to_q3)
-        
-        # 3. Shape Constraint: Curve naturally follows other nodes
-        loss_shape = 0
-        for i in [1, 3, 4, 5]: # Nodes Q2, Q4, Q5, Q6
-            nx, ny = x_nodes[i], y_nodes[i]
+        # Calculate the closest distance from the generated curve to each node
+        total_fit_error = 0
+        for nx, ny in zip(x_nodes[:-1], y_nodes[:-1]): # Exclude the tip since it's the anchor
             dists = (xs - nx)**2 + (ys - ny)**2
-            loss_shape += np.min(dists)
+            total_fit_error += np.min(dists)
             
-        # Heavily penalize failing to terminate on Q1 or missing Q3
-        return 1e6 * dist_end_to_q1 + 1e5 * min_dist_q3 + loss_shape
+        # Add a soft constraint to encourage the end of the curve to stop near Q1
+        # so we don't get infinite sweeping tails
+        end_dist_to_q1 = (xs[-1] - x_nodes[0])**2 + (ys[-1] - y_nodes[0])**2
+        
+        # Balance the general shape fit with the termination point
+        return total_fit_error + (0.5 * end_dist_to_q1)
 
-    # Robust initial guesses to prevent the solver from bowing backwards
+    # Initial guesses to seed the solver 
     initial_guesses = [
         [0.1, 0.1, 0.0, -np.pi],
         [0.1, 0.1, np.pi/2, -np.pi],
         [0.1, -0.1, np.pi, np.pi],
-        [0.1, -0.1, -np.pi/2, np.pi],
         [0.05, 0.2, 0.0, -2*np.pi]
     ]
     
@@ -97,7 +99,7 @@ def optimize_spiral_parameters(x_nodes, y_nodes):
     return best_res.x[0], best_res.x[1], best_res.x[2], best_res.x[3]
 
 def calculate_bounded_spiral(a, b, phi, t_end, start_x, start_y):
-    """Calculates final coordinates explicitly bounded by t_end."""
+    """Calculates final coordinates bounded by Theta (t_end)."""
     theta_vals = np.linspace(0, t_end, 500)
     r = a * np.exp(b * theta_vals)
     x = r * np.cos(theta_vals + phi) - a * np.cos(phi) + start_x
@@ -120,20 +122,17 @@ x_spiral, y_spiral = calculate_bounded_spiral(opt_a, opt_b, opt_phi, opt_tend, x
 
 # Plotting
 line_quad, = ax.plot(x_vals, y_vals, marker='o', markersize=6, color='#1f77b4', linewidth=2, label='Quad Nodes')
-line_spiral, = ax.plot(x_spiral, y_spiral, 'r-', linewidth=1.5, label='Auto-Fitted Spiral')
+line_spiral, = ax.plot(x_spiral, y_spiral, 'r-', linewidth=1.5, label='Best-Fit Spiral')
 
-# Highlight exactly Q1 and Q3 to prove constraints are met
-scatter_targets = ax.scatter([x_vals[0], x_vals[2]], [y_vals[0], y_vals[2]], color='orange', zorder=5, s=80, label='Fixed Targets (Q1 & Q3)')
-
-# Update title
-title = ax.set_title(f"Angle: {initial_angle:.2f}° | Auto params: a={opt_a:.5f}, b={opt_b:.3f}", fontsize=14)
+# Update title to include a, b, and Theta
+title = ax.set_title(f"Angle: {initial_angle:.2f}° | a={opt_a:.5f}, b={opt_b:.3f}, Theta={opt_tend:.2f} rad", fontsize=14)
 ax.set_xlabel("X Coordinate (m)", fontsize=12)
 ax.set_ylabel("Y Coordinate (m)", fontsize=12)
 ax.grid(True, linestyle='--', alpha=0.7)
 ax.legend()
 ax.set_aspect('equal')
 
-# --- 4. Single Slider Setup ---
+# --- 4. Angle Slider Setup ---
 axcolor = 'lightgoldenrodyellow'
 ax_angle = plt.axes([0.15, 0.08, 0.7, 0.03], facecolor=axcolor)
 
@@ -152,7 +151,7 @@ def update(val):
     new_x = df.loc[idx, x_cols].values
     new_y = df.loc[idx, y_cols].values
     
-    # Run dynamic optimization
+    # Run dynamic optimization for best fit
     a_new, b_new, phi_new, tend_new = optimize_spiral_parameters(new_x, new_y)
     
     # Generate bounded spiral coordinates
@@ -163,9 +162,9 @@ def update(val):
     # Update visual data
     line_quad.set_data(new_x, new_y)
     line_spiral.set_data(x_new_spiral, y_new_spiral)
-    scatter_targets.set_offsets(np.c_[[new_x[0], new_x[2]], [new_y[0], new_y[2]]])
     
-    title.set_text(f"Angle: {current_angle:.2f}° | Auto params: a={a_new:.5f}, b={b_new:.3f}")
+    # Update title with a, b, and Theta
+    title.set_text(f"Angle: {current_angle:.2f}° | a={a_new:.5f}, b={b_new:.3f}, Theta={tend_new:.2f} rad")
     
     # Rescale axes to fit
     ax.relim()
